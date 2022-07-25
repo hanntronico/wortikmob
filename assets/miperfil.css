@@ -1,0 +1,1882 @@
+
+
+
+/* screen - mi-perfil */
+
+.mi-perfil {
+  background-color: #f9f9f9;
+  height: 750px;
+  /*height: 1500px;*/
+  /*overflow: hidden;*/
+  width: 320px;
+  /*border: 1px solid red;*/
+  margin-top: 15px;
+}
+
+/*.mi-perfil .overlap-group4 {*/
+.overlap-group4 {
+  /*height: 727px;*/
+  /*left: -100px;*/
+  /*position: relative;*/
+  top: 30px;
+  /*width: 577px;*/
+  /*width: 320px;*/
+  /*border: 1px solid blue;*/
+}
+
+/*.mi-perfil .overlap-group2 {*/
+.overlap-group2 {
+  height: 727px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 320px;
+  /*border: 1px solid green;*/
+}
+
+/*.mi-perfil .overlap-group1 {*/
+.overlap-group1 {
+  height: 629px;
+  left: 40px;
+  position: absolute;
+  top: 98px;
+  /*width: 537px;*/
+  width: 120px;
+  /*border: 1px solid purple;*/
+}
+
+.mi-perfil .azul {
+  background: linear-gradient(180deg, rgb(51, 150, 152) 47.92%);
+  border-radius: 123.5px;
+  filter: blur(123.19px);;
+  height: 247px;
+  left: 290px;
+  position: absolute;
+  top: 0;
+  width: 247px;
+}
+
+.mi-perfil .overlap-group {
+  height: 459px;
+  left: 0;
+  position: absolute;
+  top: 170px;
+  width: 337px;
+}
+
+.mi-perfil .verde {
+  background: linear-gradient(180deg, rgb(131, 195, 137) 45.94%);
+  border-radius: 100.5px;
+  filter: blur(88.35px);;
+  height: 201px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 201px;
+}
+
+.mi-perfil .azul-1 {
+  background: linear-gradient(180deg, rgb(51, 150, 152) 47.92%);
+  border-radius: 163.5px;
+  filter: blur(163.09px);;
+  height: 327px;
+  left: 10px;
+  position: absolute;
+  top: 132px;
+  width: 327px;
+}
+
+.mi-perfil .azul-2 {
+  background: linear-gradient(180deg, rgb(51, 150, 152) 47.92%);
+  border-radius: 83px;
+  filter: blur(82.79px);;
+  height: 166px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 166px;
+}
+
+.mi-perfil .align-justify-2 {
+  height: 32px;
+  left: 364px;
+  position: absolute;
+  top: 7px;
+  width: 32px;
+}
+
+.mi-perfil .group {
+  height: 24px;
+  left: 206px;
+  position: absolute;
+  top: 8px;
+  width: 118px;
+}
+
+.mi-perfil .overlap-group3 {
+  height: 35px;
+  left: 127px;
+  position: absolute;
+  top: 1px;
+  width: 36px;
+}
+
+.mi-perfil .bell {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.mi-perfil .nuevo {
+  background-color: var(--malachite);
+  border-radius: 16px;
+  height: 20px;
+  left: 16px;
+  position: absolute;
+  top: 15px;
+  width: 20px;
+}
+
+.mi-perfil .number {
+  left: 4px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 1px;
+  white-space: nowrap;
+}
+
+.mi-perfil .frame-3553::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+/*.mi-perfil .frame-3553 {*/
+.frame-3553 {
+  height: 750px;
+  /*left: 124px;*/
+/*  overflow: hidden;
+  overflow-y: scroll;*/
+  /*position: absolute;*/
+  /*top: 20px;*/
+  width: 320px;
+  /*border: 1px solid brown;*/
+}
+
+.main-frame{
+  /*border: 1px solid red;*/
+  height: 750px;
+  width: 320px;
+  margin: 0px auto;
+  text-align: center;
+  /*margin-left: 10px;*/
+  padding: 0px 20px;
+
+}
+
+.mi-perfil .texto {
+  height: 63px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 276px;
+}
+
+.mi-perfil .aviso {
+  left: 88px;
+  letter-spacing: 0;
+  line-height: 31.2px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.titulo {
+  /*left: 88px;*/
+  letter-spacing: 0;
+  color: #339698;
+  line-height: 31.2px;
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  text-align: center;
+
+}
+
+.mi-perfil .aviso-1 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: center;
+  top: 31px;
+  width: 272px;
+}
+
+.mi-perfil .frame-3523::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.mi-perfil .frame-3523 {
+  height: 165px;
+  left: 0;
+  overflow-x: scroll;
+  position: absolute;
+  top: 79px;
+  width: 272px;
+}
+
+.mi-perfil .frame-3359 {
+  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62ac7d8d5d5550dee679302c/img/fondo@2x.svg);
+  background-size: 100% 100%;
+  height: 165px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 180px;
+}
+
+.mi-perfil .info {
+  height: 61px;
+  left: 23px;
+  position: absolute;
+  top: 16px;
+  width: 134px;
+}
+
+.mi-perfil .aviso-2 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: -1px;
+  white-space: nowrap;
+  width: 134px;
+}
+
+.mi-perfil .aviso-3 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: center;
+  top: 28px;
+  width: 134px;
+}
+
+.mi-perfil .overlap-group-1 {
+  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62ac7d8d5d5550dee679302c/img/ellipse-231@2x.svg);
+  background-size: 100% 100%;
+  height: 60px;
+  left: 56px;
+  position: absolute;
+  top: 89px;
+  width: 67px;
+}
+
+.mi-perfil .ellipse-232 {
+  height: 60px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 67px;
+}
+
+.mi-perfil .percent {
+  color: var(--storm-dust);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs2);
+  font-weight: 700;
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 22px;
+  white-space: nowrap;
+}
+
+.mi-perfil .frame-3520 {
+  height: 165px;
+  left: 200px;
+  position: absolute;
+  top: 0;
+  width: 180px;
+}
+
+/*.mi-perfil .overlap-group1-1 {*/
+.overlap-group1-1 {
+  height: 165px;
+  left: 16px;
+  position: relative;
+  width: 140px;
+}
+
+.mi-perfil .fondo {
+  height: 165px;
+  left: 38px;
+  position: absolute;
+  top: 0;
+  width: 72px;
+}
+
+.mi-perfil .info-1 {
+  height: 133px;
+  left: 0;
+  position: absolute;
+  top: 16px;
+  width: 140px;
+}
+
+.mi-perfil .aviso-4 {
+  left: 4px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+}
+
+.mi-perfil .aviso-5 {
+  color: var(--white2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs);
+  font-weight: 300;
+  left: 8px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: center;
+  top: 28px;
+  width: 124px;
+}
+
+.mi-perfil .frame-3353 {
+  background-color: var(--white2);
+  border-radius: 16px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 101px;
+  width: 140px;
+}
+
+.mi-perfil .icon-download_arrow {
+  height: 16px;
+  left: 16px;
+  position: absolute;
+  top: 8px;
+  width: 16px;
+}
+
+.mi-perfil .descripcin {
+  left: 40px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 7px;
+  white-space: nowrap;
+}
+
+.mi-perfil .frame-3067 {
+  height: 9px;
+  left: 123px;
+  position: absolute;
+  top: 256px;
+  width: 27px;
+}
+
+.mi-perfil .ellipse-49 {
+  background-color: var(--malachite-2);
+  border-radius: 4.64px;
+  height: 9px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 9px;
+}
+
+.mi-perfil .ellipse-48 {
+  background-color: var(--malachite);
+  border-radius: 4.64px;
+  height: 9px;
+  left: 17px;
+  position: absolute;
+  top: 0;
+  width: 9px;
+}
+
+.mi-perfil .frame-3530 {
+  height: 3726px;
+  left: 0;
+  position: absolute;
+  top: 489px;
+  width: 272px;
+}
+
+.mi-perfil .datos-personales {
+  background-color: var(--white-22);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 264px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 272px;
+}
+
+.mi-perfil .nombre {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 15px;
+  white-space: nowrap;
+  width: 188px;
+}
+
+.mi-perfil .frame-3546 {
+  height: 64px;
+  left: 102px;
+  position: absolute;
+  top: 51px;
+  width: 69px;
+}
+
+.mi-perfil .foto {
+  height: 6px;
+  left: -2px;
+  position: absolute;
+  top: 24px;
+  width: 58px;
+}
+
+.mi-perfil .editar-2 {
+  height: 1px;
+  left: 53px;
+  position: absolute;
+  top: 48px;
+  width: 1px;
+}
+
+.mi-perfil .frame-3529 {
+  height: 128px;
+  left: 16px;
+  position: absolute;
+  top: 120px;
+  width: 240px;
+}
+
+.mi-perfil .nombre-2 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  width: 240px;
+}
+
+.mi-perfil .span1 {
+  line-height: 15.6px;
+}
+
+.mi-perfil .overlap-group-2 {
+  height: 64px;
+  left: 41px;
+  position: absolute;
+  top: 63px;
+  width: 158px;
+}
+
+.mi-perfil .profesion-8 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 158px;
+}
+
+.mi-perfil .span1-1 {
+  text-decoration: underline;
+}
+
+.mi-perfil .whatsapp-symbol-1 {
+  height: 1px;
+  left: 132px;
+  position: absolute;
+  top: 23px;
+  width: 1px;
+}
+
+.mi-perfil .editar-3 {
+  height: 32px;
+  left: 224px;
+  position: absolute;
+  top: 12px;
+  width: 32px;
+}
+
+.mi-perfil .datos-personales-1 {
+  background-color: var(--white-22);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 101px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 280px;
+  width: 272px;
+}
+
+.mi-perfil .editar {
+  height: 1px;
+  left: 240px;
+  position: absolute;
+  top: 28px;
+  width: 1px;
+}
+
+.mi-perfil .frame-3488 {
+  height: 32px;
+  left: 16px;
+  position: absolute;
+  top: 53px;
+  width: 208px;
+}
+
+.mi-perfil .frame-3486 {
+  background-color: #0a66c2;
+  border-radius: 16px;
+  box-shadow: 0px 5px 20px #ededed;
+  height: 32px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.mi-perfil .ellipse-23 {
+  height: 1px;
+  left: 16px;
+  object-fit: cover;
+  position: absolute;
+  top: 16px;
+  width: 1px;
+}
+
+.mi-perfil .frame-3487 {
+  box-shadow: 0px 5px 20px #ededed;
+  height: 32px;
+  left: 44px;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.mi-perfil .frame-3488-1 {
+  box-shadow: 0px 5px 20px #ededed;
+  height: 32px;
+  left: 88px;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.mi-perfil .frame-3489 {
+  box-shadow: 0px 5px 20px #ededed;
+  height: 32px;
+  left: 132px;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.mi-perfil .frame-3493 {
+  background-color: var(--white2);
+  border-radius: 16px;
+  box-shadow: 0px 5px 20px #ededed;
+  height: 32px;
+  left: 176px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.mi-perfil .layer1 {
+  height: 1px;
+  left: 16px;
+  position: absolute;
+  top: 16px;
+  width: 1px;
+}
+
+.mi-perfil .datos-personales-2 {
+  background-color: var(--white-22);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 197px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 397px;
+  width: 272px;
+}
+
+.mi-perfil .profesion-9 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 51px;
+  width: 240px;
+}
+
+.mi-perfil .datos-personales-3 {
+  background-color: var(--white-22);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 879px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 610px;
+  width: 272px;
+}
+
+.mi-perfil .nombre-1 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 15px;
+  white-space: nowrap;
+}
+
+.mi-perfil .frame-container {
+  height: 385px;
+  left: 16px;
+  position: absolute;
+  top: 61px;
+  width: 240px;
+}
+
+.mi-perfil .frame-354 {
+  height: 385px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 240px;
+}
+
+.mi-perfil .frame-3531 {
+  height: 385px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 203px;
+}
+
+.mi-perfil .profesion {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: -1px;
+  width: 203px;
+}
+
+.mi-perfil .frame-3228 {
+  height: 136px;
+  left: 0;
+  position: absolute;
+  top: 217px;
+  width: 205px;
+}
+
+.mi-perfil .profesion-1 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: -1px;
+  white-space: nowrap;
+}
+
+.mi-perfil .frame-3047 {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 24px;
+  width: 205px;
+}
+
+.mi-perfil .frame-3537 {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 125px;
+}
+
+.mi-perfil .frame-3022 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 51px;
+}
+
+.mi-perfil .profesion-2 {
+  left: 8px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 7px;
+  white-space: nowrap;
+}
+
+.mi-perfil .frame-3026 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 59px;
+  position: absolute;
+  top: 0;
+  width: 66px;
+}
+
+.mi-perfil .frame-3539 {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 40px;
+  width: 205px;
+}
+
+.mi-perfil .frame-3026-1 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 66px;
+}
+
+.mi-perfil .frame-3027 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 74px;
+  position: absolute;
+  top: 0;
+  width: 83px;
+}
+
+.mi-perfil .frame-3028 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 165px;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.mi-perfil .frame-3538 {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 80px;
+  width: 174px;
+}
+
+.mi-perfil .frame-3028-1 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 55px;
+}
+
+.mi-perfil .frame-3029 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 63px;
+  position: absolute;
+  top: 0;
+  width: 39px;
+}
+
+.mi-perfil .frame-3030 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 110px;
+  position: absolute;
+  top: 0;
+  width: 64px;
+}
+
+.mi-perfil .profesion-3 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 368px;
+  white-space: nowrap;
+  width: 203px;
+}
+
+.mi-perfil .editar-1 {
+  height: 1px;
+  left: 224px;
+  position: absolute;
+  top: 16px;
+  width: 1px;
+}
+
+.mi-perfil .frame-3550 {
+  height: 385px;
+  left: 16px;
+  position: absolute;
+  top: 470px;
+  width: 240px;
+}
+
+.mi-perfil .datos-personales-4 {
+  background-color: var(--white-22);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 277px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 1505px;
+  width: 272px;
+}
+
+.mi-perfil .frame-3533 {
+  height: 92px;
+  left: 16px;
+  position: absolute;
+  top: 53px;
+  width: 240px;
+}
+
+.mi-perfil .frame-3531-1 {
+  height: 92px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 192px;
+}
+
+.mi-perfil .profesion-4 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: -1px;
+  width: 192px;
+}
+
+.mi-perfil .profesion-5 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 75px;
+  white-space: nowrap;
+}
+
+.mi-perfil .frame-3534 {
+  height: 92px;
+  left: 16px;
+  position: absolute;
+  top: 169px;
+  width: 240px;
+}
+
+.mi-perfil .datos-personales-5 {
+  background-color: var(--white-22);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 113px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 1798px;
+  width: 272px;
+}
+
+.mi-perfil .profesion-10 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 51px;
+  white-space: nowrap;
+}
+
+.mi-perfil .profesion-11 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 79px;
+  white-space: nowrap;
+}
+
+.mi-perfil .datos-personales-6 {
+  background-color: var(--white-22);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 1077px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 1927px;
+  width: 272px;
+}
+
+.mi-perfil .frame-3228-1 {
+  height: 136px;
+  left: 16px;
+  position: absolute;
+  top: 53px;
+  width: 236px;
+}
+
+.mi-perfil .frame-3047-1 {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 24px;
+  width: 236px;
+}
+
+.mi-perfil .frame-3537-1 {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 195px;
+}
+
+.mi-perfil .frame-3022-1 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 103px;
+}
+
+.mi-perfil .frame-3026-2 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 111px;
+  position: absolute;
+  top: 0;
+  width: 84px;
+}
+
+.mi-perfil .frame-3538-1 {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 40px;
+  width: 236px;
+}
+
+.mi-perfil .frame-3027-1 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 117px;
+}
+
+.mi-perfil .frame-3028-2 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 125px;
+  position: absolute;
+  top: 0;
+  width: 111px;
+}
+
+.mi-perfil .frame-3029-1 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 80px;
+  width: 95px;
+}
+
+.mi-perfil .frame-3261 {
+  height: 136px;
+  left: 16px;
+  position: absolute;
+  top: 205px;
+  width: 136px;
+}
+
+.mi-perfil .frame-3047-2 {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 24px;
+  width: 136px;
+}
+
+.mi-perfil .frame-3022-2 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 131px;
+}
+
+.mi-perfil .frame-3027-2 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 40px;
+  width: 135px;
+}
+
+.mi-perfil .frame-3029-2 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 80px;
+  width: 136px;
+}
+
+.mi-perfil .frame-3262 {
+  height: 96px;
+  left: 16px;
+  position: absolute;
+  top: 357px;
+  width: 222px;
+}
+
+.mi-perfil .frame-3047-3 {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 24px;
+  width: 222px;
+}
+
+.mi-perfil .frame-3537-2 {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 222px;
+}
+
+.mi-perfil .frame-3022-3 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 109px;
+}
+
+.mi-perfil .frame-3027-3 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 117px;
+  position: absolute;
+  top: 0;
+  width: 105px;
+}
+
+.mi-perfil .frame-3029-3 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 40px;
+  width: 155px;
+}
+
+.mi-perfil .frame-3263 {
+  height: 56px;
+  left: 16px;
+  position: absolute;
+  top: 469px;
+  width: 228px;
+}
+
+.mi-perfil .frame-3047-4 {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 24px;
+  width: 228px;
+}
+
+.mi-perfil .frame-3022-4 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 95px;
+}
+
+.mi-perfil .frame-3027-4 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 103px;
+  position: absolute;
+  top: 0;
+  width: 125px;
+}
+
+.mi-perfil .frame-3264 {
+  height: 56px;
+  left: 16px;
+  position: absolute;
+  top: 541px;
+  width: 238px;
+}
+
+.mi-perfil .frame-3047-5 {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 24px;
+  width: 238px;
+}
+
+.mi-perfil .frame-3022-5 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 111px;
+}
+
+.mi-perfil .frame-3027-5 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 119px;
+  position: absolute;
+  top: 0;
+  width: 119px;
+}
+
+.mi-perfil .frame-3265 {
+  height: 56px;
+  left: 16px;
+  position: absolute;
+  top: 613px;
+  width: 209px;
+}
+
+.mi-perfil .frame-3047-6 {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 24px;
+  width: 209px;
+}
+
+.mi-perfil .frame-3022-6 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 99px;
+}
+
+.mi-perfil .frame-3027-6 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 107px;
+  position: absolute;
+  top: 0;
+  width: 102px;
+}
+
+.mi-perfil .frame-3022-7 {
+  background-color: var(--coconut);
+  border-radius: 8px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 64px;
+  width: 111px;
+}
+
+.mi-perfil .profesion-12 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 723px;
+}
+
+.mi-perfil .profesion-13 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 771px;
+  width: 209px;
+}
+
+.mi-perfil .profesion-14 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 819px;
+  width: 238px;
+}
+
+.mi-perfil .profesion-15 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 899px;
+  width: 230px;
+}
+
+.mi-perfil .profesion-16 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 963px;
+  width: 238px;
+}
+
+.mi-perfil .profesion-17 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 1027px;
+  width: 238px;
+}
+
+.mi-perfil .datos-personales-7 {
+  background-color: var(--white-22);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 241px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 3020px;
+  width: 272px;
+}
+
+.mi-perfil .frame-3533-1 {
+  height: 76px;
+  left: 16px;
+  position: absolute;
+  top: 53px;
+  width: 240px;
+}
+
+.mi-perfil .frame-3531-2 {
+  height: 72px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 192px;
+}
+
+.mi-perfil .profesion-6 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 55px;
+  white-space: nowrap;
+}
+
+.mi-perfil .frame-3534-1 {
+  height: 76px;
+  left: 16px;
+  position: absolute;
+  top: 153px;
+  width: 240px;
+}
+
+.mi-perfil .datos-personales-8 {
+  background-color: var(--white-22);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 297px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 3277px;
+  width: 272px;
+}
+
+.mi-perfil .frame-3533-2 {
+  height: 100px;
+  left: 16px;
+  position: absolute;
+  top: 53px;
+  width: 240px;
+}
+
+.mi-perfil .frame-3531-3 {
+  height: 104px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 192px;
+}
+
+.mi-perfil .profesion-7 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  text-decoration: underline;
+  top: 87px;
+  white-space: nowrap;
+}
+
+.mi-perfil .frame-3534-2 {
+  height: 100px;
+  left: 16px;
+  position: absolute;
+  top: 177px;
+  width: 240px;
+}
+
+.mi-perfil .frame-3524 {
+  background-color: var(--white-22);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 177px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 289px;
+  width: 272px;
+}
+
+.mi-perfil .profesion-18 {
+  left: 112px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 14px;
+  white-space: nowrap;
+}
+
+.mi-perfil .frame-3493-1 {
+  height: 112px;
+  left: 36px;
+  position: absolute;
+  top: 49px;
+  width: 200px;
+}
+
+.mi-perfil .frame-3373 {
+  border-radius: 16px;
+  height: 68px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 200px;
+}
+
+.mi-perfil .frame-3374 {
+  height: 16px;
+  left: 62px;
+  position: absolute;
+  top: 8px;
+  width: 76px;
+}
+
+.mi-perfil .subir-cv {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+}
+
+.mi-perfil .file-generic-3 {
+  height: 16px;
+  left: 60px;
+  position: absolute;
+  top: 0;
+  width: 16px;
+}
+
+.mi-perfil .archivos-permitidos-doc-pdf {
+  left: 40px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: center;
+  top: 27px;
+}
+
+.mi-perfil .frame-3353-1 {
+  background-color: var(--white2);
+  border-radius: 16px;
+  height: 32px;
+  left: 30px;
+  position: absolute;
+  top: 80px;
+  width: 140px;
+}
+
+
+
+
+/* screen - menu-dashboard */
+
+.menu-dashboard {
+  background-color: #fff;
+  /*height: 568px;*/
+  /*position: relative;*/
+  /*width: 254px;*/
+
+}
+
+/*.menu-dashboard .group {*/
+.group {
+  height: 23px;
+  left: 48px;
+  position: absolute;
+  top: 24px;
+  width: 110px;
+
+}
+
+/*.menu-dashboard .close-2-1 {*/
+.close-2-1 {
+  height: 24px;
+  left: 206px;
+  position: absolute;
+  top: 24px;
+  width: 24px;
+
+}
+
+/*.menu-dashboard .rectangle-263 {*/
+.rectangle-263 {
+  height: 24px;
+  left: 250px;
+  position: absolute;
+  top: 85px;
+  width: 4px;
+
+}
+
+/*.menu-dashboard .frame-3541 {*/
+.frame-3541 {
+  /*height: 454px;*/
+  left: 24px;
+  /*position: fixed;*/
+  position: absolute;
+  top: 82px;
+  /*width: 193px;*/
+
+}
+
+/*.menu-dashboard .frame-3540 {*/
+.frame-3540 {
+  height: 293px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  /*width: 178px;*/
+
+}
+
+/*.menu-dashboard .frame-3545 {*/
+.frame-3545 {
+  height: 240px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  /*width: 178px;*/
+
+}
+
+/*.menu-dashboard .seccin {*/
+.seccin {
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  /*width: 178px;*/
+
+}
+
+/*.menu-dashboard .dashboard-1 {*/
+.dashboard-1 {
+  height: 24px;
+  left: 16px;
+  position: absolute;
+  top: 8px;
+  width: 24px;
+  
+}
+
+.menu-dashboard .dashboard {
+ /*.dashboard_menu {*/
+  background-color: transparent;
+  left: 48px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: relative;
+  top: 8px;
+  white-space: nowrap;
+  width: 110px;
+  height: 25px;
+  /*border: 1px solid red;*/
+}
+
+.seccin-1 {
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 40px;
+  width: 178px;
+}
+
+.menu-dashboard .icon-user {
+  height: 24px;
+  left: 16px;
+  position: absolute;
+  top: 8px;
+  width: 24px;
+}
+
+.menu-dashboard .mi-perfil {
+  left: 48px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 8px;
+  white-space: nowrap;
+  /*border: 1px solid blue;*/
+}
+
+.menu-dashboard .seccin-2 {
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 80px;
+  width: 178px;
+}
+
+.menu-dashboard .icon-user-1 {
+  height: 24px;
+  left: 16px;
+  position: absolute;
+  top: 8px;
+  width: 24px;
+}
+
+.menu-dashboard .postulaciones {
+  left: 48px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 8px;
+  white-space: nowrap;
+}
+
+.menu-dashboard .seccin-3 {
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 120px;
+  width: 178px;
+}
+
+.menu-dashboard .icon-mail {
+  height: 24px;
+  left: 16px;
+  position: absolute;
+  top: 8px;
+  width: 24px;
+}
+
+.menu-dashboard .mensajes {
+  left: 48px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 8px;
+  white-space: nowrap;
+  width: 122px;
+}
+
+.menu-dashboard .seccin-4 {
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 160px;
+  width: 178px;
+}
+
+.menu-dashboard .icon-bookmark {
+  height: 24px;
+  left: 16px;
+  position: absolute;
+  top: 8px;
+  width: 24px;
+}
+
+.menu-dashboard .guardados {
+  left: 48px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 8px;
+  white-space: nowrap;
+  width: 122px;
+}
+
+.menu-dashboard .seccin-5 {
+  height: 40px;
+  left: 0;
+  position: absolute;
+  top: 200px;
+  width: 178px;
+}
+
+.menu-dashboard .money-1 {
+  height: 24px;
+  left: 16px;
+  position: absolute;
+  top: 8px;
+  width: 24px;
+}
+
+.menu-dashboard .salarios {
+  left: 48px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 8px;
+  white-space: nowrap;
+}
+
+.menu-dashboard .botn-p {
+  background: linear-gradient(180deg, rgb(131, 195, 137) 0%, rgb(51, 150, 152) 100%);
+  border: none;
+  border-radius: 16px;
+  height: 37px;
+  left: 0;
+  position: absolute;
+  top: 256px;
+  width: 178px;
+}
+
+.menu-dashboard .icon-search {
+  height: 16px;
+  left: 16px;
+  position: absolute;
+  top: 10px;
+  width: 16px;
+}
+
+.menu-dashboard .buscar-empleo {
+  left: 40px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 7px;
+  white-space: nowrap;
+}
+
+.menu-dashboard .frame-3539 {
+  height: 121px;
+  left: 0;
+  position: absolute;
+  top: 333px;
+  width: 193px;
+}
+
+.menu-dashboard .correo {
+  height: 39px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 161px;
+}
+
+.menu-dashboard .name {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  text-align: center;
+  top: -1px;
+  white-space: nowrap;
+  width: 145px;
+}
+
+.menu-dashboard .rodrigo44gmailcom {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: center;
+  top: 21px;
+  white-space: nowrap;
+  width: 145px;
+}
+
+.menu-dashboard .frame-3542 {
+  height: 74px;
+  left: 0;
+  position: absolute;
+  top: 47px;
+  width: 193px;
+}
+
+.menu-dashboard .mi-cuenta {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 7px;
+  white-space: nowrap;
+}
+
+.menu-dashboard .cerrar-sesin {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 44px;
+  white-space: nowrap;
+}
+
+
+.input_text {
+  border-radius: 0px !important; 
+  border: none !important; 
+  background-color: transparent !important; 
+  border-bottom: 1px solid #B8B8B8 !important;
+  font-size: 20px !important; 
+  padding-left: 18px !important; 
+  padding-bottom: 20px !important; 
+}
+
+.select_input {
+  border-radius: 0px !important; 
+  border: none !important; 
+  background-color: transparent !important; 
+  border-bottom: 1px solid #B8B8B8 !important;
+  font-size: 20px !important; 
+  padding-left: 18px !important; 
+  height: 60px !important;
+  appearance: none;
+}
+
+.select_frame{
+  /*border: 1px solid red;*/
+
+}
+
+.chevron-down-1 {
+  position: absolute;
+  top: 20px;
+  left: 250px;
+}
+
+.chevron-down-2 {
+  position: absolute;
+  top: 5px;
+  left: 60px;
+}
+
+.select_frame_pais{
+  margin-top: -14px;
+}
+
+.icon_info {
+  position: absolute;
+  top: 0px;
+  left: 155px;
+}
+
+.icon_info_2{
+  position: absolute;
+  top: 0px;
+  left: 250px;
+}
+
+.borde_rojo{
+  border: 1px solid red;
+}
