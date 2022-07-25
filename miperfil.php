@@ -9,12 +9,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+
   <title>Document</title>
 </head>
 
 <body>
   <div class="container container-principal">
-    <header>
+    <!-- <header>
       <div class="menu_bar mt-3">
         <a href="" class="btn-menu">
           <div class="row">
@@ -40,7 +42,19 @@
           <li><a href="">Seccion Menu 5</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
+
+    <aside class="main-sidebar sidebar-light-primary elevation-4" >
+    <div class="sidebar">
+
+    <?php include 'menu.php' ?>
+
+    </div>
+  </aside>
+
+  
+
+
 
     <div class="container text-center  mb-5 text-black-50">
       <h1 class="fs-3 fw-bold ">Mi perfil</h1>
