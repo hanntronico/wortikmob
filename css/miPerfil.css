@@ -36,10 +36,10 @@ header .menu_bar a {
   text-decoration: none;
 }
 header .menu_bar a span.icono-notificacion {
-  color: #B8B8B8;
+  color: #b8b8b8;
 }
 
-.badge-custom{
+.badge-custom {
   background-color: #339698;
   margin-top: 38px;
 }
@@ -121,48 +121,47 @@ header nav ul li a {
   word-break: break-all;
 }
 
-.flickity-prev-next-button { display: none; }
+.flickity-prev-next-button {
+  display: none;
+}
 
 .scrollmenu .card-custom i {
   font-size: 20px;
 }
 
-.flickity-page-dots .dot{
+.flickity-page-dots .dot {
   background-color: #339698 !important;
 }
-.tituloMedidor{
+.tituloMedidor {
   color: #339698;
-
 }
 
 .subirCV {
   border: 1px dashed #b8b8b8;
   margin: 0 auto;
 }
-.tuCV{
+.tuCV {
   display: grid;
   justify-content: centers;
 }
-.tuCV h5{
+.tuCV h5 {
   color: #339698;
   font-style: normal;
   font-weight: 300;
 }
-.listaCv{
+.listaCv {
   list-style: none;
 }
 
-.bi-file-earmark{
+.bi-file-earmark {
   margin-top: -6px;
 }
 
-
-.bi-pencil{
+.bi-pencil {
   color: #339698;
-
 }
 
-.btn-descarga button{
+.btn-descarga button {
   color: #616161;
   font-weight: 400;
   font-size: 12px;
@@ -203,24 +202,23 @@ header nav ul li a {
   border-radius: 50%;
 }
 
-.imagen12{
+.imagen12 {
   position: relative;
   margin-top: -73px;
   left: 17px;
 }
 
-
-.name-perfil{
+.name-perfil {
   line-height: 7px;
 }
-.name-perfil p{
+.name-perfil p {
   font-size: 14px;
 }
-.bi-whatsapp{
+.bi-whatsapp {
   color: #339698;
 }
 
-.texto-resumen{
+.texto-resumen {
   color: #616161;
   font-style: normal;
   font-weight: 300;
@@ -228,70 +226,80 @@ header nav ul li a {
   line-height: 130%;
 }
 
-.editar-perfil{
+.editar-perfil {
   margin-top: -46px;
 }
 
-.icono-edit1{
+.icono-edit1 {
   width: 32px !important;
-  height: 32px ;
+  height: 32px;
   padding: 4px !important;
 }
 
-.detalles-perfil{
+.detalles-perfil {
   color: #616161;
 }
-.detalles-perfil h5{
+.detalles-perfil h5 {
   color: #616161;
   font-weight: 500;
 }
- .direcion-perfil{
+.direcion-perfil {
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
 }
-.lista-perfil{
+.lista-perfil {
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
 }
-.lista-tab{
+.lista-tab {
   list-style: none;
 }
-.info-formacion p{
+.info-formacion p {
   color: #616161;
   font-size: 14px;
 }
-.diomas{
+.diomas {
   font-size: 14px;
 }
-.idioma-1{
+.idioma-1 {
   color: #616161;
 }
-.nivel-idioma{
+.nivel-idioma {
   color: #339698;
 }
-.lista-aptitudes{
+.lista-aptitudes {
   font-size: 14px;
   width: 120%;
 }
-.span-oscuro{
+.span-oscuro {
   color: #616161;
 }
-.span-green{
+.span-green {
   color: #339698;
 }
-.titulo-aptitudes{
+.titulo-aptitudes {
   color: #616161;
 }
-.aptitudes-respuesta{
+.aptitudes-respuesta {
   color: #616161;
   font-size: 14px;
   font-weight: 300;
 }
-.cursos-certifica{
+.cursos-certifica {
   width: 173%;
 }
+
+.flickity-slider {
+  left: -29px !important;
+  width: 156% !important;
+}
+
+/* .imagen-237 {
+  margin-left: -5px;
+  margin-right: 16px;
+} */
 
 /* .scrollcards .card-custom {
   width: 66%;

@@ -43,7 +43,7 @@
   <div class="container container-principal" style="border: 1px solid red;">
 
 
-      <div class="dashboard screen" style="border: 1px solid green; height: 70px; margin-left: -10px;">
+      <div class="dashboard screen bg-transparent" style=" height: 70px; margin-left: -10px;">
         <div class="overlap-group4"> 
           
           <div class="align-justify-2">
@@ -176,7 +176,6 @@
               <h5 class=" mt-3">Datos Persoles
               </h5>
             </div>
-            <!-- <div class="col-md-2 bg-white rounded-3 icono-edit1 mt-2 ms-2"> -->
             <div class="col-3">
               <div class="bg-white rounded-3 icono-edit1 mt-3 ms-2" style="border: 0px solid green; margin-right: 80px;">
                 <img src="img/Edit 1.png" alt="">
@@ -221,18 +220,20 @@
       <div class="tuCV border border-1 border-white rounded-4 mb-5">
         <div class="container">
           <div class="row">
-            <div class="col-10">
+            <div class="col-9">
               <h5 class=" mt-3">Redes sociales
               </h5>
             </div>
-            <div class="col-2  bg-white  rounded-3 icono-edit1 mt-2 ms-2">
-              <img src="img/Edit 1.png" alt="">
+            <div class="col-3">
+              <div class="bg-white rounded-3 icono-edit1 mt-3 ms-2" style="border: 0px solid green; margin-right: 80px;">
+                <img src="img/Edit 1.png" alt="">
+              </div>
             </div>
             <div class="container iconos-redes">
               <img src="img/Group 12822.png" alt="">
               <img src="img/Group 12823.png" alt="">
-              <img src="img/Ellipse 237.png" alt="">
-              <img class="ms-3" src="img/Ellipse 237 (1).png" alt="">
+              <img class="imagen-237" src="img/Ellipse 237.png" alt="">
+              <img class="" src="img/Ellipse 237 (1).png" alt="">
               <img src="img/Frame 3493.png" alt="">
             </div>
           </div>
@@ -244,34 +245,35 @@
       <div class="tuCV border border-1 border-white rounded-4 mb-5">
         <div class="container">
           <div class="row">
-            <div class="col-10">
+            <div class="col-9">
               <h5 class=" mt-3">Resúmen laboral
               </h5>
             </div>
-            <div class="col-2  bg-white  rounded-3 icono-edit1 mt-2 ms-2">
-              <img src="img/Edit 1.png" alt="">
+            <div class="col-3">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 ms-2" style="border: 0px solid green; margin-right: 80px;">
+                <img src="img/Edit 1.png" alt="">
+              </div>
             </div>
-            <div class="container resumen">
+          </div>
+        </div>
+        <div class="container resumen mt-2">
               <p class="texto-resumen">
                 Bachiller en Psicología Organizacional con experiencia en procesos de selección, análisis de clima
                 organizacional, elaboración de bandas salariales y generación de contenido estructurado para soluciones
                 tecnológicas en reclutamiento digital. Amante del mundo digital.
-
               </p>
             </div>
-          </div>
-        </div>
       </div>
     </div>
     <div class="container">
       <div class="tuCV border border-1 border-white rounded-4 mb-5">
         <div class="container">
           <div class="row">
-            <div class="col-10">
+            <div class="col-9">
               <h5 class=" mt-3">Experiencia Laboral
               </h5>
             </div>
-            <div class="col-2  icono-edit1 mt-2 ms-2">
+            <div class="col-3  icono-edit1 mt-2 ps-3 ">
               <img src="img/Editar (1).png" alt="">
             </div>
           </div>
@@ -316,10 +318,12 @@
               </ul>
               <p class="fw-normal">Ene 2019 - Ago 2019 (7 meses)</p>
             </div>
-            <div class="col-2  bg-white  rounded-3 icono-edit1 mt-3 ms-2">
-              <img src="img/Edit 1.png" alt="">
-            </div>
+            <div class="col-2">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -15px;">
+                <img src="img/Edit 1.png" alt="">
+              </div>
           </div>
+        </div>
         </div>
         <div class="container">
           <div class="row">
@@ -361,9 +365,11 @@
               </ul>
               <p class="fw-normal">Ene 2019 - Ago 2019 (7 meses)</p>
             </div>
-            <div class="col-2  bg-white  rounded-3 icono-edit1 mt-3 ms-2">
-              <img src="img/Edit 1.png" alt="">
-            </div>
+            <div class="col-2">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -15px;">
+                <img src="img/Edit 1.png" alt="">
+              </div>
+          </div>
           </div>
         </div>
       </div>
@@ -372,11 +378,11 @@
       <div class="tuCV border border-1 border-white rounded-4 mb-5">
         <div class="container">
           <div class="row">
-            <div class="col-10">
+            <div class="col-9">
               <h5 class=" mt-3">Form. académica
               </h5>
             </div>
-            <div class="col-2  icono-edit1 mt-2 ms-2">
+            <div class="col-3 ps-3  icono-edit1 mt-2 ">
               <img src="img/Editar (1).png" alt="">
             </div>
             <div class="row mt-2 m-0">
@@ -386,25 +392,30 @@
                 <p class="fw-semibold">Marz 2014 - Ago 2019</p>
 
               </div>
-              <div class="col-2  bg-white  rounded-3 icono-edit1  ms-3">
+              <div class="col-2">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -8px;">
                 <img src="img/Edit 1.png" alt="">
               </div>
             </div>
-            <div class="row mt-2 m-0">
+        </div>
+        <div class="row mt-2 m-0">
               <div class="col-10 info-formacion">
                 <p class="fw-semibold m-0">Ingeniería de Sistemas –Culminado –Décimo superior</p>
                 <p class="fw-light">Pontifica Universidad Nacional Mayor de San Marcos</p>
                 <p class="fw-semibold">Marz 2014 - Ago 2019</p>
 
               </div>
-              <div class="col-2  bg-white  rounded-3 icono-edit1  ms-3">
+              <div class="col-2">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -8px;">
                 <img src="img/Edit 1.png" alt="">
               </div>
             </div>
           </div>
         </div>
+    </div>
       </div>
     </div>
+
     <div class="container">
       <div class="tuCV border border-1 border-white rounded-4 mb-5">
         <div class="container">
@@ -421,8 +432,10 @@
                 <p class="mx-1 nivel-idioma">- Nativo</p>
               </div>
             </div>
-            <div class="col-2  bg-white  rounded-3 icono-edit1 mt-2 ms-2">
-              <img src="img/Edit 1.png" alt="">
+            <div class="col-2">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
+                <img src="img/Edit 1.png" alt="">
+              </div>
             </div>
           </div>
         </div>
@@ -546,8 +559,10 @@
               <p class="fw-normal titulo-aptitudes m-0">Metodologías de trabajo:</p>
               <p class="aptitudes-respuesta">Scrum, Kanban</p>
             </div>
-            <div class="col-2  bg-white  rounded-3 icono-edit1 mt-2 ms-2">
-              <img src="img/Edit 1.png" alt="">
+            <div class="col-2">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
+                <img src="img/Edit 1.png" alt="">
+              </div>
             </div>
           </div>
         </div>
@@ -567,27 +582,30 @@
                   <p class="fw-semibold">Ago 2014 - Dic 2019</p>
 
                 </div>
-                <div class="col-4  bg-white  rounded-3 icono-edit1 ">
-                  <img src="img/Edit 1.png" alt="">
-                </div>
+                <div class="col-4">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-29px;">
+                <img src="img/Edit 1.png" alt="">
+              </div>
+            </div>
               </div>
               <div class="cursos-certifica row mt-3 ">
                 <div class="col-8 info-formacion">
                   <p class="fw-semibold m-0">Fundamentos de Design <br> Thinking</p>
                   <p class="fw-light">Platzi</p>
                   <p class="fw-semibold">Ago 2014 - Dic 2019</p>
-
                 </div>
-                <div class="col-4  bg-white  rounded-3 icono-edit1 ">
-                  <img src="img/Edit 1.png" alt="">
-                </div>
+            <div class="col-4">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-29px;">
+                <img src="img/Edit 1.png" alt="">
               </div>
             </div>
-            <div class="col-2  icono-edit1 mt-2 ms-2">
-              <img src="img/Editar (1).png" alt="">
+              </div>
             </div>
-
-
+            <div class="col-2">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
+                <img src="img/Edit 1.png" alt="">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -608,9 +626,11 @@
                   <p class="fw-light">985656521</p>
                   <p class="fw-semibold text-decoration-underline">985656521</p>
                 </div>
-                <div class="col-4  bg-white  rounded-3 icono-edit1 ">
-                  <img src="img/Edit 1.png" alt="">
-                </div>
+            <div class="col-4">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-29px;">
+                <img src="img/Edit 1.png" alt="">
+              </div>
+            </div>
               </div>
               <div class="cursos-certifica row mt-3 ">
                 <div class="col-8 info-formacion">
@@ -621,12 +641,14 @@
                   <p class="fw-light">985656521</p>
                   <p class="fw-semibold text-decoration-underline">985656521</p>
                 </div>
-                <div class="col-4  bg-white  rounded-3 icono-edit1 ">
-                  <img src="img/Edit 1.png" alt="">
-                </div>
+              <div class="col-4">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-29px;">
+                <img src="img/Edit 1.png" alt="">
               </div>
             </div>
-            <div class="col-2  icono-edit1 mt-2 ms-2">
+              </div>
+            </div>
+            <div class="col-2  icono-edit1 mt-2 ps-0">
               <img src="img/Editar (1).png" alt="">
             </div>
 
