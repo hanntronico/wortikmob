@@ -11,11 +11,64 @@
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
 
+  <link rel="stylesheet" type="text/css" href="assets/styleguide.css" />
+  <link rel="stylesheet" type="text/css" href="assets/globals.css" />
+  <link rel="stylesheet" type="text/css" href="assets/dashboard.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="assets/menu/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+
+
+
+
   <title>Document</title>
 </head>
 
 <body>
-  <div class="container container-principal">
+
+
+  <aside class="main-sidebar sidebar-light-primary">
+    <div class="sidebar">
+
+    <?php include 'menu.php' ?>
+
+    </div>
+  </aside>
+
+
+
+
+  <div class="container container-principal" style="border: 1px solid red;">
+
+
+      <div class="dashboard screen" style="border: 1px solid green; height: 70px; margin-left: -10px;">
+        <div class="overlap-group4"> 
+          
+          <div class="align-justify-2">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+              <img src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/align-justify-2@2x.svg">
+            </a>
+          </div>
+          
+          <img
+            class="group"
+            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a738c3c50d8e0f8758cea4/img/group@2x.svg"
+          />
+
+          <div class="overlap-group3">
+            <img
+              class="bell"
+              src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/bell@2x.svg"
+            />
+            <div class="nuevo"><div class="number poppins-semi-bold-white-12px">20</div></div>
+          </div>
+        
+        </div>
+      </div>
+
+
     <!-- <header>
       <div class="menu_bar mt-3">
         <a href="" class="btn-menu">
@@ -44,13 +97,7 @@
       </nav>
     </header> -->
 
-    <aside class="main-sidebar sidebar-light-primary elevation-4" >
-    <div class="sidebar">
 
-    <?php include 'menu.php' ?>
-
-    </div>
-  </aside>
 
   
 
@@ -124,20 +171,22 @@
     <div class="container  mb-5">
       <div class="tuCV border border-1 border-white rounded-4 mb-5">
         <div class="container">
-          <div class="row">
-            <div class="col-10">
+          <div class="row" style="border: 0px solid red;">
+            <div class="col-9" style="border: 0px solid green;">
               <h5 class=" mt-3">Datos Persoles
               </h5>
             </div>
-            <div class="col-2  bg-white  rounded-3 icono-edit1 mt-2 ms-2">
-              <img src="img/Edit 1.png" alt="">
+            <!-- <div class="col-md-2 bg-white rounded-3 icono-edit1 mt-2 ms-2"> -->
+            <div class="col-3">
+              <div class="bg-white rounded-3 icono-edit1 mt-3 ms-2" style="border: 0px solid green; margin-right: 80px;">
+                <img src="img/Edit 1.png" alt="">
+              </div>
             </div>
           </div>
           <div class="fotoPerfil mb-5">
             <div class="imagenPerfil">
               <img class="text-center" src="img/Foto.png" alt="">
               <img src="img/Editar.png" class="mx-5 w-50 editar-perfil" alt="">
-
             </div>
           </div>
           <div class="container name-perfil text-black-50 ">
@@ -586,6 +635,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
 
@@ -598,6 +648,22 @@
   </script>
   <script src="js/miPerfil.js"></script>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!-- <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+
+    <script src="assets/menu/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/menu/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+
+
+
+
+
 </body>
 
 </html>
