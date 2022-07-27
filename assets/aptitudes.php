@@ -78,7 +78,8 @@
 
                     <div class="col-12 col-md-12 mb-4">
                       <div class="select_frame">
-                        <select class="form-control select_input" name="aptitudes">
+                        <select class="form-control select_input" name="aptitudes" id="aptitudes"
+                         onchange="getSelectValue();">
                           <option value="lenguajes">Lenguajes</option>
                           <option value="frameworks">Frameworks</option>
                           <option value="bases">Bases de Datos</option>
@@ -108,7 +109,8 @@
 
                     <div class="col-12 col-md-12 mb-4">
                       <div class="select_frame">
-                        <select class="form-control select_input" name="aptitudes">
+                        <select class="form-control select_input" name="aptitudes" id="aptitudesNivel"
+                         onchange="getSelectValue();">
                           <option value="0">Nivel</option>
                           <option value="basico">Básico</option>
                           <option value="intermedio">Intermedio</option>
@@ -123,7 +125,10 @@
                     </div>
 
                     <div class="col-12 col-md-12 mt-2 mb-4">
-                      <button type="submit" class="btn btn-primary btn-lg|btn-sm" style="color: #339698; border: none; border-radius: 16px; background: #F5F5F5; font-size: 13px; font-weight: 500; padding: 12px 16px;">Agregar</button>
+                      <button type="submit" class="btn btn-primary btn-lg|btn-sm" id="agregar"
+                      style="color: #339698; border: none; border-radius: 16px; background: #F5F5F5; font-size: 13px; font-weight: 500; padding: 12px 16px;">
+                      Agregar
+                    </button>
                     </div>
 
                   </div>
@@ -148,6 +153,20 @@
         </div>
       </div>
     </div>
+
+    <script>
+      function getSelectValue(){
+        var selectValue = document.getElementById("aptitudes").value;
+        var selectValue2 = document.getElementById("aptitudesNivel").value;
+        var resultado = selectValue + "" + selectValue2
+        console.log(resultado );
+
+        IdDelSpan.innerHTML = resultado;
+
+
+      }
+      getSelectValue();
+    </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

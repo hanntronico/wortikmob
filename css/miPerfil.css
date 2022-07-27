@@ -1,6 +1,6 @@
 .container-principal {
-  /*background-color: #cddcdc;*/
-  background-color: #E8F7F7;
+  background-color: #cddcdc;
+  background-color: #e8f7f7;
   background-image: radial-gradient(
       at 50% 100%,
       rgba(255, 255, 255, 0.5) 0%,
@@ -102,7 +102,7 @@ header nav ul li a {
     display: block;
   }
 
-  .fondo_transparente{
+  .fondo_transparente {
     background-color: rgba(255, 255, 255, 0.5);
   }
 }
@@ -301,10 +301,10 @@ header nav ul li a {
   width: 156% !important;
 }
 
-/* .imagen-237 {
+.imagen-237 {
   margin-left: -5px;
   margin-right: 16px;
-} */
+}
 
 /* .scrollcards .card-custom {
   width: 66%;

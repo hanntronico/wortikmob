@@ -8,12 +8,15 @@
                  surnames,
                  birthdate,
                  ubication,
+                 sexo,
                  phone,
                  email,
+                 doc_id,
+                 localidad,
                  cv,
                  position,
                  image
-          FROM profiles
+                FROM profiles
           WHERE id = 1";
 
   $db = $dbh->prepare($sql);
@@ -21,6 +24,7 @@
   $data= Array();
   $reg = $db->fetch(PDO::FETCH_OBJ);
 
+  //print_r($reg);
 
 $date1 = new DateTime($reg->birthdate);
 $date2 = new DateTime("now");
@@ -241,7 +245,9 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
               <?php echo $reg->email; ?>
             </p>
             <p class="text-center">
-             <?php echo $reg->$localidad; ?>
+             <?php 
+             
+             echo (isset($reg->localidad)) ? $reg->localidad : ''; ?>
             </p>
           </div>
         </div>
@@ -595,6 +601,7 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
             </div>
             <div class="col-2">
               <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
+              <a href="assets/aptitudes.php">
                 <img src="img/Edit 1.png" alt="">
               </div>
             </div>
