@@ -1,3 +1,31 @@
+<?php  
+  session_start();
+  $_SESSION["idPosutlante"] = 1; 
+  include_once "../conf/conf.php";
+
+  $sql = "SELECT id,
+                 name,
+                 surnames,
+                 birthdate,
+                 ubication,
+                 sexo,
+                 phone,
+                 email,
+                 doc_id,
+                 localidad,
+                 cv,
+                 position,
+                 image
+          FROM profiles
+          WHERE id = 1";
+
+  $db = $dbh->prepare($sql);
+  $db->execute();
+  $data= Array();
+  $reg = $db->fetch(PDO::FETCH_OBJ);
+
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -22,9 +50,6 @@
     <div class="sidebar">
 
     <?php include 'menu.php' ?>
-
-
-  
 
     </div>
   </aside>
@@ -73,21 +98,26 @@
                   </div>
                 </div>
 
-                <form style="border: none;">
+                <form style="border: none;" action="editarPerfil.php" method="POST">
                   <div class="form-row mt-3">
                     <div class="col-12 col-md-12 mb-4">
-                      <input type="text" class="form-control input_text" id="validationServer01" placeholder="Nombre" value="" required>
+                      <input type="text" class="form-control input_text" name="nombre" id="nombre" placeholder="Nombre" value="<?php echo $reg->name;?>" required>
                     </div>
 
                     <div class="col-12 col-md-12 mb-3">
-                      <input type="text" class="form-control input_text" id="validationServer01" placeholder="Apellidos" value="" required>
+                      <input type="text" class="form-control input_text" id="apellidos" name="apellidos" placeholder="Apellidos" value="<?php echo $reg->surnames;?>" required>
                     </div>
 
                     <div class="col-12 col-md-12 mb-4">
                       <div class="select_frame">
                         <select class="form-control select_input" name="">
-                          <option value="masculino">Masculino</option>
-                          <option value="femenino">Femenino</option>
+                          <?php 
+                            $sexo = $reg->sexo; 
+                          ?>
+                          
+                          <?php //if($sexo=='m'){echo 'selected';}?>
+                          <option value="m" <?php echo ($sexo == 'm') ? 'selected' : '';?>>Masculino</option>
+                          <option value="f" <?php echo ($sexo == 'f') ? 'selected' : '';?>>Femenino</option>
                         </select>
                         <img
                         class="chevron-down-1"
@@ -98,7 +128,7 @@
 
                     <div class="col-12 col-md-12 mt-2 mb-4">
                       <div class="select_frame">
-                        <input type="date" class="form-control input_text" name="fec_nac" id="fec_nac">
+                        <input type="date" class="form-control input_text" name="fec_nac" id="fec_nac" value="<?php echo $reg->birthdate;?>">
                       </div>
                     </div>
 
@@ -121,7 +151,7 @@
 
                     <div class="col-8 col-md-8 mt-2 mb-4">
                       <div class="select_frame">
-                        <input type="text" class="form-control input_text" name="fec_nac" id="fec_nac">
+                        <input type="text" class="form-control input_text" name="telefono" id="telefono" value="<?php echo $reg->phone;?>">
                       </div>
                       <img
                           class="icon_info"
@@ -145,21 +175,22 @@
                     </div>           
 
                     <div class="col-12 col-md-12 mt-2 mb-3">
-                      <input type="text" class="form-control input_text" id="validationServer01" placeholder="Nº de Documento" value="" required>
+                      <input type="text" class="form-control input_text" id="validationServer01" placeholder="Nº de Documento" value="<?php echo $reg->doc_id;?>" required>
                     </div>
                     
                     <div class="col-12 col-md-12 mt-3 mb-3">
-                      <input type="email" class="form-control input_text" id="validationServer01" placeholder="email" value="" required>
+                      <input type="email" class="form-control input_text" id="validationServer01" placeholder="email" value="<?php echo $reg->email; ?> " required>
                     </div>    
 
                     <div class="col-12 col-md-12 mb-4">
                       <div class="select_frame">
                         <select class="form-control select_input" name="">
-                          <option value="lima">Lima, Perú</option>
-                          <option value="bogota">Bogotá, Colombia</option>
-                          <option value="quito">Quito, Ecuador</option>
-                          <option value="bs_as">Buenos Aires, Argentina</option>
-                          <option value="la_paz">La Paz, Bolivia</option>
+                          <?php $ubi = $reg->ubication; ?>
+                          <option value="lima" <?php echo ($ubi == 'lima') ? 'selected' : '';?>>Lima, Perú</option>
+                          <option value="bogota" <?php echo ($ubi == 'bogota') ? 'selected' : '';?>>Bogotá, Colombia</option>
+                          <option value="quito" <?php echo ($ubi == 'quito') ? 'selected' : '';?>>Quito, Ecuador</option>
+                          <option value="bs_as" <?php echo ($ubi == 'bs_as') ? 'selected' : '';?>>Buenos Aires, Argentina</option>
+                          <option value="la_paz" <?php echo ($ubi == 'la_paz') ? 'selected' : '';?>>La Paz, Bolivia</option>
 
                         </select>
                         <img
@@ -170,7 +201,7 @@
                     </div>  
 
                     <div class="col-12 col-md-12 mt-2 mb-4">
-                      <input type="text" class="form-control input_text" id="validationServer01" placeholder="Región o cuidad" value="" required>
+                      <input type="text" class="form-control input_text" id="validationServer01" placeholder="Región o cuidad" value="<?php echo $reg->localidad;?>" required>
                     </div>
 
                     <div class="col-12 col-md-12 mt-2 mb-4">

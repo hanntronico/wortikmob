@@ -20,14 +20,18 @@
                   class="dashboard-1"
                   src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/dashboard-1@2x.svg"
                 />
-                <div class="dashboard poppins-medium-malachite-16px">Dashboard</div>
+                <div class="dashboard poppins-medium-malachite-16px">
+                  <a href="dashboard.php">Dashboard</a>
+                </div>
               </div>
               <div class="seccin-1">
                 <img
                   class="icon-user"
                   src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/user--1--1@2x.svg"
                 />
-                <div class="mi-perfil poppins-normal-storm-dust-16px">Mi perfil</div>
+                <div class="mi-perfil poppins-normal-storm-dust-16px">
+                  <a href="../miperfil.php">Mi perfil</a>
+                </div>
               </div>
               <div class="seccin-2">
                 <img

@@ -1,5 +1,6 @@
 .container-principal {
-  background-color: #cddcdc;
+  /*background-color: #cddcdc;*/
+  background-color: #E8F7F7;
   background-image: radial-gradient(
       at 50% 100%,
       rgba(255, 255, 255, 0.5) 0%,
@@ -99,6 +100,10 @@ header nav ul li a {
 
   header nav ul li {
     display: block;
+  }
+
+  .fondo_transparente{
+    background-color: rgba(255, 255, 255, 0.5);
   }
 }
 

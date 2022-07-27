@@ -1,3 +1,33 @@
+<?php 
+  session_start();
+  $_SESSION["idPosutlante"] = 1; 
+  include_once "conf/conf.php";
+
+  $sql = "SELECT id,
+                 name,
+                 surnames,
+                 birthdate,
+                 ubication,
+                 phone,
+                 email,
+                 cv,
+                 position,
+                 image
+          FROM profiles
+          WHERE id = 1";
+
+  $db = $dbh->prepare($sql);
+  $db->execute();
+  $data= Array();
+  $reg = $db->fetch(PDO::FETCH_OBJ);
+
+
+$date1 = new DateTime($reg->birthdate);
+$date2 = new DateTime("now");
+$diff = $date1->diff($date2);
+$anios = ($diff->y > 1) ? $diff->y : $diff->y;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,9 +52,6 @@
   <link rel="stylesheet" href="assets/menu/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
 
-
-
-
   <title>Document</title>
 </head>
 
@@ -42,7 +69,7 @@
 
 
 
-  <div class="container container-principal" style="border: 1px solid red;">
+  <div class="container container-principal">
 
 
       <div class="dashboard screen bg-transparent" style=" height: 70px; margin-left: -10px;">
@@ -149,7 +176,7 @@
       </div>
     </div>
     <div class="container mt-5">
-      <div class="tuCV border border-1 border-white rounded-4 mb-3">
+      <div class="tuCV border border-1 border-white rounded-4 mb-3 fondo_transparente">
         <h5 class="text-center mt-3">Tu CV</h5>
         <a href="javascript: alert('subir archivo');" style="text-decoration: none;">
           <div class="subirCV rounded-4 mb-4 w-75">
@@ -171,7 +198,7 @@
       </div>
     </div>
     <div class="container  mb-5">
-      <div class="tuCV border border-1 border-white rounded-4 mb-5">
+      <div class="tuCV border border-1 border-white rounded-4 mb-5 fondo_transparente">
         <div class="container">
           <div class="row" style="border: 0px solid red;">
             <div class="col-9" style="border: 0px solid green;">
@@ -180,37 +207,41 @@
             </div>
             <div class="col-3">
               <div class="bg-white rounded-3 icono-edit1 mt-3 ms-2" style="border: 0px solid green; margin-right: 80px;">
-                <img src="img/Edit 1.png" alt="">
+                <a href="assets/datos_personales.php">
+                  <img src="img/Edit 1.png" alt="">  
+                </a>
               </div>
             </div>
           </div>
-          <div class="fotoPerfil mb-5">
+          <div class="fotoPerfil mb-1">
             <div class="imagenPerfil">
+              <!-- <img class="text-center" src="img/Foto.png" alt=""> -->
               <img class="text-center" src="img/Foto.png" alt="">
               <img src="img/Editar.png" class="mx-5 w-50 editar-perfil" alt="">
             </div>
           </div>
           <div class="container name-perfil text-black-50 ">
-            <p class="fs-5 text-center ">
-              Patricia Castañeda Ramirez
+            <p class="fs-5 text-center" style="line-height : 25px;">
+              <?php echo $reg->name . " " . $reg->surnames; ?>
             </p>
             <p class="text-center">
-              IT Recruiter I Analista digital I
+              <?php echo $reg->position; ?>
             </p>
-            <p class="text-center">Proyectos digitales</p>
+            <!-- <p class="text-center">Proyectos digitales</p> -->
           </div>
-          <div class="container name-perfil text-black-50 mt-5 ">
+          <div class="container name-perfil text-black-50 mt-2">
             <p class=" text-center ">
-              24 años
+              <?php echo $anios;?> años
             </p>
             <p class="text-center fw-bold text-decoration-underline ">
-              956 585 632 <img class="ms-3" src="img/whatsapp-symbol 1.png" alt="">
+              <?php echo $reg->phone; ?>
+              <img class="ms-3" src="img/whatsapp-symbol 1.png" alt="">
             </p>
             <p class="text-center">
-              Usuario45@gmail.com
+              <?php echo $reg->email; ?>
             </p>
             <p class="text-center">
-              Lima, Lima, Perú
+             <?php echo $reg->$localidad; ?>
             </p>
           </div>
         </div>
@@ -219,7 +250,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="tuCV border border-1 border-white rounded-4 mb-5">
+      <div class="tuCV border border-1 border-white rounded-4 mb-5 fondo_transparente">
         <div class="container">
           <div class="row">
             <div class="col-9">
@@ -235,6 +266,7 @@
               <img src="img/Group 12822.png" alt="">
               <img src="img/Group 12823.png" alt="">
               <img class="imagen-237" src="img/Ellipse 237.png" alt="">
+              <!-- <img src="img/Ellipse 237.png" alt=""> -->
               <img class="" src="img/Ellipse 237 (1).png" alt="">
               <img src="img/Frame 3493.png" alt="">
             </div>
@@ -244,7 +276,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="tuCV border border-1 border-white rounded-4 mb-5">
+      <div class="tuCV border border-1 border-white rounded-4 mb-5 fondo_transparente">
         <div class="container">
           <div class="row">
             <div class="col-9">
@@ -268,7 +300,7 @@
       </div>
     </div>
     <div class="container">
-      <div class="tuCV border border-1 border-white rounded-4 mb-5">
+      <div class="tuCV border border-1 border-white rounded-4 mb-5 fondo_transparente">
         <div class="container">
           <div class="row">
             <div class="col-9">
