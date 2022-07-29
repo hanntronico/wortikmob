@@ -78,18 +78,17 @@
 
                     <div class="col-12 col-md-12 mb-4">
                       <div class="select_frame">
-                        <select class="form-control select_input" name="aptitudes" id="aptitudes"
-                         onchange="getSelectValue();">
-                          <option value="lenguajes">Lenguajes</option>
-                          <option value="frameworks">Frameworks</option>
-                          <option value="bases">Bases de Datos</option>
-                          <option value="des_movil">Desarrollo móvil</option>
-                          <option value="librerias">Librerías</option>
-                          <option value="herram_diseno">Herramientas de diseño</option>
-                          <option value="so">Sistemas Opertaivos</option>
-                          <option value="devops">DevOps</option>
-                          <option value="metodologias">Métodologias de trabajo</option>
-                          <option value="otros">Otros</option>
+                        <select class="form-control select_input" name="aptitudes" id="aptitudes">
+                          <option value="0">Lenguajes</option>
+                          <option value="Frameworks">Frameworks</option>
+                          <option value="Bases de Datos">Bases de Datos</option>
+                          <option value="Desarrollo móvil">Desarrollo móvil</option>
+                          <option value="Librerias">Librerías</option>
+                          <option value="Herramientas de diseño">Herramientas de diseño</option>
+                          <option value="Sistemas Opertaivos">Sistemas Opertaivos</option>
+                          <option value="DevOps">DevOps</option>
+                          <option value="Métodologias de trabajo">Métodologias de trabajo</option>
+                          <option value="Otros">Otros</option>
                         </select>
                         <img
                         class="chevron-down-1"
@@ -109,13 +108,12 @@
 
                     <div class="col-12 col-md-12 mb-4">
                       <div class="select_frame">
-                        <select class="form-control select_input" name="aptitudes" id="aptitudesNivel"
-                         onchange="getSelectValue();">
+                        <select class="form-control select_input" name="aptitudes" id="aptitudesNivel">
                           <option value="0">Nivel</option>
-                          <option value="basico">Básico</option>
-                          <option value="intermedio">Intermedio</option>
-                          <option value="avanzado">Avanzado</option>
-                          <option value="experto">Experto</option>
+                          <option value="Básico">Básico</option>
+                          <option value="Intermedio">Intermedio</option>
+                          <option value="Avanzado">Avanzado</option>
+                          <option value="Experto">Experto</option>
                         </select>
                         <img
                         class="chevron-down-1"
@@ -136,8 +134,11 @@
 
                   <div class="form-row mt-2">
                     
-                    <div class="col-12 col-md-12 mb-4">
-                     <span style="color: #9F9F9F; font-size: 12px; font-weight: 400;">Aún no se ha agregado nada.</span> 
+                    <div class="col-12 col-md-12 mb-4" id="contenedor">
+                     <span class=""
+                     style="color: #9F9F9F; font-size: 12px; font-weight: 400;" id="resultado">
+                     Aún no se ha agregado nada.
+                    </span> 
                     </div>
 
                   </div>
@@ -153,19 +154,74 @@
         </div>
       </div>
     </div>
+<style>
+  .etiqueta{
+    color:#339698 !important;
+    background: #F5F5F5;
+    padding: 9px;
+    border-radius: 12px;
+    margin-right: 12px;
+    display: inline-block;
+    margin-top: 12px;
+  }
 
+
+</style>
     <script>
-      function getSelectValue(){
-        var selectValue = document.getElementById("aptitudes").value;
-        var selectValue2 = document.getElementById("aptitudesNivel").value;
-        var resultado = selectValue + "" + selectValue2
-        console.log(resultado );
+      window.onload = function() {
+        window.datos = [];
+      } 
 
-        IdDelSpan.innerHTML = resultado;
+      document.getElementById('agregar').addEventListener('click',function(e){
+        e.preventDefault();
+        let selectLenguaje = document.getElementById ('aptitudes').value;
+        let selectNivel = document.getElementById ('aptitudesNivel').value;
+        let resultadoValor = selectLenguaje + " / " + selectNivel;
+
+        //document.getElementById('resultado').innerHTML = resultadoValor;
+
+      
 
 
+        datos.push(resultadoValor);
+
+        mostraInfo();
+        limpiarCampos();
+
+    
+
+      });
+
+      function mostraInfo() {
+        let resultado = document.getElementById('contenedor');
+
+        resultado.innerHTML = '';
+
+        for (const dato of datos) {
+          let valor = document.createElement('span');
+          valor.innerHTML = dato;
+          valor.classList.add("etiqueta");
+          resultado.appendChild(valor);
+        }
       }
-      getSelectValue();
+
+      function limpiarCampos(){
+        $('#aptitudes')[0].selectedIndex = 0;
+        $('#aptitudesNivel')[0].selectedIndex = 0;
+      }
+
+
+      // function getSelectValue(){
+      //   var selectValue = document.getElementById("aptitudes").value;
+      //   var selectValue2 = document.getElementById("aptitudesNivel").value;
+      //   var resultado = selectValue + "" + selectValue2
+      //   console.log(resultado );
+
+      //   IdDelSpan.innerHTML = resultado;
+
+
+      // }
+      // getSelectValue();
     </script>
 
     <!-- Bootstrap core JavaScript
