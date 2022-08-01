@@ -79,7 +79,7 @@
                     <div class="col-12 col-md-12 mb-4">
                       <div class="select_frame">
                         <select class="form-control select_input" name="aptitudes" id="aptitudes">
-                          <option value="0">Lenguajes</option>
+                          <option value="0">Lenguajes y frameworks</option>
                           <option value="Frameworks">Frameworks</option>
                           <option value="Bases de Datos">Bases de Datos</option>
                           <option value="Desarrollo móvil">Desarrollo móvil</option>
@@ -143,7 +143,14 @@
 
                   </div>
 
+                  
                 </form>
+                <div class="col-12 col-md-12 mt-2 mb-4">
+                    <button type="submit" class="btn btn-primary btn-lg|btn-sm"
+                     style="border: none; border-radius: 16px; background: linear-gradient(270deg, #339698 0%, #83C389 100%); font-size: 12px; padding: 8px 24px;">
+                     Guardar
+                    </button>
+                  </div>
 
               </div>
 
@@ -156,15 +163,17 @@
     </div>
 <style>
   .etiqueta{
-    color:#339698 !important;
+    /* color:#339698 !important; */
     background: #F5F5F5;
     padding: 9px;
-    border-radius: 12px;
+    border-radius: 18px;
     margin-right: 12px;
     display: inline-block;
     margin-top: 12px;
   }
-
+.colorTexto{
+  color: #339698;
+}
 
 </style>
     <script>
@@ -176,19 +185,17 @@
         e.preventDefault();
         let selectLenguaje = document.getElementById ('aptitudes').value;
         let selectNivel = document.getElementById ('aptitudesNivel').value;
-        let resultadoValor = selectLenguaje + " / " + selectNivel;
-
-        //document.getElementById('resultado').innerHTML = resultadoValor;
-
-      
-
+        let barra = '/';
+        let colorSelectNivel = '<span class ="colorTexto">' + selectNivel + '</span>'
+        let colorBarra = '<span class ="colorTexto">' + barra + '</span>'
+        let resultadoValor = selectLenguaje  + colorBarra + colorSelectNivel;
+       
 
         datos.push(resultadoValor);
 
         mostraInfo();
         limpiarCampos();
 
-    
 
       });
 
@@ -210,18 +217,6 @@
         $('#aptitudesNivel')[0].selectedIndex = 0;
       }
 
-
-      // function getSelectValue(){
-      //   var selectValue = document.getElementById("aptitudes").value;
-      //   var selectValue2 = document.getElementById("aptitudesNivel").value;
-      //   var resultado = selectValue + "" + selectValue2
-      //   console.log(resultado );
-
-      //   IdDelSpan.innerHTML = resultado;
-
-
-      // }
-      // getSelectValue();
     </script>
 
     <!-- Bootstrap core JavaScript
