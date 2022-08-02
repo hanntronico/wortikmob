@@ -79,8 +79,8 @@
                     <div class="col-12 col-md-12 mb-4">
                       <div class="select_frame">
                         <select class="form-control select_input" name="aptitudes" id="aptitudes">
-                          <option value="0">Lenguajes y frameworks</option>
-                          <option value="Frameworks">Frameworks</option>
+                          <option value="0">Seleccione una aptitud</option>
+                          <option value="Lenguajes y Frameworks">Lenguajes y Frameworks</option>
                           <option value="Bases de Datos">Bases de Datos</option>
                           <option value="Desarrollo móvil">Desarrollo móvil</option>
                           <option value="Librerias">Librerías</option>
@@ -98,7 +98,7 @@
                     </div>
 
                     <div class="busqueda col-12 col-md-12 mb-4">
-                      <input type="text" class="txt_busqueda" placeholder="Buscar aptitud" name="" id="">
+                      <input type="text" class="txt_busqueda" placeholder="Buscar aptitud" name="" id="buscar">
                       <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M8 15.5C11.866 15.5 15 12.366 15 8.5C15 4.63401 11.866 1.5 8 1.5C4.13401 1.5 1 4.63401 1 8.5C1 12.366 4.13401 15.5 8 15.5Z" stroke="#339698" stroke-width="2" stroke-linecap="round"/>
                         <path d="M13 14.5L16 17.5" stroke="#339698" stroke-width="2" stroke-linecap="round"/>
@@ -109,7 +109,7 @@
                     <div class="col-12 col-md-12 mb-4">
                       <div class="select_frame">
                         <select class="form-control select_input" name="aptitudes" id="aptitudesNivel">
-                          <option value="0">Nivel</option>
+                          <option value="0">Seleccione nivel</option>
                           <option value="Básico">Básico</option>
                           <option value="Intermedio">Intermedio</option>
                           <option value="Avanzado">Avanzado</option>
@@ -130,6 +130,7 @@
                     </div>
 
                   </div>
+
 
 
                   <div class="form-row mt-2">
@@ -155,15 +156,11 @@
               </div>
 
           </div>
-
-
-
         </div>
       </div>
     </div>
 <style>
   .etiqueta{
-    /* color:#339698 !important; */
     background: #F5F5F5;
     padding: 9px;
     border-radius: 18px;
@@ -185,10 +182,15 @@
         e.preventDefault();
         let selectLenguaje = document.getElementById ('aptitudes').value;
         let selectNivel = document.getElementById ('aptitudesNivel').value;
+        let buscarLenguaje = document.getElementById ('buscar').value;
         let barra = '/';
+       
+
+
         let colorSelectNivel = '<span class ="colorTexto">' + selectNivel + '</span>'
         let colorBarra = '<span class ="colorTexto">' + barra + '</span>'
-        let resultadoValor = selectLenguaje  + colorBarra + colorSelectNivel;
+        let resultadoValor = buscarLenguaje  + colorBarra + colorSelectNivel;
+        
        
 
         datos.push(resultadoValor);
@@ -204,11 +206,31 @@
 
         resultado.innerHTML = '';
 
+        let selectLenguaje = document.getElementById ('aptitudes').value;
+
+
         for (const dato of datos) {
+          let titulo = document.createElement('p');
+          
+          if (titulo == selectLenguaje){
+            
+            titulo.innerHTML = selectLenguaje;
+
+          }
+
+          else {
+            
+          }
+
+
           let valor = document.createElement('span');
           valor.innerHTML = dato;
+
           valor.classList.add("etiqueta");
+
+          resultado.appendChild(titulo);
           resultado.appendChild(valor);
+
         }
       }
 
@@ -217,6 +239,7 @@
         $('#aptitudesNivel')[0].selectedIndex = 0;
       }
 
+    
     </script>
 
     <!-- Bootstrap core JavaScript
