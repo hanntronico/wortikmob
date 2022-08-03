@@ -469,13 +469,15 @@
                 <div class="info-1">
                   <div class="aviso poppins-medium-malachite-16px">Postulaciones</div>
                   <p class="aviso-1 poppins-light-storm-dust-12px">Avanza en los procesos de tu empleo deseado.</p>
-                  <div class="ver-mas">
+                <a href="./postulaciones.php">
+                <div class="ver-mas">
                     <div class="ver poppins-semi-bold-malachite-12px">Ver</div>
                     <img
                       class="add-stroke-1"
                       src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/add-stroke-1@2x.svg"
                     />
                   </div>
+                </a>
                 </div>
               </div>
               <div class="overlap-group2-1">

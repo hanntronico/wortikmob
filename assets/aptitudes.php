@@ -191,7 +191,17 @@
         let colorBarra = '<span class ="colorTexto">' + barra + '</span>'
         let resultadoValor = buscarLenguaje  + colorBarra + colorSelectNivel;
         
-       
+       if (selectLenguaje == null || selectLenguaje == 0 ){
+        return false;
+       }
+
+       if( buscarLenguaje == null || buscarLenguaje.length == 0 || /^\s+$/.test(buscarLenguaje ) ) {
+           return false;
+        }
+
+        if (selectNivel == null || selectNivel == 0 ){
+        return false;
+       }
 
         datos.push(resultadoValor);
 
@@ -211,17 +221,8 @@
 
         for (const dato of datos) {
           let titulo = document.createElement('p');
-          
-          if (titulo == selectLenguaje){
-            
+      
             titulo.innerHTML = selectLenguaje;
-
-          }
-
-          else {
-            
-          }
-
 
           let valor = document.createElement('span');
           valor.innerHTML = dato;
@@ -237,8 +238,9 @@
       function limpiarCampos(){
         $('#aptitudes')[0].selectedIndex = 0;
         $('#aptitudesNivel')[0].selectedIndex = 0;
+        
       }
-
+          
     
     </script>
 

@@ -21,7 +21,7 @@
                   src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/dashboard-1@2x.svg"
                 />
                 <div class="dashboard poppins-medium-malachite-16px">
-                  <a href="dashboard.php">Dashboard</a>
+                  <a href="./dashboard.php">Dashboard</a>
                 </div>
               </div>
               <div class="seccin-1">
@@ -39,7 +39,7 @@
                   src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/user--1--1@2x.svg"
                 />
                 <div class="postulaciones poppins-normal-storm-dust-16px">
-                  <a href="postulaciones.php">Postulaciones</a>
+                  <a href="./postulaciones.php">Postulaciones</a>
                 </div>
               </div>
               <div class="seccin-3">

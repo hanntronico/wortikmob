@@ -265,7 +265,9 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
             </div>
             <div class="col-3">
               <div class="bg-white rounded-3 icono-edit1 mt-3 ms-2" style="border: 0px solid green; margin-right: 80px;">
-                <img src="img/Edit 1.png" alt="">
+               <a href="./assets/redes_proyectos.php">
+               <img src="img/Edit 1.png" alt="">
+               </a>
               </div>
             </div>
             <div class="container iconos-redes">
@@ -474,7 +476,9 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
             </div>
             <div class="col-2">
               <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
+                <a href="./assets/idiomas.php">
                 <img src="img/Edit 1.png" alt="">
+                </a>
               </div>
             </div>
           </div>
