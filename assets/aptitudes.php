@@ -159,20 +159,35 @@
         </div>
       </div>
     </div>
-<style>
-  .etiqueta{
-    background: #F5F5F5;
-    padding: 9px;
-    border-radius: 18px;
-    margin-right: 12px;
-    display: inline-block;
-    margin-top: 12px;
-  }
-.colorTexto{
-  color: #339698;
-}
+    <style>
+      .etiqueta{
+        background: #F5F5F5;
+        padding: 9px;
+        border-radius: 18px;
+        margin-right: 12px;
+        display: inline-block;
+        margin-top: 12px;
+      }
+    .colorTexto{
+      color: #339698;
+    }
+    .autocomplete-items {
+      position: absolute;
+      border-bottom: none;
+      border-top: none;
+      z-index: 99;
+      top: 100%;
+      left: 0;
+      right: 0;
+    }
+    .autocomplete-items div {
+      padding: 10px;
+      cursor: pointer;
+      background-color: #F5F5F5;
+      border-bottom: 1px solid #d4d4d4;
+    }
 
-</style>
+    </style>
     <script>
       window.onload = function() {
         window.datos = [];
@@ -185,29 +200,26 @@
         let buscarLenguaje = document.getElementById ('buscar').value;
         let barra = '/';
        
-
-
+        if (selectLenguaje == null || selectLenguaje == 0 ){
+         return false;
+        }
+ 
+        if( buscarLenguaje == null || buscarLenguaje.length == 0 || /^\s+$/.test(buscarLenguaje ) ) {
+            return false;
+         }
+ 
+         if (selectNivel == null || selectNivel == 0 ){
+         return false;
+        }
+       
         let colorSelectNivel = '<span class ="colorTexto">' + selectNivel + '</span>'
         let colorBarra = '<span class ="colorTexto">' + barra + '</span>'
         let resultadoValor = buscarLenguaje  + colorBarra + colorSelectNivel;
         
-       if (selectLenguaje == null || selectLenguaje == 0 ){
-        return false;
-       }
-
-       if( buscarLenguaje == null || buscarLenguaje.length == 0 || /^\s+$/.test(buscarLenguaje ) ) {
-           return false;
-        }
-
-        if (selectNivel == null || selectNivel == 0 ){
-        return false;
-       }
-
         datos.push(resultadoValor);
 
         mostraInfo();
         limpiarCampos();
-
 
       });
 
@@ -217,7 +229,6 @@
         resultado.innerHTML = '';
 
         let selectLenguaje = document.getElementById ('aptitudes').value;
-
 
         for (const dato of datos) {
           let titulo = document.createElement('p');
@@ -238,10 +249,110 @@
       function limpiarCampos(){
         $('#aptitudes')[0].selectedIndex = 0;
         $('#aptitudesNivel')[0].selectedIndex = 0;
-        
+        $('#buscar').val('');
       }
+      
+      // Autocompletado input buscar
+
+      function autocomplete(inp, arr) {
+        var currentFocus;
+        inp.addEventListener("input", function(e) {
+            var a, b, i, val = this.value;
+            closeAllLists();
+
+            if (!val) { return false;}
+            currentFocus = -1;
+
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+
+            this.parentNode.appendChild(a);
+            
+            for (i = 0; i < arr.length; i++) {
+
+              if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+
+                b = document.createElement("DIV");
+
+                b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                b.innerHTML += arr[i].substr(val.length);
+
+                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+
+                b.addEventListener("click", function(e) {
+
+                  inp.value = this.getElementsByTagName("input")[0].value;
+
+                  closeAllLists();
+                });
+                a.appendChild(b);
+              }
+            }
+        });
+
+        inp.addEventListener("keydown", function(e) {
+            var x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 40) {
+
+              currentFocus++;
+
+              addActive(x);
+            } else if (e.keyCode == 38) { 
+
+              currentFocus--;
+
+              addActive(x);
+            } else if (e.keyCode == 13) {
+
+              e.preventDefault();
+              if (currentFocus > -1) {
+
+                if (x) x[currentFocus].click();
+              }
+            }
+        });
+        function addActive(x) {
+
+          if (!x) return false;
+
+          removeActive(x);
+          if (currentFocus >= x.length) currentFocus = 0;
+          if (currentFocus < 0) currentFocus = (x.length - 1);
+
+          x[currentFocus].classList.add("autocomplete-active");
+        }
+        function removeActive(x) {
+
+          for (var i = 0; i < x.length; i++) {
+            x[i].classList.remove("autocomplete-active");
+          }
+        }
+        function closeAllLists(elmnt) {
+
+          var x = document.getElementsByClassName("autocomplete-items");
+          for (var i = 0; i < x.length; i++) {
+            if (elmnt != x[i] && elmnt != inp) {
+              x[i].parentNode.removeChild(x[i]);
+            }
+          }
+        }
+
+        document.addEventListener("click", function (e) {
+            closeAllLists(e.target);
+        });
+      }
+
+      var lenguajes = ["JAVA","PHP","javascript","C#","Kotlin","Swift","Phyton","MySQL","PostgreSQL","Microsoft SQL Server",
+      "Oracle","MongoDB","Angular","Laravel","Xamarin","Jquery"," Mootols","Chart.js","MathJS","matplotlib","Numpy",
+      "Pandas","iostream","cstring","PHPUnit","Twig","Oauth 2.0","Symfony Console Component","Psr/log","Figma",
+      "Balsamiq","Sketch"," Microsoft Windows","UNIX","Linux","MAC OS","iOS","Android","Solaris","Microsoft Azure",
+      "Metodología Scrum","Metodología Kanban","Metodología Scrumban","Metodología Six Sigma"];
+
+
+      autocomplete(document.getElementById("buscar"), lenguajes);
           
-    
     </script>
 
     <!-- Bootstrap core JavaScript
