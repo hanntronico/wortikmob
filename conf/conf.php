@@ -9,7 +9,7 @@ header("Pragma: no-cache");
 
 define('DB_HOST', 'localhost');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', ''); // pon la clave del root de tu phpmyadmin no tengo
+define('DB_PASSWORD', '*274053*'); // pon la clave del root de tu phpmyadmin no tengo
 define('DB_NAME', 'bdwortika');
 // define('ENLACE_SERVIDOR', 'C:/xampp/htdocs/wortikmob/');
 define('ENLACE_SERVIDOR', 'C:/laragon/www/wortikmob/');

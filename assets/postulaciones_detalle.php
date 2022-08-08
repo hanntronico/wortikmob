@@ -34,7 +34,8 @@
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
 
     <link rel="stylesheet" type="text/css" href="dashboard.css" />
-    <link rel="stylesheet" type="text/css" href="postulaciones.css" />
+    <link rel="stylesheet" type="text/css" href="postulaciones_detalle.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="postulaciones.css" /> -->
     <!-- <link rel="stylesheet" type="text/css" href="miperfil.css" /> -->
 
 
@@ -60,8 +61,8 @@
     <input type="hidden" id="anPageName" name="page" value="postulaciones" />
 
     <div class="container-center-horizontal">
-      <div class="tus-postulaciones screen">
-        <div class="overlap-group4">
+      <div class="mensajes screen">
+        <div class="overlap-group5">
           <div class="overlap-group2">
             <div class="overlap-group1">
               <div class="azul"></div>
@@ -72,7 +73,60 @@
             </div>
             <div class="azul-2"></div>
           </div>
-          <div class="frame-3550">
+
+          <div class="frame-3551">
+            <div class="postulaciones poppins-normal-storm-dust-12px">Postulaciones /</div>
+            <div class="programador-fullstack poppins-normal-malachite-12px">Programador Fullstack</div>
+          </div>
+
+          <div class="frame-3550 frame-3571">
+            <h1 class="aviso poppins-semi-bold-storm-dust-24px">Tus postulaciones</h1>
+            <div class="frame-3319 poppins-normal-storm-dust-12px">
+              <div class="frame-355">
+                <div class="aviso-1">Aviso</div>
+                <p class="programador-fullstac">
+                  <span class="poppins-normal-storm-dust-12px">Programador Fullstack<br /></span>
+                  <span class="poppins-semi-bold-storm-dust-12px">Samsung<br /></span>
+                  <span class="poppins-normal-storm-dust-12px">
+                    Lima, San Isidro<br />Creado: 22/Ene/2021<br />Oferta confidencial
+                  </span>
+                </p>
+              </div>
+              <div class="frame-355">
+                <div class="estadsticas">Estadísticas</div>
+                <p class="visualizacines-958">
+                  Visualizaciónes: 958<br />Total candidatos: 900<br />Activos: 30<br />Descartados: 47
+                </p>
+              </div>
+              <div class="frame-3555">
+                <div class="tareas poppins-normal-storm-dust-12px">Tareas</div>
+                <div class="tipo"><div class="completar poppins-medium-storm-dust-12px">Completar</div></div>
+              </div>
+              <div class="frame-355-1">
+                <div class="estados poppins-normal-storm-dust-12px">Estados</div>
+                <div class="frame-3339">
+                  <div class="solicitud-enviada poppins-medium-storm-dust-12px">Solicitud enviada</div>
+                  <div class="frame-3340">
+                    <div class="frame-3341"></div>
+                    <div class="frame-334"></div>
+                    <div class="frame-334"></div>
+                    <div class="frame-334"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="frame-355-1">
+                <div class="mensajes-1 poppins-normal-storm-dust-12px">Mensajes</div>
+                <div class="notificaciones">
+                  <div class="frame-2963">
+                    <div class="nuevo-1"><div class="number-1 poppins-semi-bold-white-12px">01</div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+<!--           <div class="frame-3550">
             <div class="ttulo">
               <h1 class="aviso-1 poppins-semi-bold-storm-dust-24px">Tus postulaciones</h1>
               <p class="aviso-2 poppins-light-storm-dust-12px">Mantente al tanto sobre tu proceso</p>
@@ -151,7 +205,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
 
 <!--             <a class="nav-link" data-widget="pushmenu" href="#" role="button">

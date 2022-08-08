@@ -115,3 +115,11 @@
   font-style: normal;
   font-weight: 400;
 }
+
+.poppins-normal-malachite-12px {
+  color: var(--malachite);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
