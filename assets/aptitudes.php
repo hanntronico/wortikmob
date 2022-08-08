@@ -187,6 +187,13 @@
       border-bottom: 1px solid #d4d4d4;
     }
 
+    .btnEliminar{
+      font-size: 14px;
+      margin-left: 5px;
+      font-weight: 500;
+      color: #339698;
+    }
+
     </style>
     <script>
       window.onload = function() {
@@ -214,14 +221,30 @@
        
         let colorSelectNivel = '<span class ="colorTexto">' + selectNivel + '</span>'
         let colorBarra = '<span class ="colorTexto">' + barra + '</span>'
-        let resultadoValor = buscarLenguaje  + colorBarra + colorSelectNivel;
+        let btnEliminar = '<span class="btnEliminar">X</span>';
+        let resultadoValor = buscarLenguaje  + colorBarra + colorSelectNivel + " " + btnEliminar;
+
+      
+
         
         datos.push(resultadoValor);
 
         mostraInfo();
         limpiarCampos();
+        eliminarEtiqueta();
 
       });
+      function eliminarEtiqueta(){
+
+        if ($('.btnEliminar').length) {
+
+          $('.btnEliminar').on("click", function(e){
+          e.preventDefault();
+          console.log(datos.indexOf());
+        });
+        }
+
+      }
 
       function mostraInfo() {
         let resultado = document.getElementById('contenedor');

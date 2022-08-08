@@ -395,7 +395,7 @@
           </div>
 
           <div class="align-justify-2">
-            <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+            <a class="nav-link" data-widget="pushmenu" id="btnMenu" href="#" role="button">
               <img src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/align-justify-2@2x.svg">
             </a>
           </div>
@@ -553,6 +553,5 @@
     <script src="menu/plugins/jquery/jquery.min.js"></script>
     <script src="menu/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
-
   </body>
 </html>

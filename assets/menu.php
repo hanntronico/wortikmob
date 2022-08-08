@@ -5,7 +5,7 @@
           src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62aa83f4d4ab18fcfd2ee297/img/group@2x.svg"
         />
         <img
-          class="close-2-1"
+          class="close-2-1" id ="btnClose"
           src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62aa83f4d4ab18fcfd2ee297/img/close--2--1@2x.svg"
         />
         <img
@@ -97,3 +97,4 @@
 
   </div>
 </div>
+
