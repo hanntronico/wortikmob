@@ -870,14 +870,14 @@
   white-space: nowrap;
 }
 
-.menu-dashboard .frame-3539 {
+/*.menu-dashboard .frame-3539 {
   height: 121px;
   left: 0;
   position: absolute;
   top: 333px;
   width: 193px;
 }
-
+*/
 .menu-dashboard .correo {
   height: 39px;
   left: 0;
@@ -889,21 +889,11 @@
 .menu-dashboard .name {
   left: 16px;
   letter-spacing: 0;
-  line-height: 20.8px;
-  position: absolute;
+  /*line-height: 20.8px;*/
+  line-height: 20px;
+  position: relative;
   text-align: center;
   top: -1px;
-  white-space: nowrap;
-  width: 145px;
-}
-
-.menu-dashboard .rodrigo44gmailcom {
-  left: 16px;
-  letter-spacing: 0;
-  line-height: 15.6px;
-  position: absolute;
-  text-align: center;
-  top: 21px;
   white-space: nowrap;
   width: 145px;
 }
@@ -920,18 +910,22 @@
   left: 24px;
   letter-spacing: 0;
   line-height: 20.8px;
-  position: absolute;
+  /*position: absolute;*/
+  position: relative;
   top: 7px;
   white-space: nowrap;
+  margin-top: 8px;
 }
 
 .menu-dashboard .cerrar-sesin {
   left: 24px;
   letter-spacing: 0;
   line-height: 20.8px;
-  position: absolute;
-  top: 44px;
+  /*position: absolute;*/
+  position: relative;
+  /*top: 44px;*/
   white-space: nowrap;
+  margin-top: 24px;
 }
 
 /* screen - mi-perfil */
@@ -1717,13 +1711,13 @@
   width: 66px;
 }
 
-.mi-perfil .frame-3539 {
+/*.mi-perfil .frame-3539 {
   height: 32px;
   left: 0;
   position: absolute;
   top: 40px;
   width: 205px;
-}
+}*/
 
 .mi-perfil .frame-3026-1 {
   background-color: var(--coconut);
@@ -2746,8 +2740,10 @@
   height: 121px;
   left: 0;
   position: absolute;
-  top: 333px;
+  /*top: 333px;*/
+  top: 350px;
   width: 193px;
+  /*border: 1px solid red;*/
 }
 
 .menu-dashboard .correo {
@@ -2758,7 +2754,7 @@
   width: 161px;
 }
 
-.menu-dashboard .name {
+/*.menu-dashboard .name {
   left: 16px;
   letter-spacing: 0;
   line-height: 20.8px;
@@ -2767,15 +2763,15 @@
   top: -1px;
   white-space: nowrap;
   width: 145px;
-}
+}*/
 
-.menu-dashboard .rodrigo44gmailcom {
+.menu-dashboard .text_correo {
   left: 16px;
   letter-spacing: 0;
   line-height: 15.6px;
-  position: absolute;
+  position: relative;
   text-align: center;
-  top: 21px;
+  /*top: 30px;*/
   white-space: nowrap;
   width: 145px;
 }
@@ -2788,23 +2784,23 @@
   width: 193px;
 }
 
-.menu-dashboard .mi-cuenta {
+/*.menu-dashboard .mi-cuenta {
   left: 24px;
   letter-spacing: 0;
   line-height: 20.8px;
   position: absolute;
   top: 7px;
   white-space: nowrap;
-}
+}*/
 
-.menu-dashboard .cerrar-sesin {
+/*.menu-dashboard .cerrar-sesin {
   left: 24px;
   letter-spacing: 0;
   line-height: 20.8px;
   position: absolute;
   top: 44px;
   white-space: nowrap;
-}
+}*/
 
 .input_text {
   border-radius: 0px !important;

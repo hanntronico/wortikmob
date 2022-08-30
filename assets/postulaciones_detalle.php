@@ -24,6 +24,40 @@
   $data= Array();
   $reg = $db->fetch(PDO::FETCH_OBJ);
 
+
+    $sql2 = "SELECT J.*, C.* 
+           FROM JOBS J 
+           INNER JOIN JOBS_PROFILES JP 
+           ON J.id = JP.id_job 
+           INNER JOIN PROFILES P 
+           ON jp.id_profile = P.id 
+           INNER JOIN COMPANIES C 
+           ON J.company_id = C.id
+           WHERE P.id = " . $_SESSION["idPosutlante"] . " AND J.ID = " . $_GET["id"];
+  $db = $dbh->prepare($sql2);
+  $db->execute();
+  $data= Array();
+  $regDatos = $db->fetch(PDO::FETCH_OBJ);
+
+  // echo "<pre>";
+  // print_r($reg);
+  // echo "</pre>";
+  // exit();
+  
+  $createDate = ( !is_null($regDatos->created_at) ) ? date("d/m/Y", strtotime( $regDatos->created_at )) : '';
+
+
+  $sql3 = "select count(*) as total from jobs_profiles where id_job = " . $_GET["id"];
+  $db3 = $dbh->prepare($sql3);
+  $db3->execute();
+  $totalCandidatos = $db3->fetch(PDO::FETCH_OBJ);
+
+  // echo "<pre>";
+  // print_r($totaCandidatos);
+  // echo "</pre>";
+  // exit();
+  
+
 ?>
 
 <!DOCTYPE html>
@@ -85,17 +119,20 @@
               <div class="frame-355">
                 <div class="aviso-1">Aviso</div>
                 <p class="programador-fullstac">
-                  <span class="poppins-normal-storm-dust-12px">Programador Fullstack<br /></span>
-                  <span class="poppins-semi-bold-storm-dust-12px">Samsung<br /></span>
+                  <span class="poppins-normal-storm-dust-12px"> <?php echo $regDatos->name; ?> <br /></span>
+                  <span class="poppins-semi-bold-storm-dust-12px"><?php echo $regDatos->business_name; ?><br /></span>
                   <span class="poppins-normal-storm-dust-12px">
-                    Lima, San Isidro<br />Creado: 22/Ene/2021<br />Oferta confidencial
+                    Lima, San Isidro<br />Creado: <?php echo $createDate; ?><br />Oferta confidencial
                   </span>
                 </p>
               </div>
               <div class="frame-355">
                 <div class="estadsticas">Estadísticas</div>
                 <p class="visualizacines-958">
-                  Visualizaciónes: 958<br />Total candidatos: 900<br />Activos: 30<br />Descartados: 47
+                  Visualizaciónes: 958<br />
+                  Total candidatos: <?php echo $totalCandidatos->total; ?> <br />
+                  Activos: 30
+                  <br />Descartados: 47
                 </p>
               </div>
               <div class="frame-3555">
@@ -125,92 +162,6 @@
             </div>
           </div>
 
-
-<!--           <div class="frame-3550">
-            <div class="ttulo">
-              <h1 class="aviso-1 poppins-semi-bold-storm-dust-24px">Tus postulaciones</h1>
-              <p class="aviso-2 poppins-light-storm-dust-12px">Mantente al tanto sobre tu proceso</p>
-            </div>
-            <div class="frame-3426">
-              <div class="frame-3427">
-                <div class="sobre-el-aviso">
-                  <div class="aviso poppins-medium-storm-dust-16px">Programador Fullstack</div>
-                  <div class="datos">
-                    <div class="lugar poppins-semi-bold-storm-dust-12px">Samsung</div>
-                    <div class="lugar-1 poppins-normal-storm-dust-12px">Lima, San Isidro</div>
-                    <div class="creacin poppins-normal-storm-dust-12px">Creado: 22/Ene/2021</div>
-                    <div class="creacin-1 poppins-normal-storm-dust-12px">Oferta confidencial</div>
-                  </div>
-                </div>
-                <div class="ver-mas">
-                  <div class="ver poppins-semi-bold-malachite-12px">Ver</div>
-                  <img
-                    class="add-stroke-1"
-                    src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/add-stroke-1@2x.svg"
-                  />
-                </div>
-              </div>
-              <div class="frame-344">
-                <div class="sobre-el-aviso">
-                  <div class="aviso poppins-medium-storm-dust-16px">Programador Fullstack</div>
-                  <div class="datos">
-                    <div class="lugar poppins-semi-bold-storm-dust-12px">Samsung</div>
-                    <div class="lugar-1 poppins-normal-storm-dust-12px">Lima, San Isidro</div>
-                    <div class="creacin poppins-normal-storm-dust-12px">Creado: 22/Ene/2021</div>
-                    <div class="creacin-1 poppins-normal-storm-dust-12px">Oferta confidencial</div>
-                  </div>
-                </div>
-                <div class="ver-mas">
-                  <div class="ver-1 poppins-semi-bold-malachite-12px">Ver</div>
-                  <img
-                    class="add-stroke-1"
-                    src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/add-stroke-1@2x.svg"
-                  />
-                </div>
-              </div>
-              <div class="frame-344">
-                <div class="sobre-el-aviso">
-                  <div class="aviso poppins-medium-storm-dust-16px">Programador Fullstack</div>
-                  <div class="datos">
-                    <div class="lugar poppins-semi-bold-storm-dust-12px">Samsung</div>
-                    <div class="lugar-1 poppins-normal-storm-dust-12px">Lima, San Isidro</div>
-                    <div class="creacin poppins-normal-storm-dust-12px">Creado: 22/Ene/2021</div>
-                    <div class="creacin-1 poppins-normal-storm-dust-12px">Oferta confidencial</div>
-                  </div>
-                </div>
-                <div class="ver-mas">
-                  <div class="ver-2 poppins-semi-bold-malachite-12px">Ver</div>
-                  <img
-                    class="add-stroke-1"
-                    src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/add-stroke-1@2x.svg"
-                  />
-                </div>
-              </div>
-              <div class="frame-344">
-                <div class="sobre-el-aviso">
-                  <div class="aviso poppins-medium-storm-dust-16px">Programador Fullstack</div>
-                  <div class="datos">
-                    <div class="lugar poppins-semi-bold-storm-dust-12px">Samsung</div>
-                    <div class="lugar-1 poppins-normal-storm-dust-12px">Lima, San Isidro</div>
-                    <div class="creacin poppins-normal-storm-dust-12px">Creado: 22/Ene/2021</div>
-                    <div class="creacin-1 poppins-normal-storm-dust-12px">Oferta confidencial</div>
-                  </div>
-                </div>
-                <div class="ver-mas">
-                  <div class="ver-3 poppins-semi-bold-malachite-12px">Ver</div>
-                  <img
-                    class="add-stroke-1"
-                    src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/add-stroke-1@2x.svg"
-                  />
-                </div>
-              </div>
-            </div>
-          </div> -->
-
-
-<!--             <a class="nav-link" data-widget="pushmenu" href="#" role="button">
-              <img src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/align-justify-2@2x.svg">
-            </a> -->
 
             <a class="nav-link" data-widget="pushmenu" href="#" role="button">
           <img

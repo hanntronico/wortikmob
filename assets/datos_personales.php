@@ -153,10 +153,10 @@
                       <div class="select_frame">
                         <input type="text" class="form-control input_text" name="telefono" id="telefono" value="<?php echo $reg->phone;?>">
                       </div>
-                      <img
+<!--                       <img
                           class="icon_info"
                           src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/629768465aeed9a731c2eb83/img/info-4@2x.svg"
-                      />
+                      /> -->
                     </div>
 
                     <div class="col-12 col-md-12 mb-4">

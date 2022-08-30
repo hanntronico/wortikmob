@@ -1,0 +1,518 @@
+/* screen - mensajes-5 */
+
+.mensajes-5 {
+  background-color: var(--hint-of-red);
+  height: 568px;
+  overflow: hidden;
+  position: relative;
+  width: 320px;
+}
+
+.mensajes-5 .nuevo {
+  background-color: var(--malachite);
+  border-radius: 16px;
+  height: 30px;
+  left: 11px;
+  position: absolute;
+  top: 30px;
+  width: 30px;
+}
+
+.mensajes-5 .overlap-group3 {
+  height: 727px;
+  left: -100px;
+  position: absolute;
+  top: 12px;
+  width: 577px;
+}
+
+.mensajes-5 .align-justify-2 {
+  cursor: pointer;
+  height: 32px;
+  left: 364px;
+  position: absolute;
+  top: 7px;
+  width: 32px;
+}
+
+.mensajes-5 .group {
+  height: 24px;
+  left: 206px;
+  position: absolute;
+  top: 8px;
+  width: 118px;
+}
+
+.mensajes-5 .overlap-group-1 {
+  height: 35px;
+  left: 127px;
+  position: absolute;
+  top: 1px;
+  width: 36px;
+}
+
+.mensajes-5 .bell {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.mensajes-5 .nuevo {
+  align-items: flex-start;
+  background-color: var(--malachite2);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 20px;
+  left: 16px;
+  padding: 2px 4px;
+  position: absolute;
+  top: 15px;
+  width: 20px;
+}
+
+.mensajes-5 .number {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1px;
+  white-space: nowrap;
+}
+
+.mensajes-5 .frame-3551 {
+  align-items: center;
+  border: 1px solid green;
+  display: flex;
+  gap: 4px;
+  height: min-content;
+  left: 135px;
+  position: absolute;
+  top: 114px;
+  width: min-content;
+}
+
+.mensajes-5 .maintitle {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  height: min-content;
+  left: 135px;
+  position: absolute;
+  top: 64px;
+  width: min-content;
+}
+
+.mensajes-5 .newmessege {
+  background-color: var(--white);
+  height: 64px;
+  left: 100px;
+  /*position: fixed;*/
+  position: relative;
+  top: 94px;
+  width: 320px;
+}
+
+.mensajes-5 .mensajes {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1px;
+  min-width: 66px;
+  white-space: nowrap;
+}
+
+.mensajes-5 .mensaje-patricia-castaeda {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1px;
+  min-width: 180px;
+  white-space: nowrap;
+}
+
+.mensajes-5 .frame-3575::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.mensajes-5 .frame-3575 {
+  height: 438px;
+  left: 124px;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  top: 172px;
+  width: 272px;
+}
+
+.mensajes-5 .mensaje-4 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: min-content;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: min-content;
+}
+
+.mensajes-5 .ttulo-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: min-content;
+  width: min-content;
+}
+
+.mensajes-5 .ttulo {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1px;
+  min-width: 182px;
+  white-space: nowrap;
+}
+
+.mensajes-5 .usuario {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  width: min-content;
+}
+
+.mensajes-5 .foto {
+  height: 32px;
+  min-width: 32px;
+}
+
+.mensajes-5 .texto {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: min-content;
+  width: min-content;
+}
+
+.mensajes-5 .de {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1px;
+  min-width: 19px;
+  white-space: nowrap;
+}
+
+.mensajes-5 .nombre {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  width: 224px;
+}
+
+.mensajes-5 .contenido-1 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: min-content;
+  width: min-content;
+}
+
+.mensajes-5 .contenido {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1px;
+  width: 272px;
+}
+
+.mensajes-5 .fecha-1 {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  min-width: 113px;
+  white-space: nowrap;
+}
+
+.mensajes-5 .separador {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 257px;
+  width: 272px;
+}
+
+.mensajes-5 .mensaje-6 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: min-content;
+  left: 0;
+  position: absolute;
+  top: 281px;
+  width: min-content;
+}
+
+.mensajes-5 .ttulo-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: min-content;
+  width: min-content;
+}
+
+.mensajes-5 .ttulo-3 {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1px;
+  min-width: 117px;
+  white-space: nowrap;
+}
+
+.mensajes-5 .overlap-group {
+  border-radius: 16px;
+  height: 32px;
+  position: relative;
+  width: 32px;
+}
+
+.mensajes-5 .ellipse-225 {
+  background-color: var(--tranquil);
+  border-radius: 16px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: rotate(180deg);
+  width: 32px;
+}
+
+.mensajes-5 .c {
+  left: 10.5px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  text-align: center;
+  top: 6px;
+  white-space: nowrap;
+}
+
+.mensajes-5 .de-1 {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1px;
+  min-width: 19px;
+  white-space: nowrap;
+}
+
+.mensajes-5 .contenido-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: min-content;
+  width: min-content;
+}
+
+.mensajes-5 .fecha {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  min-width: 112px;
+  white-space: nowrap;
+}
+
+.mensajes-5 .separador-1 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 538px;
+  width: 272px;
+}
+
+.mensajes-5 .mensaje-7 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: min-content;
+  left: 0;
+  position: absolute;
+  top: 562px;
+  width: min-content;
+}
+
+.mensajes-5 .ttulo-4 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: min-content;
+  width: min-content;
+}
+
+.mensajes-5 .c-1 {
+  left: 9px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  white-space: nowrap;
+}
+
+.mensajes-5 .de-2 {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1px;
+  min-width: 19px;
+  white-space: nowrap;
+}
+
+.mensajes-5 .contenido-3 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: min-content;
+  width: min-content;
+}
+
+.mensajes-5 .separador-2 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 819px;
+  width: 272px;
+}
+
+.mensajes-5 .no-hay-ms-mensajes {
+  color: var(--star-dust);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs);
+  font-weight: 300;
+  left: 68px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: center;
+  top: 842px;
+  white-space: nowrap;
+}
+
+.mensajes-5 .overlap-group2 {
+  height: 719px;
+  left: -30px;
+  position: absolute;
+  top: 8px;
+  width: 639px;
+}
+
+.mensajes-5 .overlap-group1 {
+  height: 597px;
+  left: 3px;
+  position: absolute;
+  top: 122px;
+  width: 636px;
+}
+
+.mensajes-5 .azul {
+  background: linear-gradient(180deg, rgb(51, 150, 152) 47.92%);
+  border-radius: 123.5px;
+  filter: blur(123.19px);;
+  height: 247px;
+  left: 389px;
+  position: absolute;
+  top: 0;
+  width: 247px;
+}
+
+.mensajes-5 .overlap-group-2 {
+  height: 392px;
+  left: 0;
+  position: absolute;
+  top: 205px;
+  width: 404px;
+}
+
+.mensajes-5 .verde {
+  background: linear-gradient(180deg, rgb(131, 195, 137) 45.94%);
+  border-radius: 100.5px;
+  filter: blur(88.35px);;
+  height: 201px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 201px;
+}
+
+.mensajes-5 .azul-1 {
+  background: linear-gradient(180deg, rgb(51, 150, 152) 47.92%);
+  border-radius: 163.5px;
+  filter: blur(163.09px);;
+  height: 327px;
+  left: 77px;
+  position: absolute;
+  top: 65px;
+  width: 327px;
+}
+
+.mensajes-5 .azul-2 {
+  background: linear-gradient(180deg, rgb(51, 150, 152) 47.92%);
+  border-radius: 83px;
+  filter: blur(82.79px);;
+  height: 166px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 166px;
+}
+
+.mensajes-5 .nuevo-mensaje {
+  background-color: var(--white);
+  height: 64px;
+  left: 0;
+  position: fixed;
+  /*position: absolute;*/
+  top: 104px;
+  width: 320px;
+}
+
+.mensajes-5 .ttulo-5 {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 20px;
+  white-space: nowrap;
+  width: 133px;
+}
+
+.mensajes-5 .frame-3275 {
+  align-items: center;
+  background-color: var(--cultured-pearl);
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  gap: 4px;
+  height: min-content;
+  justify-content: center;
+  left: 209px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 12px;
+  width: min-content;
+}
+
+.mensajes-5 .crear {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  min-width: 35px;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.mensajes-5 .add-stroke-3 {
+  height: 24px;
+  min-width: 24px;
+}

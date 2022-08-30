@@ -169,12 +169,16 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
                 gratis!
               </p>
             </div>
-            <div class="btn-descarga text-center mb-3">
-              <button class="btn rounded-4 bg-white ">
-                <img src="img/Download-3 2.png" alt="">
-                Descarga CV
-              </button>
-            </div>
+            <a href="assets/assets/docs/cv.pdf" target="_blank">
+              
+              <div class="btn-descarga text-center mb-3">
+                <button class="btn rounded-4 bg-white ">
+                  <img src="img/Download-3 2.png" alt="">
+                  Descarga CV
+                </button>
+              </div>
+
+            </a>
           </div>
         </div>
       </div>
@@ -193,12 +197,14 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
             </ul>
           </div>
         </a>
-        <div class="btn-descarga text-center p-3">
-          <button class="btn rounded-4 bg-white w-50">
-            <img src="img/Download-3 2.png" alt="">
-            Descarga CV
-          </button>
-        </div>
+        <a href="assets/assets/docs/cv.pdf" target="_blank">
+          <div class="btn-descarga text-center p-3">
+            <button class="btn rounded-4 bg-white w-50">
+              <img src="img/Download-3 2.png" alt="">
+              Descarga CV
+            </button>
+          </div>
+        </a>
       </div>
     </div>
     <div class="container  mb-5">

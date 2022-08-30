@@ -1,0 +1,423 @@
+/* screen - mensajes */
+
+.mensajes {
+  background-color: var(--hint-of-red);
+  height: 574px;
+  overflow: hidden;
+  width: 320px;
+}
+
+.mensajes .overlap-group4 {
+  height: 727px;
+  left: -100px;
+  position: relative;
+  top: 12px;
+  width: 577px;
+}
+
+.mensajes .overlap-group2 {
+  height: 727px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 577px;
+}
+
+.mensajes .overlap-group1-1 {
+  height: 629px;
+  left: 40px;
+  position: absolute;
+  top: 98px;
+  width: 537px;
+}
+
+.mensajes .azul {
+  background: linear-gradient(180deg, rgb(51, 150, 152) 47.92%);
+  border-radius: 123.5px;
+  filter: blur(123.19px);;
+  height: 247px;
+  left: 290px;
+  position: absolute;
+  top: 0;
+  width: 247px;
+}
+
+.mensajes .overlap-group-2 {
+  height: 459px;
+  left: 0;
+  position: absolute;
+  top: 170px;
+  width: 337px;
+}
+
+.mensajes .verde {
+  background: linear-gradient(180deg, rgb(131, 195, 137) 45.94%);
+  border-radius: 100.5px;
+  filter: blur(88.35px);;
+  height: 201px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 201px;
+}
+
+.mensajes .azul-1 {
+  background: linear-gradient(180deg, rgb(51, 150, 152) 47.92%);
+  border-radius: 163.5px;
+  filter: blur(163.09px);;
+  height: 327px;
+  left: 10px;
+  position: absolute;
+  top: 132px;
+  width: 327px;
+}
+
+.mensajes .azul-2 {
+  background: linear-gradient(180deg, rgb(51, 150, 152) 47.92%);
+  border-radius: 83px;
+  filter: blur(82.79px);;
+  height: 166px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 166px;
+}
+
+.mensajes .frame-3550::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.mensajes .frame-3550 {
+  height: 494px;
+  left: 124px;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  top: 68px;
+  width: 271px;
+}
+
+.mensajes .frame-3426 {
+  height: 772px;
+  left: 0;
+  position: absolute;
+  top: 79px;
+  width: 271px;
+}
+
+.mensajes .frame-3427 {
+  background-color: var(--white-2);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 110px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 271px;
+}
+
+.mensajes .frame-3424 {
+  height: 78px;
+  left: 16px;
+  position: absolute;
+  top: 16px;
+  width: 155px;
+}
+
+.mensajes .overlap-group1 {
+  height: 47px;
+  left: -2px;
+  position: absolute;
+  top: -2px;
+  width: 44px;
+}
+
+.mensajes .foto {
+  height: 42px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 42px;
+}
+
+.mensajes .overlap-group {
+  background-color: var(--white);
+  border-radius: 11px;
+  height: 22px;
+  left: 22px;
+  position: absolute;
+  top: 25px;
+  width: 22px;
+}
+
+.mensajes .icon-star {
+  height: 14px;
+  left: 3px;
+  position: absolute;
+  top: 4px;
+  width: 15px;
+}
+
+.mensajes .aviso {
+  left: 52px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: -1px;
+  width: 103px;
+}
+
+.mensajes .span1 {
+  line-height: 15.6px;
+}
+
+.mensajes .frame-3425 {
+  height: 60px;
+  left: 203px;
+  position: absolute;
+  top: 25px;
+  width: 52px;
+}
+
+.mensajes .x1020-pm {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 14.4px;
+  position: absolute;
+  top: -1px;
+  white-space: nowrap;
+}
+
+.mensajes .nuevo {
+  background-color: var(--malachite);
+  border-radius: 16px;
+  height: 30px;
+  left: 11px;
+  position: absolute;
+  top: 30px;
+  width: 30px;
+}
+
+.mensajes .number {
+  left: 8px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 6px;
+  white-space: nowrap;
+}
+
+.mensajes .frame-3436 {
+  background-color: var(--white-2);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 110px;
+  left: 0;
+  position: absolute;
+  top: 126px;
+  width: 271px;
+}
+
+.mensajes .nuevo-1 {
+  background-color: var(--gallery);
+  border-radius: 16px;
+  height: 30px;
+  left: 11px;
+  position: absolute;
+  top: 30px;
+  width: 30px;
+}
+
+.mensajes .frame-3437 {
+  background-color: var(--white-2);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 110px;
+  left: 0;
+  position: absolute;
+  top: 252px;
+  width: 271px;
+}
+
+.mensajes .frame-3438 {
+  background-color: var(--white-2);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 110px;
+  left: 0;
+  position: absolute;
+  top: 378px;
+  width: 271px;
+}
+
+.mensajes .overlap-group1-2 {
+  height: 36px;
+  left: -2px;
+  position: absolute;
+  top: 8px;
+  width: 44px;
+}
+
+.mensajes .foto-2 {
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 42px;
+}
+
+.mensajes .overlap-group-3 {
+  background-color: var(--white);
+  border-radius: 11px;
+  height: 22px;
+  left: 22px;
+  position: absolute;
+  top: 14px;
+  width: 22px;
+}
+
+.mensajes .star-21 {
+  height: 1px;
+  left: 11px;
+  position: absolute;
+  top: 11px;
+  width: 1px;
+}
+
+.mensajes .frame-3439 {
+  background-color: var(--white-2);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 110px;
+  left: 0;
+  position: absolute;
+  top: 504px;
+  width: 271px;
+}
+
+.mensajes .frame-3421 {
+  height: 47px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 44px;
+}
+
+.mensajes .foto-1 {
+  height: 1px;
+  left: 20px;
+  position: absolute;
+  top: 20px;
+  width: 1px;
+}
+
+.mensajes .overlap-group-1 {
+  background-color: var(--white);
+  border-radius: 11px;
+  height: 22px;
+  left: 20px;
+  position: absolute;
+  top: 23px;
+  width: 22px;
+}
+
+.mensajes .frame-3440 {
+  background-color: var(--white-2);
+  border: 2px solid transparent;
+  border-image: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0)) 1;
+  border-radius: 16px;
+  height: 110px;
+  left: 0;
+  position: absolute;
+  top: 630px;
+  width: 271px;
+}
+
+.mensajes .texto {
+  height: 63px;
+  left: 21px;
+  position: absolute;
+  top: 0;
+  width: 236px;
+}
+
+.mensajes .aviso-1 {
+  color: var(--storm-dust);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m2);
+  font-weight: 600;
+  left: 57px;
+  letter-spacing: 0;
+  line-height: 31.2px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  white-space: nowrap;
+}
+
+.mensajes .aviso-2 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: center;
+  top: 31px;
+  width: 232px;
+}
+
+.mensajes .align-justify-2 {
+  height: 32px;
+  left: 364px;
+  position: absolute;
+  top: 7px;
+  width: 32px;
+}
+
+.mensajes .group {
+  height: 24px;
+  left: 206px;
+  position: absolute;
+  top: 8px;
+  width: 118px;
+}
+
+.mensajes .overlap-group3 {
+  height: 35px;
+  left: 127px;
+  position: absolute;
+  top: 1px;
+  width: 36px;
+}
+
+.mensajes .bell {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.mensajes .nuevo-2 {
+  background-color: var(--malachite);
+  border-radius: 16px;
+  height: 20px;
+  left: 16px;
+  position: absolute;
+  top: 15px;
+  width: 20px;
+}
+
+.mensajes .number-1 {
+  left: 4px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 1px;
+  white-space: nowrap;
+}

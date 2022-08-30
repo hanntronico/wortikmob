@@ -1,0 +1,315 @@
+/* screen - datos-personales-1 */
+
+.datos-personales-1 {
+  background-color: var(--hint-of-red);
+  height: 568px;
+  position: relative;
+  width: 320px;
+}
+
+.datos-personales-1 .align-justify-2 {
+  cursor: pointer;
+  height: 32px;
+  left: 264px;
+  position: absolute;
+  top: 19px;
+  width: 32px;
+}
+
+.datos-personales-1 .group {
+  height: 24px;
+  left: 106px;
+  position: absolute;
+  top: 20px;
+  width: 118px;
+}
+
+.datos-personales-1 .frame-2963 {
+  height: 40px;
+  left: 24px;
+  position: absolute;
+  top: 12px;
+  width: 40px;
+}
+
+.datos-personales-1 .overlap-group {
+  height: 35px;
+  left: 3px;
+  position: relative;
+  top: 1px;
+  width: 36px;
+}
+
+.datos-personales-1 .bell {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.datos-personales-1 .nuevo {
+  align-items: flex-start;
+  background-color: var(--malachite2);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 20px;
+  left: 16px;
+  padding: 2px 4px;
+  position: absolute;
+  top: 15px;
+  width: 20px;
+}
+
+.datos-personales-1 .number {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1px;
+  white-space: nowrap;
+}
+
+.datos-personales-1 .frame-3591::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.datos-personales-1 .frame-3591 {
+  height: 492px;
+  left: 24px;
+  overflow-y: scroll;
+  position: absolute;
+  top: 76px;
+  width: 272px;
+}
+
+.datos-personales-1 .frame-3592 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  left: 11px;
+  position: absolute;
+  top: 0;
+}
+
+.datos-personales-1 .nombre {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1px;
+  text-align: center;
+  white-space: nowrap;
+  width: 188px;
+}
+
+.datos-personales-1 .frame-3552 {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+}
+
+.datos-personales-1 .mensajes {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1px;
+  min-width: 66px;
+  white-space: nowrap;
+}
+
+.datos-personales-1 .mensaje-patricia-castaeda {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1px;
+  min-width: 180px;
+  white-space: nowrap;
+}
+
+.datos-personales-1 .usuario {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  left: 5px;
+  position: absolute;
+  top: 81px;
+}
+
+.datos-personales-1 .foto {
+  height: 32px;
+  min-width: 32px;
+}
+
+.datos-personales-1 .texto {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+.datos-personales-1 .nombre-1 {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1px;
+  text-align: center;
+  width: 262px;
+}
+
+.datos-personales-1 .frame-3479 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  left: 0;
+  position: absolute;
+  top: 185px;
+}
+
+.datos-personales-1 .frame-3451 {
+  height: 39px;
+  min-width: 272px;
+  position: relative;
+}
+
+.datos-personales-1 .frame-3069 {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  left: 0;
+  padding: 0px 0px 0px 16px;
+  position: absolute;
+  top: 2px;
+  width: 283px;
+}
+
+.datos-personales-1 .asunto {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1px;
+  min-width: 56px;
+  white-space: nowrap;
+}
+
+.datos-personales-1 .asunto_text {
+  border-radius: 0px !important;
+  border: none !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid #b8b8b8 !important;
+  font-size: 18px !important;
+  padding-left: 18px !important;
+  padding-bottom: 20px !important;
+
+  width: 100%; 
+}
+
+.datos-personales-1 .vector-9 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 39px;
+  width: 272px;
+}
+
+.datos-personales-1 .campo-escribir {
+  border-radius: 20px;
+  height: 164px;
+  min-width: 272px;
+  position: relative;
+}
+
+.datos-personales-1 .escribir {
+  left: 15px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 14px;
+  white-space: nowrap;
+  width: 72px;
+}
+
+.datos-personales-1 .edicin {
+  align-items: flex-start;
+  display: flex;
+  gap: 8px;
+  left: 15px;
+  position: absolute;
+  top: 115px;
+}
+
+.datos-personales-1 .edicin-item {
+  border-radius: 8px;
+  height: 32px;
+  min-width: 32px;
+  position: relative;
+}
+
+.datos-personales-1 .b {
+  left: 9px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 3px;
+  white-space: nowrap;
+}
+
+.datos-personales-1 .tag-1 {
+  height: 24px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  width: 24px;
+}
+
+.datos-personales-1 .icon-file {
+  height: 24px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  width: 24px;
+}
+
+.datos-personales-1 .bullet-list-1 {
+  height: 24px;
+  left: 3px;
+  position: absolute;
+  top: 3px;
+  width: 24px;
+}
+
+.datos-personales-1 .nuevo-mensaje {
+  background-color: var(--white);
+  border-radius: 16px;
+  box-shadow: 0px 5px 20px #ededed;
+  height: 64px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 504px;
+  width: 320px;
+  text-align: center;
+}
+
+.datos-personales-1 .frame-3353 {
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgb(51, 150, 152) 0%, rgb(131, 195, 137) 100%);
+  border-radius: 16px;
+  display: flex;
+  gap: 10px;
+  left: 89px;
+  padding: 8px 24px;
+  position: absolute;
+  top: 16px;
+  width: 45%;
+  text-align: center;
+}
+
+.datos-personales-1 .descripcin {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1px;
+  white-space: nowrap;
+}

@@ -3,26 +3,41 @@
   $_SESSION["idPosutlante"] = 1; 
   include_once "../conf/conf.php";
 
-  $sql = "SELECT id,
-                 name,
-                 surnames,
-                 birthdate,
-                 ubication,
-                 sexo,
-                 phone,
-                 email,
-                 doc_id,
-                 localidad,
-                 cv,
-                 position,
-                 image
-          FROM profiles
-          WHERE id = 1";
+  // $sql = "SELECT id,
+  //                name,
+  //                surnames,
+  //                birthdate,
+  //                ubication,
+  //                sexo,
+  //                phone,
+  //                email,
+  //                doc_id,
+  //                localidad,
+  //                cv,
+  //                position,
+  //                image
+  //         FROM profiles
+  //         WHERE id = 1";
 
-  $db = $dbh->prepare($sql);
+  // $db = $dbh->prepare($sql);
+  // $db->execute();
+  // $data= Array();
+  // $reg = $db->fetch(PDO::FETCH_OBJ);
+
+
+  $sql2 = "SELECT J.ID as job, J.*, C.* 
+           FROM JOBS J 
+           INNER JOIN JOBS_PROFILES JP 
+           ON J.id = JP.id_job 
+           INNER JOIN PROFILES P 
+           ON jp.id_profile = P.id 
+           INNER JOIN COMPANIES C 
+           ON J.company_id = C.id
+           WHERE P.id = " . $_SESSION["idPosutlante"];
+  $db = $dbh->prepare($sql2);
   $db->execute();
   $data= Array();
-  $reg = $db->fetch(PDO::FETCH_OBJ);
+  // $reg = $db->fetch(PDO::FETCH_OBJ);
 
 ?>
 
@@ -78,7 +93,38 @@
               <p class="aviso-2 poppins-light-storm-dust-12px">Mantente al tanto sobre tu proceso</p>
             </div>
             <div class="frame-3426">
+
+<?php while ( $regJobs = $db->fetch(PDO::FETCH_OBJ) ) {
+
+    $createDate = ( !is_null($regJobs->created_at) ) ? date("d/m/Y", strtotime( $regJobs->created_at )) : '';
+    
+ ?>
               <div class="frame-3427">
+                <div class="sobre-el-aviso">
+                  <div class="aviso poppins-medium-storm-dust-16px"><?php echo $regJobs->name; ?></div>
+                  <div class="datos">
+                    <div class="lugar poppins-semi-bold-storm-dust-12px"><?php echo $regJobs->business_name; ?></div>
+                    <div class="lugar-1 poppins-normal-storm-dust-12px">Lima, San Isidro</div>
+                    <div class="creacin poppins-normal-storm-dust-12px">Creado: <?php echo $createDate; ?></div>
+                    <div class="creacin-1 poppins-normal-storm-dust-12px">Oferta confidencial</div>
+                  </div>
+                </div>
+                <div class="ver-mas">
+                  <a href="postulaciones_detalle.php?id=<?php echo $regJobs->job; ?>">
+                    <div class="ver poppins-semi-bold-malachite-12px">Ver</div>
+                    <img
+                      class="add-stroke-1"
+                      src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/add-stroke-1@2x.svg"
+                    />
+                  </a>
+                </div>
+              </div>
+
+<?php } ?>
+  
+
+
+<!--               <div class="frame-3427">
                 <div class="sobre-el-aviso">
                   <div class="aviso poppins-medium-storm-dust-16px">Programador Fullstack</div>
                   <div class="datos">
@@ -96,6 +142,7 @@
                   />
                 </div>
               </div>
+
               <div class="frame-344">
                 <div class="sobre-el-aviso">
                   <div class="aviso poppins-medium-storm-dust-16px">Programador Fullstack</div>
@@ -114,6 +161,7 @@
                   />
                 </div>
               </div>
+
               <div class="frame-344">
                 <div class="sobre-el-aviso">
                   <div class="aviso poppins-medium-storm-dust-16px">Programador Fullstack</div>
@@ -132,6 +180,7 @@
                   />
                 </div>
               </div>
+
               <div class="frame-344">
                 <div class="sobre-el-aviso">
                   <div class="aviso poppins-medium-storm-dust-16px">Programador Fullstack</div>
@@ -150,6 +199,7 @@
                   />
                 </div>
               </div>
+ -->
             </div>
           </div>
 

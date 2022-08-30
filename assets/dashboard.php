@@ -1,3 +1,30 @@
+<?php  
+  session_start();
+  $_SESSION["idPosutlante"] = 1; 
+  include_once "../conf/conf.php";
+
+  $sql = "SELECT id,
+                 name,
+                 surnames,
+                 birthdate,
+                 ubication,
+                 sexo,
+                 phone,
+                 email,
+                 doc_id,
+                 localidad,
+                 cv,
+                 position,
+                 image
+          FROM profiles
+          WHERE id = 1";
+
+  $db = $dbh->prepare($sql);
+  $db->execute();
+  $data= Array();
+  $reg = $db->fetch(PDO::FETCH_OBJ);
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -112,14 +139,7 @@
 
 
 
-<!--       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block">Alexander</a>
-        </div>
-      </div> -->
+
 
 <!--       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -420,7 +440,7 @@
           <div class="frame-3553">
             <div class="frame-3543">
               <div class="texto">
-                <h1 class="aviso-2 poppins-semi-bold-storm-dust-24px">Hola Rodrigo</h1>
+                <h1 class="aviso-2 poppins-semi-bold-storm-dust-24px">Hola <?php echo $reg->name; ?></h1>
                 <div class="aviso-3 poppins-light-storm-dust-12px">¡Te damos la bienvenida!</div>
               </div>
               <div class="frame-3515">
@@ -445,11 +465,13 @@
                         Por completar tu perfil. Ahora puedes descargar tu CV gratis.
                       </p>
                       <div class="frame-3353-1">
-                        <img
-                          class="icon-download_arrow"
-                          src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a738c3c50d8e0f8758cea4/img/download-3-2@2x.svg"
-                        />
-                        <div class="descripcin-2 poppins-medium-storm-dust-12px">Descargar CV</div>
+                        <a href="assets/docs/cv.pdf">
+                          <img
+                            class="icon-download_arrow"
+                            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a738c3c50d8e0f8758cea4/img/download-3-2@2x.svg"
+                          />
+                          <div class="descripcin-2 poppins-medium-storm-dust-12px">Descargar CV</div>
+                        </a>
                       </div>
                     </div>
                   </div>

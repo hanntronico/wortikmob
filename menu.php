@@ -30,7 +30,7 @@
                   src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/user--1--1@2x.svg"
                 />
                 <div class="mi-perfil poppins-normal-storm-dust-16px">
-                  <a href="../miperfil.php">Mi perfil</a>
+                  <a href="miperfil.php">Mi perfil</a>
                 </div>
               </div>
               <div class="seccin-2">
@@ -85,8 +85,10 @@
 
           <div class="frame-3539">
             <div class="correo">
-              <div class="name poppins-medium-storm-dust-16px">Rodrigo Ceballos</div>
-              <div class="rodrigo44gmailcom poppins-normal-storm-dust-12px">rodrigo44@gmail.com</div>
+              <div class="name poppins-medium-storm-dust-16px">
+                <?php echo $reg->name . " " . $reg->surnames; ?>
+              </div>
+              <div class="rodrigo44gmailcom poppins-normal-storm-dust-12px"><?php echo $reg->email; ?></div>
             </div>
             <div class="frame-3542 poppins-normal-storm-dust-16px">
               <div class="mi-cuenta">Mi cuenta</div>
