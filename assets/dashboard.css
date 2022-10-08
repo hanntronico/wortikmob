@@ -777,7 +777,7 @@
   width: 24px;
 }
 
-.menu-dashboard .mensajes {
+.menu-dashboard .mensajes_item {
   left: 48px;
   letter-spacing: 0;
   line-height: 20.8px;
@@ -2643,7 +2643,7 @@
   width: 24px;
 }
 
-.menu-dashboard .mensajes {
+/*.menu-dashboard .mensajes {
   left: 48px;
   letter-spacing: 0;
   line-height: 20.8px;
@@ -2651,7 +2651,7 @@
   top: 8px;
   white-space: nowrap;
   width: 122px;
-}
+}*/
 
 .menu-dashboard .seccin-4 {
   height: 40px;

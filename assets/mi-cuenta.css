@@ -1,0 +1,570 @@
+/* screen - mi-cuenta */
+
+.mi-cuenta {
+  background-color: var(--hint-of-red);
+  border: 1px none;
+  height: 568px;
+  position: relative;
+  width: 320px;
+}
+
+.mi-cuenta .align-justify-2 {
+  cursor: pointer;
+  height: 32px;
+  left: 264px;
+  position: absolute;
+  top: 19px;
+  width: 32px;
+}
+
+.mi-cuenta .group {
+  height: 24px;
+  left: 106px;
+  position: absolute;
+  top: 20px;
+  width: 118px;
+}
+
+.mi-cuenta .frame-2963 {
+  border: 1px none;
+  height: 40px;
+  left: 24px;
+  position: absolute;
+  top: 12px;
+  width: 40px;
+}
+
+.mi-cuenta .overlap-group-1 {
+  height: 35px;
+  left: 3px;
+  position: relative;
+  top: 1px;
+  width: 36px;
+}
+
+.mi-cuenta .bell {
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.mi-cuenta .nuevo {
+  align-items: flex-start;
+  background-color: var(--malachite2);
+  border: 1px none;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 20px;
+  left: 16px;
+  padding: 2px 4px;
+  position: absolute;
+  top: 15px;
+  width: 20px;
+}
+
+.mi-cuenta .number {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.mi-cuenta .frame-3591::-webkit-scrollbar {
+  display: none;
+  width: 0;
+}
+
+.mi-cuenta .frame-3591 {
+  border: 1px none;
+  height: 492px;
+  left: 24px;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  top: 76px;
+  width: 272px;
+}
+
+.mi-cuenta .frame-3590 {
+  align-items: center;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0px 0px 102px;
+  width: fit-content;
+}
+
+.mi-cuenta .nombre {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  text-align: center;
+  white-space: nowrap;
+  width: 188px;
+}
+
+.mi-cuenta .frame-347 {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: fit-content;
+}
+
+.mi-cuenta .frame-34 {
+  border: 1px none;
+  height: 39px;
+  min-width: 272px;
+  position: relative;
+}
+
+.mi-cuenta .frame-3069 {
+  align-items: center;
+  border: 1px none;
+  display: flex;
+  gap: 8px;
+  left: 0;
+  padding: 0px 0px 0px 16px;
+  position: absolute;
+  top: 2px;
+  width: 272px;
+}
+
+.mi-cuenta .nombres {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.mi-cuenta .vector {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 39px;
+  width: 272px;
+}
+
+.mi-cuenta .apellidos {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.mi-cuenta .fecha-de-nacimiento {
+  height: 162px;
+  margin-right: -2.00px;
+  min-width: 274px;
+  position: relative;
+}
+
+.mi-cuenta .frame-3474 {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  left: 0;
+  position: absolute;
+  top: 16px;
+  width: fit-content;
+}
+
+.mi-cuenta .frame-3596 {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  gap: 20px;
+  width: 272px;
+}
+
+.mi-cuenta .da {
+  height: 61px;
+  min-width: 130px;
+  position: relative;
+}
+
+.mi-cuenta .da-1 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.mi-cuenta .number-1 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 24px;
+  white-space: nowrap;
+}
+
+.mi-cuenta .vector-10 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 61px;
+  width: 126px;
+}
+
+.mi-cuenta .chevron-down-1 {
+  height: 24px;
+  left: 102px;
+  position: absolute;
+  top: 21px;
+  width: 24px;
+}
+
+.mi-cuenta .da-2 {
+  height: 61px;
+  margin-right: -4.00px;
+  min-width: 130px;
+  position: relative;
+}
+
+.mi-cuenta .mes {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.mi-cuenta .noviem {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 24px;
+  white-space: nowrap;
+}
+
+.mi-cuenta .chevron-down-1-1 {
+  height: 24px;
+  left: 98px;
+  position: absolute;
+  top: 21px;
+  width: 24px;
+}
+
+.mi-cuenta .da-3 {
+  height: 61px;
+  margin-right: -4.00px;
+  min-width: 276px;
+  position: relative;
+}
+
+.mi-cuenta .ao {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.mi-cuenta .number-2 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 24px;
+  white-space: nowrap;
+}
+
+.mi-cuenta .vector-10-1 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 61px;
+  width: 272px;
+}
+
+.mi-cuenta .chevron-down-1-2 {
+  height: 24px;
+  left: 248px;
+  position: absolute;
+  top: 21px;
+  width: 24px;
+}
+
+.mi-cuenta .fecha-de-nacimiento-1 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 155px;
+}
+
+.mi-cuenta .frame-3069-2 {
+  align-items: center;
+  border: 1px none;
+  display: flex;
+  gap: 40px;
+  left: 0;
+  padding: 0px 0px 0px 16px;
+  position: absolute;
+  top: 2px;
+  width: 283px;
+}
+
+.mi-cuenta .ubicacin {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  white-space: nowrap;
+  width: 189px;
+}
+
+.mi-cuenta .chevron-down-1-3 {
+  height: 24px;
+  min-width: 24px;
+}
+
+.mi-cuenta .overlap-group-2 {
+  height: 24px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  width: 283px;
+}
+
+.mi-cuenta .frame-3069-3 {
+  align-items: center;
+  border: 1px none;
+  display: flex;
+  gap: 16px;
+  left: 0;
+  padding: 0px 0px 0px 16px;
+  position: absolute;
+  top: 0;
+  width: 283px;
+}
+
+.mi-cuenta .frame-3479 {
+  align-items: center;
+  border: 1px none;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  width: fit-content;
+}
+
+.mi-cuenta .frame-3478 {
+  background-color: var(--red-orange);
+  border: 0.72px none;
+  height: 14.38px;
+  min-width: 23px;
+}
+
+.mi-cuenta .rectangle-265 {
+  background-color: var(--white);
+  border: 0.72px none;
+  height: 14px;
+  left: 7px;
+  position: relative;
+  width: 8px;
+}
+
+.mi-cuenta .text-1 {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.mi-cuenta .chevron-down-1-4 {
+  height: 16px;
+  min-width: 16px;
+}
+
+.mi-cuenta .phone {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.mi-cuenta .icon-information {
+  height: 24px;
+  left: 240px;
+  position: absolute;
+  top: 0;
+  width: 24px;
+}
+
+.mi-cuenta .frame-3603 {
+  align-items: center;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: fit-content;
+}
+
+.mi-cuenta .correo-electrnico {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.mi-cuenta .frame-360 {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: fit-content;
+}
+
+.mi-cuenta .frame-3069-1 {
+  align-items: center;
+  border: 1px none;
+  display: flex;
+  gap: 40px;
+  left: 0;
+  padding: 0px 0px 0px 16px;
+  position: absolute;
+  top: 2px;
+  width: 272px;
+}
+
+.mi-cuenta .text-2 {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  white-space: nowrap;
+  width: 192px;
+}
+
+.mi-cuenta .eye-5 {
+  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/6300db60b99a625a2af31671/img/page-1@2x.png);
+  background-size: 100% 100%;
+  border: 1px none;
+  height: 24px;
+  min-width: 24px;
+  overflow: hidden;
+}
+
+.mi-cuenta .group-132 {
+  height: 29px;
+  left: 9px;
+  position: relative;
+  top: -2px;
+  transform: rotate(-43.89deg);
+  width: 4px;
+}
+
+.mi-cuenta .overlap-group {
+  height: 29px;
+  left: 10px;
+  position: relative;
+  top: -5px;
+}
+
+.mi-cuenta .rectangle-205 {
+  background-color: var(--sonic-silver);
+  border: 1px none;
+  height: 29px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 2px;
+}
+
+.mi-cuenta .rectangle-206 {
+  background-color: var(--white);
+  border: 1px none;
+  height: 29px;
+  left: 2px;
+  position: absolute;
+  top: 0;
+  width: 2px;
+}
+
+.mi-cuenta .nueva-contrasea {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  white-space: nowrap;
+  width: 192px;
+}
+
+.mi-cuenta .frame-3599 {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  gap: 4px;
+  width: fit-content;
+}
+
+.mi-cuenta .icon-information-1 {
+  height: 16px;
+  min-width: 16px;
+}
+
+.mi-cuenta .usa-ocho-o-ms-carac {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1.00px;
+  width: 252px;
+}
+
+.mi-cuenta .confirmar-contrasea {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  white-space: nowrap;
+  width: 192px;
+}
+
+.mi-cuenta .nuevo-mensaje {
+  background-color: var(--white);
+  border: 1px none;
+  border-radius: 16px;
+  box-shadow: 0px 5px 20px #ededed;
+  height: 64px;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 504px;
+  width: 320px;
+}
+
+.mi-cuenta .frame-3353 {
+  align-items: flex-start;
+  background-color: var(--gallery);
+  border: 1px none;
+  border-radius: 16px;
+  display: flex;
+  gap: 10px;
+  left: 110px;
+  padding: 8px 24px;
+  position: relative;
+  top: 16px;
+  width: fit-content;
+}
+
+.mi-cuenta .descripcin {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}

@@ -516,3 +516,77 @@
   height: 24px;
   min-width: 24px;
 }
+
+
+/**************************************/
+
+.frame-3384 {
+  align-items: flex-start;
+  display: flex;
+  gap: 8px;
+  width: min-content;
+}
+
+.frame-163 {
+  align-items: center;
+  background-color: #eefafa;
+  border-radius: 16px;
+  display: flex;
+  gap: 4px;
+  height: min-content;
+  justify-content: center;
+  padding: 8px 16px;
+  width: min-content;
+}
+
+.pendientes {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  min-width: 68px;
+  white-space: nowrap;
+}
+
+.frame-165 {
+  align-items: center;
+  background-color: var(--hint-of-red);
+  border-radius: 16px;
+  display: flex;
+  gap: 4px;
+  height: min-content;
+  justify-content: center;
+  padding: 8px 16px;
+  width: min-content;
+}
+
+.terminadas {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  min-width: 72px;
+  white-space: nowrap;
+}
+
+.number-1 {
+  color: var(--malachite);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs2);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1px;
+  min-width: 11px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.number-2 {
+  color: var(--storm-dust);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs2);
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1px;
+  min-width: 10px;
+  text-align: right;
+  white-space: nowrap;
+}

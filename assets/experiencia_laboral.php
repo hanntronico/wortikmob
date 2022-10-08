@@ -2,26 +2,26 @@
   session_start();
   include_once "../conf/conf.php";
 
-  $sql = "SELECT id,
-                 name,
-                 surnames,
-                 birthdate,
-                 ubication,
-                 sexo,
-                 phone,
-                 email,
-                 doc_id,
-                 localidad,
-                 cv,
-                 position,
-                 image
-          FROM profiles
-          WHERE id = " . $_SESSION["idPosutlante"];
+  // $sql = "SELECT id,
+  //                name,
+  //                surnames,
+  //                birthdate,
+  //                ubication,
+  //                sexo,
+  //                phone,
+  //                email,
+  //                doc_id,
+  //                localidad,
+  //                cv,
+  //                position,
+  //                image
+  //         FROM profiles
+  //         WHERE id = 1";
 
-  $db = $dbh->prepare($sql);
-  $db->execute();
-  $data= Array();
-  $reg = $db->fetch(PDO::FETCH_OBJ);
+  // $db = $dbh->prepare($sql);
+  // $db->execute();
+  // $data= Array();
+  // $reg = $db->fetch(PDO::FETCH_OBJ);
 
 ?>
 
@@ -91,23 +91,56 @@
 
                 <div class="row" style="border: none; margin: 0px auto; padding: 0px; width: 100%; ">
                   <div class="col-md-12">
-                    <h1 class="titulo">Datos personales</h1>
+                    <h1 class="titulo">Experiencia Laboral</h1>
                     <p class="poppins-light-storm-dust-12px" style="text-align: center;">Mi perfil / 
-                      <span style="color: #339698; font-weight: 400; line-height: 130%;">Edición</span></p>
+                      <span style="color: #339698; font-weight: 400; line-height: 130%;">Nueva</span></p>
                   </div>
                 </div>
+
+
+
+<!-- id
+title_work_experience
+companies
+lugar
+descrip_work_experience
+fec_inicio
+fec_fin
+status_work_experience -->
+
 
                 <form style="border: none;" action="editarPerfil.php" method="POST">
                   <div class="form-row mt-3">
                     <div class="col-12 col-md-12 mb-4">
-                      <input type="text" class="form-control input_text" name="nombre" id="nombre" placeholder="Nombre" value="<?php echo $reg->name;?>" required>
-                    </div>
-
-                    <div class="col-12 col-md-12 mb-3">
-                      <input type="text" class="form-control input_text" id="apellidos" name="apellidos" placeholder="Apellidos" value="<?php echo $reg->surnames;?>" required>
+                      <input type="text" class="form-control input_text" name="titulo" id="titulo" placeholder="Título" required>
                     </div>
 
                     <div class="col-12 col-md-12 mb-4">
+                      <input type="text" class="form-control input_text" id="companie" name="companie" placeholder="Empresa" required>
+                    </div>
+
+                    <div class="col-12 col-md-12 mb-4">
+                      <input type="text" class="form-control input_text" id="lugar" name="lugar" placeholder="Lugar" required>
+                    </div>                    
+
+                    <div class="col-12 col-md-12 mb-4">
+                      <textarea class="form-control input_text" name="descripcion"></textarea>
+                    </div>  
+
+                    <div class="col-12 col-md-12 mt-2 mb-4">
+                      <div class="select_frame">
+                        <input type="date" class="form-control input_text" name="fec_ini" id="fec_ini" value="<?php echo $reg->birthdate;?>">
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 mt-2 mb-4">
+                      <div class="select_frame">
+                        <input type="date" class="form-control input_text" name="fec_fin" id="fec_fin" value="<?php echo $reg->birthdate;?>">
+                      </div>
+                    </div>
+
+
+<!--                     <div class="col-12 col-md-12 mb-4">
                       <div class="select_frame">
                         <select class="form-control select_input" name="">
                           <?php 
@@ -123,19 +156,19 @@
                         src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/629768465aeed9a731c2eb83/img/chevron-down-1@2x.svg"
                       />
                       </div>
-                    </div>
+                    </div> -->
 
-                    <div class="col-12 col-md-12 mt-2 mb-4">
+<!--                     <div class="col-12 col-md-12 mt-2 mb-4">
                       <div class="select_frame">
                         <input type="date" class="form-control input_text" name="fec_nac" id="fec_nac" value="<?php echo $reg->birthdate;?>">
                       </div>
-                    </div>
+                    </div> -->
 
                   </div>
 
                   <div class="form-row mt-2">
                     
-                    <div class="col-4 col-md-4 mb-4">
+<!--                     <div class="col-4 col-md-4 mb-4">
                       <div class="select_frame_pais">
                         <select class="form-control select_input" name="">
                           <option value="51">+51</option>
@@ -146,19 +179,15 @@
                         src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/629768465aeed9a731c2eb83/img/chevron-down-1@2x.svg"
                       />
                       </div>
-                    </div>
+                    </div> -->
 
-                    <div class="col-8 col-md-8 mt-2 mb-4">
+<!--                     <div class="col-8 col-md-8 mt-2 mb-4">
                       <div class="select_frame">
                         <input type="text" class="form-control input_text" name="telefono" id="telefono" value="<?php echo $reg->phone;?>">
                       </div>
-<!--                       <img
-                          class="icon_info"
-                          src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/629768465aeed9a731c2eb83/img/info-4@2x.svg"
-                      /> -->
                     </div>
-
-                    <div class="col-12 col-md-12 mb-4">
+ -->
+<!--                     <div class="col-12 col-md-12 mb-4">
                       <div class="select_frame">
                         <select class="form-control select_input" name="">
                           <option value="masculino">Tipo documento</option>
@@ -171,17 +200,17 @@
                         src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/629768465aeed9a731c2eb83/img/chevron-down-1@2x.svg"
                       />
                       </div>
-                    </div>           
+                    </div>    -->        
 
-                    <div class="col-12 col-md-12 mt-2 mb-3">
+<!--                     <div class="col-12 col-md-12 mt-2 mb-3">
                       <input type="text" class="form-control input_text" id="validationServer01" placeholder="Nº de Documento" value="<?php echo $reg->doc_id;?>" required>
                     </div>
                     
                     <div class="col-12 col-md-12 mt-3 mb-3">
                       <input type="email" class="form-control input_text" id="validationServer01" placeholder="email" value="<?php echo $reg->email; ?> " required>
-                    </div>    
+                    </div>  -->   
 
-                    <div class="col-12 col-md-12 mb-4">
+<!--                     <div class="col-12 col-md-12 mb-4">
                       <div class="select_frame">
                         <select class="form-control select_input" name="">
                           <?php $ubi = $reg->ubication; ?>
@@ -197,9 +226,9 @@
                         src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/629768465aeed9a731c2eb83/img/chevron-down-1@2x.svg"
                       />
                       </div>
-                    </div>  
+                    </div>   -->
 
-                    <div class="col-12 col-md-12 mt-2 mb-4">
+<!--                     <div class="col-12 col-md-12 mt-2 mb-4">
                       <input type="text" class="form-control input_text" id="validationServer01" placeholder="Región o cuidad" value="<?php echo $reg->localidad;?>" required>
                     </div>
 
@@ -211,7 +240,7 @@
                           class="icon_info_2"
                           src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/629768465aeed9a731c2eb83/img/info-4@2x.svg"
                       />
-                    </div>
+                    </div> -->
 
                     <div class="col-12 col-md-12 mt-2 mb-4">
                       <button type="submit" class="btn btn-primary btn-lg|btn-sm" style="border: none; border-radius: 16px; background: linear-gradient(270deg, #339698 0%, #83C389 100%); font-size: 12px; padding: 8px 24px;">Guardar</button>

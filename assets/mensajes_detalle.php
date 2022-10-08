@@ -1,6 +1,6 @@
 <?php  
   session_start();
-  $_SESSION["idPosutlante"] = 1; 
+
   include_once "../conf/conf.php";
 
   // $sql = "SELECT id,
@@ -36,7 +36,6 @@
            WHERE P.id = " . $_SESSION["idPosutlante"];
   $db = $dbh->prepare($sql2);
   $db->execute();
-  $data= Array();
   // $reg = $db->fetch(PDO::FETCH_OBJ);
 
 ?>
@@ -79,7 +78,7 @@
 
     <div class="container-center-horizontal">
 
-      <div class="mensajes-5 screen" style="border: 1px solid blue; height: 1500px;">
+      <div class="mensajes-5 screen" style="height: 1500px;">
 
 
 
@@ -129,7 +128,22 @@
 
           <div class="frame-3575" style="height: 1500px;">
 
-            <div class="mensaje-4">
+
+              <div class="frame-3384">
+                <div class="frame-163">
+                  <div class="pendientes poppins-medium-malachite-12px">Enviados
+                  </div>
+                  <div class="number-1">4</div>
+                </div>
+                <div class="frame-165">
+                  <div class="terminadas poppins-normal-storm-dust-12px">Recibidos</div>
+                  <div class="number-2">2</div>
+                </div>
+              </div>
+
+
+
+<!--             <div class="mensaje-4">
               <div class="ttulo-1">
                 <p class="ttulo poppins-medium-storm-dust-16px">Sobre el reenvio de CV</p>
                 <div class="usuario">
@@ -162,11 +176,6 @@
               class="separador"
               src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/6300db60b99a625a2af31671/img/separador@2x.png"
             />            
-
-<!--             <img
-              class="separador"
-              src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/6300db60b99a625a2af31671/img/separador@2x.svg"
-            /> -->
 
             <div class="mensaje-6">
               <div class="ttulo-2">
@@ -240,7 +249,8 @@
               src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/6300db60b99a625a2af31671/img/separador@2x.png"
             />
 
-            <div class="no-hay-ms-mensajes">No hay más mensajes.</div>
+            <div class="no-hay-ms-mensajes">No hay más mensajes.</div> -->
+
           </div>
 
 

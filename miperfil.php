@@ -1,28 +1,41 @@
 <?php 
   session_start();
-  $_SESSION["idPosutlante"] = 1; 
   include_once "conf/conf.php";
 
-  $sql = "SELECT id,
-                 name,
-                 surnames,
-                 birthdate,
-                 ubication,
-                 sexo,
-                 phone,
-                 email,
-                 doc_id,
-                 localidad,
-                 cv,
-                 position,
-                 image
-                FROM profiles
-          WHERE id = 1";
+  $sql = "SELECT P.id,
+                 P.name,
+                 P.surnames,
+                 P.birthdate,
+                 P.ubication,
+                 P.sexo,
+                 P.phone,
+                 P.email,
+                 P.doc_id,
+                 P.localidad,
+                 P.cv,
+                 P.position,
+                 P.image,
+                 JS.id as idjobsummary, 
+                 JS.job_summary as summary
+                FROM profiles P INNER JOIN job_summary JS
+                ON P.id_job_summary = JS.id
+          WHERE P.id = " . $_SESSION["idPosutlante"];
 
   $db = $dbh->prepare($sql);
   $db->execute();
-  $data= Array();
   $reg = $db->fetch(PDO::FETCH_OBJ);
+
+  $sql_lan = "SELECT DL.id_language as idLanguaje, 
+                     L.language, 
+                     DL.nivel_language as nivelLanguaje
+          FROM detalle_languages DL 
+          INNER JOIN languages L ON DL.id_language = L.id
+          WHERE DL.id_profile = 1";
+  $db = $dbh->prepare( $sql_lan );
+  $db->execute();
+
+  $idiomas = $db->rowCount();
+
 
   //print_r($reg);
 
@@ -184,7 +197,7 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
       </div>
     </div>
     <div class="container mt-5">
-      <div class="tuCV border border-1 border-white rounded-4 mb-3 fondo_transparente">
+      <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <h5 class="text-center mt-3">Tu CV</h5>
         <a href="javascript: alert('subir archivo');" style="text-decoration: none;">
           <div class="subirCV rounded-4 mb-4 w-75">
@@ -207,12 +220,12 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
         </a>
       </div>
     </div>
-    <div class="container  mb-5">
-      <div class="tuCV border border-1 border-white rounded-4 mb-5 fondo_transparente">
+    <div class="container">
+      <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <div class="container">
           <div class="row" style="border: 0px solid red;">
             <div class="col-9" style="border: 0px solid green;">
-              <h5 class=" mt-3">Datos Persoles
+              <h5 class=" mt-3">Datos Personales
               </h5>
             </div>
             <div class="col-3">
@@ -262,7 +275,7 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
       </div>
     </div>
     <div class="container">
-      <div class="tuCV border border-1 border-white rounded-4 mb-5 fondo_transparente">
+      <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <div class="container">
           <div class="row">
             <div class="col-9">
@@ -290,31 +303,42 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
       </div>
     </div>
     <div class="container">
-      <div class="tuCV border border-1 border-white rounded-4 mb-5 fondo_transparente">
+      <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <div class="container">
           <div class="row">
             <div class="col-9">
-              <h5 class=" mt-3">Resúmen laboral
+              <h5 class=" mt-3">Resumen laboral
               </h5>
             </div>
             <div class="col-3">
               <div class="bg-white rounded-3 icono-edit1 mt-2 ms-2" style="border: 0px solid green; margin-right: 80px;">
-                <img src="img/Edit 1.png" alt="">
+                <a href="./assets/editar_resumen_laboral.php">
+                  <img src="img/Edit 1.png" alt="">
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="container resumen mt-2">
-              <p class="texto-resumen">
-                Bachiller en Psicología Organizacional con experiencia en procesos de selección, análisis de clima
+              <p class="texto-resumen" align="center">
+<!--                 Bachiller en Psicología Organizacional con experiencia en procesos de selección, análisis de clima
                 organizacional, elaboración de bandas salariales y generación de contenido estructurado para soluciones
-                tecnológicas en reclutamiento digital. Amante del mundo digital.
+                tecnológicas en reclutamiento digital. Amante del mundo digital. -->
+
+        <?php 
+          if ($reg->summary == '') {
+            echo "Sin resultados";
+          }else{
+            echo (isset($reg->idjobsummary) || $reg->idjobsummary != 0 ) ? $reg->summary : 'Sin resultados'; 
+          }
+
+        ?>
               </p>
             </div>
       </div>
     </div>
     <div class="container">
-      <div class="tuCV border border-1 border-white rounded-4 mb-5 fondo_transparente">
+      <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <div class="container">
           <div class="row">
             <div class="col-9">
@@ -322,7 +346,10 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
               </h5>
             </div>
             <div class="col-3  icono-edit1 mt-2 ps-3 ">
-              <img src="img/Editar (1).png" alt="">
+              <a href="assets/experiencia_laboral.php">
+                <img src="img/Editar (1).png" alt="">                
+              </a>
+
             </div>
           </div>
         </div>
@@ -422,8 +449,9 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
         </div>
       </div>
     </div>
+
     <div class="container">
-      <div class="tuCV border border-1 border-white rounded-4 mb-5">
+      <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <div class="container">
           <div class="row">
             <div class="col-9">
@@ -441,12 +469,12 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
 
               </div>
               <div class="col-2">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -8px;">
-                <img src="img/Edit 1.png" alt="">
+                <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -8px;">
+                  <img src="img/Edit 1.png" alt="">
+                </div>
               </div>
             </div>
-        </div>
-        <div class="row mt-2 m-0">
+            <div class="row mt-2 m-0">
               <div class="col-10 info-formacion">
                 <p class="fw-semibold m-0">Ingeniería de Sistemas –Culminado –Décimo superior</p>
                 <p class="fw-light">Pontifica Universidad Nacional Mayor de San Marcos</p>
@@ -454,31 +482,42 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
 
               </div>
               <div class="col-2">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -8px;">
-                <img src="img/Edit 1.png" alt="">
+                <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -8px;">
+                  <img src="img/Edit 1.png" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
-    </div>
       </div>
     </div>
 
     <div class="container">
-      <div class="tuCV border border-1 border-white rounded-4 mb-5">
+      <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <div class="container">
           <div class="row">
             <div class="col-10">
-              <h5 class=" mt-3">Idiomas
-              </h5>
+              <h5 class=" mt-3">Idiomas</h5>
+
+          <?php 
+          if ( $idiomas > 0 ) {
+            while (  $regLan = $db->fetch(PDO::FETCH_OBJ) ) { 
+          ?>
               <div class="idiomas d-flex fw-light">
-                <p class="idioma-1">Inglés</p>
-                <p class="mx-1 nivel-idioma">- Avanzado</p>
+                <p class="idioma-1"><?php echo $regLan->language; ?></p>
+                <p class="mx-1 nivel-idioma">- <?php echo $regLan->nivelLanguaje; ?></p>
               </div>
+
+          <?php } 
+            }else{
+          ?>
               <div class="idiomas d-flex fw-light">
-                <p class="idioma-1">Portugues</p>
-                <p class="mx-1 nivel-idioma">- Nativo</p>
+                Sin idiomas  
+                <br><br>
               </div>
+          <?php  }  ?>
+
+
             </div>
             <div class="col-2">
               <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">

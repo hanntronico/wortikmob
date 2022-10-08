@@ -55,7 +55,7 @@
                   class="icon-mail"
                   src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/mail-1@2x.svg"
                 />
-                <div class="mensajes poppins-normal-storm-dust-16px">
+                <div class="mensajes_item poppins-normal-storm-dust-16px">
                  <a href="./mensajes.php">Mensajes</a>
                </div>
               </div>
@@ -84,7 +84,7 @@
             </div>
           </div> -->
 
-          <button type="button" class="botn-p" onclick="javascript:alert('buscar');">
+          <button type="button" class="botn-p" onclick="irEmpleos()">
             <img
                 class="icon-search"
                 src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62aa83f4d4ab18fcfd2ee297/img/search-3@2x.svg"
@@ -92,12 +92,11 @@
             <div class="buscar-empleo poppins-medium-white-16px">Buscar empleo</div>
           </button>
 
-
           <ul class="frame-3539">
             
-            <li class="name poppins-medium-storm-dust-16px"><?php echo $reg->name . " <br> " . $reg->surnames; ?></li>
-            <li class="text_correo poppins-normal-storm-dust-12px">correo@dominio.com</li>
-            <li class="mi-cuenta">Mi cuenta</li>
+            <li class="name poppins-medium-storm-dust-16px"><?php echo $_SESSION["nombre_postulante"] . " <br> " . $_SESSION["apellidos_postulante"]; ?></li>
+            <li class="text_correo poppins-normal-storm-dust-12px"><?php echo $_SESSION["email_postulante"]; ?></li>
+            <li class="mi-cuenta"><a href="micuenta.php">Mi cuenta</a></li>
             <li class="cerrar-sesin"><a href="logout.php">Cerrar sesión</a></li>
           </ul>
 
@@ -124,4 +123,12 @@
 
   </div>
 </div>
+
+<script type="text/javascript">
+  
+  function irEmpleos() {
+    location.href = 'empleos.php';
+  }
+
+</script>
 

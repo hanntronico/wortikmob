@@ -1,29 +1,6 @@
 <?php  
   session_start();
-  $_SESSION["idPosutlante"] = 1; 
   include_once "../conf/conf.php";
-
-  // $sql = "SELECT id,
-  //                name,
-  //                surnames,
-  //                birthdate,
-  //                ubication,
-  //                sexo,
-  //                phone,
-  //                email,
-  //                doc_id,
-  //                localidad,
-  //                cv,
-  //                position,
-  //                image
-  //         FROM profiles
-  //         WHERE id = 1";
-
-  // $db = $dbh->prepare($sql);
-  // $db->execute();
-  // $data= Array();
-  // $reg = $db->fetch(PDO::FETCH_OBJ);
-
 
   $sql2 = "SELECT J.ID as job, J.*, C.* 
            FROM JOBS J 

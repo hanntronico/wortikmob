@@ -1,21 +1,16 @@
 <?php  
   session_start();
-  $_SESSION["idPosutlante"] = 1; 
   include_once "../conf/conf.php";
 
-  $sql2 = "SELECT * FROM mensajes M WHERE M.id_profile = " . $_SESSION["idPosutlante"];
+  $sql2 = "SELECT count(M.id_recruter) as total, R.nombres, R.apellidos, R.id as idrecruiter
+           FROM mensajes M INNER JOIN recruiters R
+           ON M.id_recruter = R.id
+           WHERE M.id_profile = ".$_SESSION["idPosutlante"]." 
+           GROUP BY id_recruter, R.nombres, R.apellidos, R.id";
 
 
   $db = $dbh->prepare($sql2);
   $db->execute();
-  $data= Array();
-  $reg = $db->fetch(PDO::FETCH_OBJ);
-
-  // echo "<pre>";
-  // print_r($reg);
-  // echo "</pre>";
-  // exit();
-  
 
 ?>
 
@@ -29,7 +24,6 @@
     <link rel="stylesheet" type="text/css" href="dashboard.css" />
     <link rel="stylesheet" type="text/css" href="mensajes.css" />
     <!-- <link rel="stylesheet" type="text/css" href="miperfil.css" /> -->
-
 
     <link rel="stylesheet" type="text/css" href="styleguide.css" />
     <link rel="stylesheet" type="text/css" href="globals.css" />
@@ -55,8 +49,10 @@
 
     <div class="container-center-horizontal">
       <div class="mensajes screen">
+
         <div class="overlap-group4">
-          <div class="overlap-group2">
+
+<!--           <div class="overlap-group2">
             <div class="overlap-group1-1">
               <div class="azul"></div>
               <div class="overlap-group-2">
@@ -65,7 +61,9 @@
               </div>
             </div>
             <div class="azul-2"></div>
-          </div>
+          </div> -->
+
+
           <div class="frame-3550">
             <div class="frame-3426">
 
@@ -75,163 +73,45 @@
   $i++;
  ?>
               <div class="frame-3427">
-                <div class="frame-3424">
-                  <div class="overlap-group1">
-                    <img
-                      class="foto"
-                      src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/foto@2x.svg"
-                    />
-                    <div class="overlap-group">
+
+                <a href="mensajes_detalle.php?id_recruiter=<?php echo $regMensajes->idrecruiter ?>">
+                  <div class="col_nombre">
+                    <div class="overlap-group1">
                       <img
-                        class="icon-star"
-                        src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/star-21@2x.svg"
+                        class="foto"
+                        src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/foto@2x.svg"
                       />
+                      <div class="overlap-group">
+                        <img
+                          class="icon-star"
+                          src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/star-21@2x.svg"
+                        />
+                      </div>
+                    </div>
+                    <div class="aviso poppins-medium-malachite-16px">
+                      <span class="poppins-medium-storm-dust-16px">
+                        <?php echo $regMensajes->nombres . " " . $regMensajes->apellidos; ?>                      
+                      </span><br>
+                        <span class="span1 poppins-light-storm-dust-12px">IT Recruiter</span>
                     </div>
                   </div>
-                  <div class="aviso poppins-medium-malachite-16px">
-                    <span class="poppins-medium-storm-dust-16px">Patricia Castañeda Ramirez<br /></span
-                    ><span class="span1 poppins-light-storm-dust-12px">IT Recruiter</span>
-                  </div>
-                </div>
+                </a>
+
+
+
                 <div class="frame-3425">
                   <div class="x1020-pm poppins-light-storm-dust-12px">10:20 pm</div>
-                  <div class="nuevo"><div class="number poppins-bold-white-12px">0<?php echo $i+1; ?></div></div>
+                  <div class="nuevo">
+                    <div class="number poppins-bold-white-12px">
+                      0<?php echo $regMensajes->total;?> 
+                    </div>
+                  </div>
                 </div>
-
-
 
               </div>
 
 <?php } ?>
 
-
-<!--               <div class="frame-3436">
-
-                <div class="frame-3424">
-                  <div class="overlap-group1">
-                    <img
-                      class="foto"
-                      src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/foto-1@2x.svg"
-                    />
-                    <div class="overlap-group">
-                      <img
-                        class="icon-star"
-                        src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/star-21@2x.svg"
-                      />
-                    </div>
-                  </div>
-
-                  <div class="aviso poppins-medium-malachite-16px">
-                    <span class="poppins-medium-storm-dust-16px">Patricia Castañeda Ramirez<br /></span
-                    ><span class="span1 poppins-light-storm-dust-12px">IT Recruiter</span>
-                  </div>
-                </div>
-
-                <div class="frame-3425">
-                  <div class="x1020-pm poppins-light-storm-dust-12px">10:20 pm</div>
-                  <div class="nuevo-1"><div class="number poppins-bold-white-12px">02</div></div>
-                </div>
-              </div>
-
-              <div class="frame-3437">
-                <div class="frame-3424">
-                  <div class="overlap-group1">
-                    <img
-                      class="foto"
-                      src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/foto-2@2x.svg"
-                    />
-                    <div class="overlap-group">
-                      <img
-                        class="icon-star"
-                        src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/star-21@2x.svg"
-                      />
-                    </div>
-                  </div>
-                  <div class="aviso poppins-medium-malachite-16px">
-                    <span class="poppins-medium-storm-dust-16px">Patricia Castañeda Ramirez<br /></span
-                    ><span class="span1 poppins-light-storm-dust-12px">IT Recruiter</span>
-                  </div>
-                </div>
-                <div class="frame-3425">
-                  <div class="x1020-pm poppins-light-storm-dust-12px">10:20 pm</div>
-                  <div class="nuevo-1"><div class="number poppins-bold-white-12px">02</div></div>
-                </div>
-              </div>
-
-              <div class="frame-3438">
-                <div class="frame-3424">
-                  <div class="overlap-group1-2">
-                    <img
-                      class="foto-2"
-                      src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/foto-3@2x.svg"
-                    />
-                    <div class="overlap-group-3">
-                      <img
-                        class="star-21"
-                        src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/star-21@2x.png"
-                      />
-                    </div>
-                  </div>
-                  <div class="aviso poppins-medium-malachite-16px">
-                    <span class="poppins-medium-storm-dust-16px">Patricia Castañeda Ramirez<br /></span
-                    ><span class="span1 poppins-light-storm-dust-12px">IT Recruiter</span>
-                  </div>
-                </div>
-                <div class="frame-3425">
-                  <div class="x1020-pm poppins-light-storm-dust-12px">10:20 pm</div>
-                  <div class="nuevo-1"><div class="number poppins-bold-white-12px">02</div></div>
-                </div>
-              </div>
-
-              <div class="frame-3439">
-                <div class="frame-3424">
-                  <div class="frame-3421">
-                    <img
-                      class="foto-1"
-                      src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/star-21@2x.png"
-                    />
-                    <div class="overlap-group-1">
-                      <img
-                        class="star-21"
-                        src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/star-21@2x.png"
-                      />
-                    </div>
-                  </div>
-                  <div class="aviso poppins-medium-malachite-16px">
-                    <span class="poppins-medium-storm-dust-16px">Patricia Castañeda Ramirez<br /></span
-                    ><span class="span1 poppins-light-storm-dust-12px">IT Recruiter</span>
-                  </div>
-                </div>
-                <div class="frame-3425">
-                  <div class="x1020-pm poppins-light-storm-dust-12px">10:20 pm</div>
-                  <div class="nuevo"><div class="number poppins-bold-white-12px">02</div></div>
-                </div>
-              </div>
-
-              <div class="frame-3440">
-                <div class="frame-3424">
-                  <div class="frame-3421">
-                    <img
-                      class="foto-1"
-                      src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/star-21@2x.png"
-                    />
-                    <div class="overlap-group-1">
-                      <img
-                        class="star-21"
-                        src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/star-21@2x.png"
-                      />
-                    </div>
-                  </div>
-                  <div class="aviso poppins-medium-malachite-16px">
-                    <span class="poppins-medium-storm-dust-16px">Patricia Castañeda Ramirez<br /></span
-                    ><span class="span1 poppins-light-storm-dust-12px">IT Recruiter</span>
-                  </div>
-                </div>
-                <div class="frame-3425">
-                  <div class="x1020-pm poppins-light-storm-dust-12px">10:20 pm</div>
-                  <div class="nuevo"><div class="number poppins-bold-white-12px">02</div></div>
-                </div>
-              </div> -->
             </div>
 
             <div class="texto">
@@ -265,27 +145,6 @@
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

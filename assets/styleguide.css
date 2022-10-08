@@ -17,12 +17,15 @@
   --font-size-xl: 18px;
   --font-size-xs: 12px;
   --font-size-xs2: 16px;
- 
+
+  --font-size-s: 15px;
+
   --coconut: #fefefe;
   --pink-swan: #b7b7b7;
   --white-22: #ffffff5e;
   --white2: #ffffff;
 
+  --bon-jour: #e2e2e2;
  
   --font-family-poppins: "Poppins", Helvetica;
 }
@@ -121,6 +124,7 @@
   font-size: var(--font-size-xs);
   font-style: normal;
   font-weight: 400;
+  text-decoration: none !important;
 }
 
 .poppins-normal-malachite-12px {
@@ -192,4 +196,44 @@
   font-size: var(--font-size-xs);
   font-style: normal;
   font-weight: 300;
+}
+
+.poppins-normal-star-dust-14px {
+  color: var(--star-dust);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-medium-silver-chalice-12px {
+  color: var(--silver-chalice);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs3);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-normal-malachite-14px {
+  color: var(--malachite2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-bold-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs2);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.poppins-semi-bold-malachite-14px {
+  color: var(--malachite2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 600;
 }

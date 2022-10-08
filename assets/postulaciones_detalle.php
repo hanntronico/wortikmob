@@ -1,6 +1,5 @@
 <?php  
   session_start();
-  $_SESSION["idPosutlante"] = 1; 
   include_once "../conf/conf.php";
 
   $sql = "SELECT id,
@@ -17,7 +16,7 @@
                  position,
                  image
           FROM profiles
-          WHERE id = 1";
+          WHERE id = ".$_SESSION["idPosutlante"];
 
   $db = $dbh->prepare($sql);
   $db->execute();
@@ -39,11 +38,6 @@
   $data= Array();
   $regDatos = $db->fetch(PDO::FETCH_OBJ);
 
-  // echo "<pre>";
-  // print_r($reg);
-  // echo "</pre>";
-  // exit();
-  
   $createDate = ( !is_null($regDatos->created_at) ) ? date("d/m/Y", strtotime( $regDatos->created_at )) : '';
 
 
@@ -52,11 +46,7 @@
   $db3->execute();
   $totalCandidatos = $db3->fetch(PDO::FETCH_OBJ);
 
-  // echo "<pre>";
-  // print_r($totaCandidatos);
-  // echo "</pre>";
-  // exit();
-  
+ 
 
 ?>
 
@@ -110,7 +100,9 @@
 
           <div class="frame-3551">
             <div class="postulaciones poppins-normal-storm-dust-12px">Postulaciones /</div>
-            <div class="programador-fullstack poppins-normal-malachite-12px">Programador Fullstack</div>
+            <div class="programador-fullstack poppins-normal-malachite-12px">
+              <?php echo substr($regDatos->name, 0, 21)." ..."; ?>
+            </div>
           </div>
 
           <div class="frame-3550 frame-3571">

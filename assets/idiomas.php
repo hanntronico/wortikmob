@@ -28,8 +28,6 @@
     </div>
   </aside>
 
-
-
     <input type="hidden" id="anPageName" name="page" value="dashboard" />
 
 
@@ -72,24 +70,42 @@
                   </div>
                 </div>
 
-                <form style="border: none;">
+                <form style="border: none;" action="guardar_idioma.php" method="POST">
                   <div class="form-row mt-3">
 
                     <div class="col-12 col-md-12 mb-3">
-                      <input type="text" class="form-control input_text" id="txtIdiomas" placeholder="Selecciona el idioma" value="" required>
+
+                      <div class="select_frame">
+                        <select class="form-control select_input" name="optIdiomas" id="optIdiomas">
+                          <option value="">Selecciona el idioma</option>
+                          <option value="1">Español</option>
+                          <option value="2">Inglés</option>
+                          <option value="3">Francés</option>
+                          <option value="4">Italiano</option>
+                          <option value="5">Portugués</option>
+                          <option value="6">Ruso</option>
+                          <option value="7">Alemán</option>
+                        </select>  
+
+                        <img
+                        class="chevron-down-1"
+                        src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/629768465aeed9a731c2eb83/img/chevron-down-1@2x.svg"
+                      />                                              
+
+                      </div>
+
                     </div>
 
 
 
                     <div class="col-12 col-md-12 mb-4">
                       <div class="select_frame">
-                        <select class="form-control select_input" name="aptitudes">
-                          <option value="0">Nivel</option>
-                          <option value="1">Ninguno</option>
-                          <option value="basico">Básico</option>
-                          <option value="intermedio">Intermedio</option>
-                          <option value="avanzado">Avanzado</option>
-                          <option value="experto">Experto</option>
+                        <select class="form-control select_input" name="nivel-idioma" id="nivel-idioma">
+                          <option value="">Nivel</option>
+                          <option value="Básico">Básico</option>
+                          <option value="Intermedio">Intermedio</option>
+                          <option value="Avanzado">Avanzado</option>
+                          <option value="Nativo">Nativo</option>
                         </select>
                         <img
                         class="chevron-down-1"
@@ -119,8 +135,6 @@
 
           </div>
 
-
-
         </div>
       </div>
     </div>
@@ -138,6 +152,6 @@
     <script src="menu/plugins/jquery/jquery.min.js"></script>
     <script src="menu/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
-
+		
   </body>
 </html>

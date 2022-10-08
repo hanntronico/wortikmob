@@ -3,40 +3,43 @@
   $_SESSION["idPosutlante"] = 1; 
   include_once "../conf/conf.php";
 
-  // $sql = "SELECT id,
-  //                name,
-  //                surnames,
-  //                birthdate,
-  //                ubication,
-  //                sexo,
-  //                phone,
-  //                email,
-  //                doc_id,
-  //                localidad,
-  //                cv,
-  //                position,
-  //                image
-  //         FROM profiles
-  //         WHERE id = 1";
+  $sql = "SELECT P.id,
+                 P.name,
+                 P.surnames,
+                 P.birthdate,
+                 P.ubication,
+                 P.sexo,
+                 P.phone,
+                 P.email,
+                 P.doc_id,
+                 P.localidad,
+                 P.cv,
+                 P.position,
+                 P.image,
+                 JS.id as idsummary,
+                 JS.job_summary as resumen
+                FROM profiles P 
+                INNER JOIN job_summary JS
+                ON P.id_job_summary = JS.id
+          WHERE P.id = 1";
 
-  // $db = $dbh->prepare($sql);
+  $db = $dbh->prepare($sql);
+  $db->execute();
+  $reg = $db->fetch(PDO::FETCH_OBJ);
+
+
+  // $sql2 = "SELECT J.ID as job, J.*, C.* 
+  //          FROM JOBS J 
+  //          INNER JOIN JOBS_PROFILES JP 
+  //          ON J.id = JP.id_job 
+  //          INNER JOIN PROFILES P 
+  //          ON jp.id_profile = P.id 
+  //          INNER JOIN COMPANIES C 
+  //          ON J.company_id = C.id
+  //          WHERE P.id = " . $_SESSION["idPosutlante"];
+  // $db = $dbh->prepare($sql2);
   // $db->execute();
   // $data= Array();
-  // $reg = $db->fetch(PDO::FETCH_OBJ);
-
-
-  $sql2 = "SELECT J.ID as job, J.*, C.* 
-           FROM JOBS J 
-           INNER JOIN JOBS_PROFILES JP 
-           ON J.id = JP.id_job 
-           INNER JOIN PROFILES P 
-           ON jp.id_profile = P.id 
-           INNER JOIN COMPANIES C 
-           ON J.company_id = C.id
-           WHERE P.id = " . $_SESSION["idPosutlante"];
-  $db = $dbh->prepare($sql2);
-  $db->execute();
-  $data= Array();
   // $reg = $db->fetch(PDO::FETCH_OBJ);
 
 ?>
@@ -101,50 +104,29 @@
         </div>
 
         <div class="frame-3591">
-          <div class="frame-3592">
-            <div class="nombre poppins-medium-malachite-16px">Mensajes</div>
-            <div class="frame-3552">
-              <div class="mensajes poppins-normal-storm-dust-12px">Mensajes /</div>
-              <div class="mensaje-patricia-castaeda poppins-normal-malachite-12px">Mensaje: Patricia Castañeda...</div>
-            </div>
-          </div>
-          <div class="usuario">
-            <img
-              class="foto"
-              src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/6300db60b99a625a2af31671/img/foto@2x.svg"
-            />
-            <div class="texto">
-              <p class="nombre-1 poppins-normal-white-12px">
-                <span class="poppins-normal-star-dust-12px">Para:</span
-                ><span class="poppins-normal-storm-dust-12px"> Patricia Castañeda Ramirez<br /></span
-                ><span class="poppins-normal-star-dust-12px"
-                  >Recruiter&nbsp;&nbsp;I&nbsp;&nbsp;Analista digital&nbsp;&nbsp;I&nbsp;&nbsp;Proyectos</span
-                >
-              </p>
-            </div>
-          </div>
-          <div class="frame-3479">
-            <div class="frame-3451">
 
-            <form id="frmEnviarMensaje" method="POST" action="enviar_mensaje.php">
+          <div class="subtitulo">
+            <div class="nombre poppins-medium-malachite-16px">Resumen Laboral</div>
+            <div class="poppins-normal-storm-dust-12px">
+              Mi Perfil / <span class="poppins-normal-malachite-12px">Editar</span>
+            </div>
+          </div>
+
+          <div class="frame-resumen">
+
+            <form id="frmEnviarMensaje" method="POST" action="guardar_resumen.php">
               
-                <input type="text" class="poppins-normal-star-dust-16px asunto_text form-control" name="txtAsunto" id="txtAsunto" value="" placeholder="Asunto">
 
-<!--               <div class="frame-3069"><div class="asunto poppins-normal-star-dust-16px">Asunto</div></div> -->
-<!--               <img
-                class="vector-9"
-                src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/6300db60b99a625a2af31671/img/vector-9@2x.svg"
-              /> -->
 
-            </div>
-            <div class="campo-escribir border-1px-pink-swan">
-              <div class="escribir poppins-normal-star-dust-16px" style="width: 90%; height: 60%;">
-                
-                <textarea class="form-control" cols="12" name="txtMensaje" id="txtMensaje" style="width: 100%; height: 100%; background-color: transparent; border: none;" placeholder="Escribir..."></textarea>
+           <div class="campo-escribir-resumen border-1px-pink-swan">
+              <div class="escribir-resumen poppins-normal-star-dust-16px" style="width: 90%; height: 60%; padding: 0;">
 
+                <input type="hidden" name="idSummary" id="idSummary" value="<?php echo $reg->idsummary; ?>">
+
+                <textarea class="form-control textarea-resumen" cols="12" rows="40" name="txtResumen" id="txtResumen" placeholder="Escribir..."><?php echo $reg->resumen; ?></textarea>
 
               </div>
-              <div class="edicin">
+              <div class="edicin-resumen">
                 <div class="edicin-item border-1px-pink-swan"><div class="b poppins-bold-storm-dust-16px">B</div></div>
                 <div class="edicin-item border-1px-pink-swan">
                   <img
@@ -169,12 +151,9 @@
           </div>
         </div>
 
-
-        <div class="nuevo-mensaje">
-<!--           <div class="frame-3353"><div class="descripcin poppins-semi-bold-white-12px">Enviar mensaje</div></div> -->
-          <button type="submit" class="frame-3353 descripcin poppins-semi-bold-white-12px" style="border: none;">Enviar mensaje</button>
+        <div class="frame-guardar-resumen">
+            <button type="submit" class="btn-guardar-resumen descripcin poppins-semi-bold-white-12px" style="border: none;">Guardar</button>
         </div>
-
        
        </form> 
 

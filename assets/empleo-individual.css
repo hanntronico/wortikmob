@@ -1,0 +1,837 @@
+/* screen - empleo-individual */
+
+.empleo-individual {
+  background-color: var(--white);
+  border: 1px none;
+  height: 2353px;
+  position: relative;
+  width: 320px;
+}
+
+.empleo-individual .overlap-group1 {
+  background-color: var(--cultured-pearl);
+  height: 698px;
+  left: 0;
+  position: absolute;
+  top: 1655px;
+  width: 320px;
+}
+
+.empleo-individual .vector-17 {
+  height: 1px;
+  left: 24px;
+  position: absolute;
+  top: 584px;
+  width: 273px;
+}
+
+.empleo-individual .redes-sociales {
+  height: 33px;
+  left: 63px;
+  position: absolute;
+  top: 616px;
+  width: 180px;
+}
+
+.empleo-individual .fb {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.empleo-individual .brandicofacebook {
+  height: 20px;
+  left: 11px;
+  position: absolute;
+  top: 7px;
+  width: 10px;
+}
+
+.empleo-individual .ins {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 50px;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.empleo-individual .icon-instagram {
+  height: 19px;
+  left: 6px;
+  position: absolute;
+  top: 7px;
+  width: 19px;
+}
+
+.empleo-individual .tw {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 98px;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.empleo-individual .icon-twitter {
+  height: 20px;
+  left: 6px;
+  position: absolute;
+  top: 6px;
+  width: 20px;
+}
+
+.empleo-individual .in {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 148px;
+  position: absolute;
+  top: 1px;
+  width: 32px;
+}
+
+.empleo-individual .icon-linkedin {
+  height: 17px;
+  left: 7px;
+  position: absolute;
+  top: 7px;
+  width: 18px;
+}
+
+.empleo-individual .group-108 {
+  height: 48px;
+  left: 139px;
+  position: absolute;
+  top: 507px;
+  width: 43px;
+}
+
+.empleo-individual .es {
+  color: var(--sonic-silver);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs);
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 17.9px;
+  position: absolute;
+  top: 29px;
+  white-space: nowrap;
+  width: 15px;
+}
+
+.empleo-individual .chevron-down-5-2 {
+  height: 22px;
+  left: 19px;
+  position: absolute;
+  top: 26px;
+  width: 22px;
+}
+
+.empleo-individual .overlap-group {
+  background-color: var(--turbo);
+  height: 20px;
+  left: 2px;
+  position: absolute;
+  top: 0;
+  width: 33px;
+}
+
+.empleo-individual .rectangle-62 {
+  background-color: var(--tart-orange);
+  border: 0.92px none;
+  height: 6px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 33px;
+}
+
+.empleo-individual .rectangle-63 {
+  background-color: var(--tart-orange);
+  border: 0.92px none;
+  height: 6px;
+  left: 0;
+  position: absolute;
+  top: 14px;
+  width: 33px;
+}
+
+.empleo-individual .contcto {
+  height: 68px;
+  left: 121px;
+  position: absolute;
+  top: 396px;
+  width: 75px;
+}
+
+.empleo-individual .telfono {
+  left: 10px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 28px;
+  white-space: nowrap;
+}
+
+.empleo-individual .plataforma {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.empleo-individual .correo {
+  left: 14px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 52px;
+  white-space: nowrap;
+}
+
+.empleo-individual .plataforma-1 {
+  height: 164px;
+  left: 84px;
+  position: absolute;
+  top: 190px;
+  width: 158px;
+}
+
+.empleo-individual .precios {
+  left: 50px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 28px;
+  white-space: nowrap;
+}
+
+.empleo-individual .plataforma-2 {
+  left: 37px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.empleo-individual .ayuda {
+  left: 52px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 52px;
+  white-space: nowrap;
+}
+
+.empleo-individual .soporte {
+  left: 48px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 76px;
+  white-space: nowrap;
+}
+
+.empleo-individual .contrata-publicidad {
+  left: 12px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 100px;
+  white-space: nowrap;
+}
+
+.empleo-individual .trminos-y-condiciones {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 124px;
+  white-space: nowrap;
+}
+
+.empleo-individual .poltica-y-privacidad {
+  left: 12px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 148px;
+  white-space: nowrap;
+}
+
+.empleo-individual .nosotros {
+  height: 126px;
+  left: 80px;
+  position: absolute;
+  top: 32px;
+  width: 171px;
+}
+
+.empleo-individual .sobre-nosotros {
+  left: 28px;
+  letter-spacing: 0;
+  line-height: 18.2px;
+  position: absolute;
+  top: 30px;
+  white-space: nowrap;
+}
+
+.empleo-individual .nosotros-1 {
+  left: 49px;
+  letter-spacing: 0;
+  line-height: 18.2px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.empleo-individual .nete-a-nosotros {
+  left: 17px;
+  letter-spacing: 0;
+  line-height: 18.2px;
+  position: absolute;
+  top: 56px;
+  white-space: nowrap;
+}
+
+.empleo-individual .programa-de-referidos {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 18.2px;
+  position: absolute;
+  top: 82px;
+  white-space: nowrap;
+}
+
+.empleo-individual .preguntas-frecuentes {
+  left: 4px;
+  letter-spacing: 0;
+  line-height: 18.2px;
+  position: absolute;
+  top: 108px;
+  white-space: nowrap;
+}
+
+.empleo-individual .frame-124 {
+  align-items: center;
+  border: 1px none;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  left: 24px;
+  position: absolute;
+  top: 80px;
+  width: fit-content;
+}
+
+.empleo-individual .arrow {
+  height: 24px;
+  min-width: 24px;
+}
+
+.empleo-individual .regresar {
+  letter-spacing: 0;
+  line-height: 18.2px;
+  white-space: nowrap;
+  width: fit-content;
+  text-decoration: none !important;
+  color: #616161 !important;
+}
+
+.empleo-individual .empleo-1 {
+  cursor: pointer;
+  height: 141px;
+  left: 24px;
+  position: absolute;
+  top: 128px;
+  width: 273px;
+}
+
+.empleo-individual .developer-font-back-end {
+  left: 65px;
+  letter-spacing: 0;
+  line-height: 21.6px;
+  position: absolute;
+  top: 0;
+  width: 206px;
+}
+
+.empleo-individual .frame-156 {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  left: 65px;
+  position: absolute;
+  top: 52px;
+  width: fit-content;
+}
+
+.empleo-individual .group-139 {
+  height: 17px;
+  min-width: 48px;
+  position: relative;
+}
+
+.empleo-individual .hoy {
+  left: 22px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 1px;
+  white-space: nowrap;
+}
+
+.empleo-individual .calendar-3 {
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 16px;
+}
+
+.empleo-individual .place {
+  cursor: pointer;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.empleo-individual .frame-156-item {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.empleo-individual .ellipse-18 {
+  height: 48px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 49px;
+}
+
+.empleo-individual .botn-p-1 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 2px none;
+  border-radius: 10px;
+  display: flex;
+  gap: 8px;
+  left: 24px;
+  padding: 8px;
+  position: absolute;
+  top: 284px;
+  width: fit-content;
+}
+
+.empleo-individual .recomendar {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -2.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.empleo-individual .recomienda-a-alguien-para-este-puesto {
+  left: 33px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 327px;
+  width: 143px;
+}
+
+.empleo-individual .cta {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  left: 182px;
+  position: absolute;
+  top: 284px;
+  width: fit-content;
+}
+
+.empleo-individual .botn-p {
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgb(131, 195, 137) 0%, rgb(51, 150, 152) 100%);
+  border: 1px none;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  padding: 8px 24px;
+  width: fit-content;
+}
+
+.empleo-individual .botn-primario {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.empleo-individual .vector-21 {
+  height: 1px;
+  left: 24px;
+  position: absolute;
+  top: 384px;
+  width: 273px;
+}
+
+.empleo-individual .vector-22 {
+  height: 1px;
+  left: 24px;
+  position: absolute;
+  top: 578px;
+  width: 273px;
+}
+
+.empleo-individual .frame-74 {
+  align-items: flex-start;
+  background-color: var(--coconut);
+  border: 1px none;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  left: 24px;
+  padding: 8px;
+  position: absolute;
+  top: 479px;
+  width: fit-content;
+}
+
+.empleo-individual .diseo-ui {
+  letter-spacing: 0;
+  line-height: 18.2px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.empleo-individual .frame-75 {
+  align-items: flex-start;
+  background-color: var(--coconut);
+  border: 1px none;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  left: 112px;
+  padding: 8px;
+  position: absolute;
+  top: 479px;
+  width: fit-content;
+}
+
+.empleo-individual .name {
+  letter-spacing: 0;
+  line-height: 18.2px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.empleo-individual .frame-76 {
+  align-items: flex-start;
+  background-color: var(--coconut);
+  border: 1px none;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  left: 179px;
+  padding: 8px;
+  position: absolute;
+  top: 479px;
+  width: fit-content;
+}
+
+.empleo-individual .universitario {
+  letter-spacing: 0;
+  line-height: 18.2px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.empleo-individual .frame-77 {
+  align-items: flex-start;
+  background-color: var(--coconut);
+  border: 1px none;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  left: 24px;
+  padding: 8px;
+  position: absolute;
+  top: 521px;
+  width: fit-content;
+}
+
+.empleo-individual .egresado {
+  letter-spacing: 0;
+  line-height: 18.2px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.empleo-individual .frame-71 {
+  align-items: flex-start;
+  background-color: var(--coconut);
+  border: 1px none;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  left: 24px;
+  padding: 8px;
+  position: absolute;
+  top: 437px;
+  width: fit-content;
+}
+
+.empleo-individual .presencial {
+  letter-spacing: 0;
+  line-height: 18.2px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.empleo-individual .frame-72 {
+  align-items: flex-start;
+  background-color: var(--coconut);
+  border: 1px none;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  left: 120px;
+  padding: 8px;
+  position: absolute;
+  top: 437px;
+  width: fit-content;
+}
+
+.empleo-individual .planilla {
+  letter-spacing: 0;
+  line-height: 18.2px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.empleo-individual .frame-73 {
+  align-items: flex-start;
+  background-color: var(--coconut);
+  border: 1px none;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  left: 194px;
+  padding: 8px;
+  position: absolute;
+  top: 437px;
+  width: fit-content;
+}
+
+.empleo-individual .diseo {
+  letter-spacing: 0;
+  line-height: 18.2px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.empleo-individual .sobre-el-puesto {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 407px;
+  white-space: nowrap;
+  width: 131px;
+}
+
+.empleo-individual .sobre-nosotros-1 {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 19.2px;
+  position: absolute;
+  top: 602px;
+  white-space: nowrap;
+  width: 131px;
+}
+
+.empleo-individual .te-encargars-de {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 19.2px;
+  position: absolute;
+  top: 796px;
+  white-space: nowrap;
+}
+
+.empleo-individual .si-eres-desarrollado {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 19.2px;
+  position: absolute;
+  top: 639px;
+  width: 272px;
+}
+
+.empleo-individual .atender-en-forma-opo {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 19.2px;
+  position: absolute;
+  top: 831px;
+  width: 272px;
+}
+
+.empleo-individual .remuneracin-en-plan {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 19.2px;
+  position: absolute;
+  top: 1156px;
+  width: 272px;
+}
+
+.empleo-individual .remuneracin-en-plan-1 {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 19.2px;
+  position: absolute;
+  top: 1310px;
+  width: 272px;
+}
+
+.empleo-individual .remuneracin-en-plan-2 {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 19.2px;
+  position: absolute;
+  top: 1445px;
+  width: 272px;
+}
+
+.empleo-individual .cta-1 {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  left: 61px;
+  position: absolute;
+  top: 1554px;
+  width: fit-content;
+}
+
+.empleo-individual .group-177 {
+  height: 19px;
+  left: 24px;
+  position: absolute;
+  top: 1411px;
+  width: 228px;
+}
+
+.empleo-individual .te-amaremos-si {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 19.2px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+  width: 202px;
+}
+
+.empleo-individual .heart-1-1 {
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  width: 16px;
+}
+
+.empleo-individual .group-176 {
+  height: 38px;
+  left: 24px;
+  position: absolute;
+  top: 1257px;
+  width: 228px;
+}
+
+.empleo-individual .eres-la-persona-que-bscamos-si {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 19.2px;
+  position: absolute;
+  top: 0;
+  width: 202px;
+}
+
+.empleo-individual .icon-user {
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 2px;
+  width: 16px;
+}
+
+.empleo-individual .beneficios {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 19.2px;
+  position: absolute;
+  top: 1121px;
+  white-space: nowrap;
+}
+
+.empleo-individual .header {
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px #eefafa;
+  height: 64px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 320px;
+}
+
+.empleo-individual .search-2 {
+  height: 24px;
+  left: 24px;
+  position: absolute;
+  top: 20px;
+  width: 24px;
+}
+
+.empleo-individual .logo-versin-positiva-2 {
+  height: 24px;
+  left: 101px;
+  position: absolute;
+  top: 19px;
+  width: 119px;
+}
+
+.empleo-individual .men-hamburguesa {
+  cursor: pointer;
+  height: 24px;
+  left: 272px;
+  position: absolute;
+  top: 20px;
+  width: 24px;
+}

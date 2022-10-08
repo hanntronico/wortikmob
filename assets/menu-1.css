@@ -1,0 +1,202 @@
+/* screen - menu-1 */
+
+.menu-1 {
+  background-color: var(--white);
+  height: 568px;
+  position: relative;
+  width: 320px;
+}
+
+.menu-1 .group {
+  height: 32px;
+  left: 81px;
+  position: absolute;
+  top: 40px;
+  width: 158px;
+}
+
+.menu-1 .close-2-1 {
+  cursor: pointer;
+  height: 24px;
+  left: 280px;
+  position: absolute;
+  top: 24px;
+  width: 24px;
+}
+
+.menu-1 .vector-17 {
+  height: 1px;
+  left: 24px;
+  position: absolute;
+  top: 478px;
+  width: 273px;
+}
+
+.menu-1 .redes-sociales {
+  height: 33px;
+  left: 63px;
+  position: absolute;
+  top: 495px;
+  width: 180px;
+}
+
+.menu-1 .fb {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.menu-1 .brandicofacebook {
+  height: 20px;
+  left: 11px;
+  position: absolute;
+  top: 7px;
+  width: 10px;
+}
+
+.menu-1 .ins {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 50px;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.menu-1 .akar-iconsinstagram-fill {
+  height: 19px;
+  left: 6px;
+  position: absolute;
+  top: 7px;
+  width: 19px;
+}
+
+.menu-1 .tw {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 98px;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.menu-1 .akar-iconstwitter-fill {
+  height: 20px;
+  left: 6px;
+  position: absolute;
+  top: 6px;
+  width: 20px;
+}
+
+.menu-1 .in {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 148px;
+  position: absolute;
+  top: 1px;
+  width: 32px;
+}
+
+.menu-1 .vector {
+  height: 17px;
+  left: 7px;
+  position: absolute;
+  top: 7px;
+  width: 18px;
+}
+
+.menu-1 .estado-default-tipo {
+  align-items: flex-start;
+  cursor: pointer;
+  display: flex;
+  left: 85px;
+  position: absolute;
+  top: 145px;
+}
+
+.menu-1 .botn-p {
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgb(131, 195, 137) 0%, rgb(52, 151, 153) 100%);
+  border-radius: 15px;
+  display: flex;
+  gap: 10px;
+  padding: 12px 24px;
+}
+
+.menu-1 .botn-primario {
+  letter-spacing: 0;
+  line-height: 19.2px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+}
+
+.menu-1 .group-156 {
+  height: 47px;
+  left: 76px;
+  position: absolute;
+  top: 204px;
+  width: 172px;
+}
+
+.menu-1 .frame-63 {
+  align-items: flex-start;
+  background-color: var(--cultured-pearl);
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  padding: 12px 24px;
+}
+
+.menu-1 .publicar-empleo {
+  color: var(--malachite2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s);
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-top: -1.00px;
+  min-width: 124px;
+  text-align: center;
+}
+
+.menu-1 .soy-postulante {
+  left: 103px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 274px;
+  white-space: nowrap;
+}
+
+.menu-1 .busco-talento {
+  left: 107px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 311px;
+  white-space: nowrap;
+}
+
+.menu-1 .subir-cv {
+  left: 128px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 348px;
+  white-space: nowrap;
+}
+
+.menu-1 .blog {
+  left: 145px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 385px;
+  white-space: nowrap;
+}
