@@ -89,7 +89,7 @@
 
                 <div class="row" style="border: none; margin: 0px auto; padding: 0px; width: 100%; ">
                   <div class="col-md-12">
-                    <h1 class="titulo">Experiencia Laboral</h1>
+                    <h1 class="titulo">Formación Académica</h1>
                     <p class="poppins-light-storm-dust-12px" style="text-align: center;">
                       <a href="../miperfil.php" style="text-decoration: none; color: #868686">
                       Mi perfil

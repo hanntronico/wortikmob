@@ -29,7 +29,6 @@
             </a>
           </div>
 
-
 <!--           <img
             class="group"
             src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62daa4495150f1813bf77495/img/group-1@2x.svg"
@@ -42,12 +41,6 @@
             <div class="nuevo"><div class="number poppins-semi-bold-white-12px">20</div></div>
           </div> -->
 
-
-
-
-
-
-
           <div class="frame-125">
             <div class="te-damos-la-bienvenida poppins-semi-bold-malachite-16px">¡Hola, te damos la Bienvenida!</div>
 <!--             <div class="usuario">
@@ -55,7 +48,7 @@
               </div>
             </div> -->
 
-            <form action="iniciar.php" method="POST" accept-charset="utf-8">
+            <form action="iniciar_emp.php" method="POST" accept-charset="utf-8">
 
 
                 <input type="text" class="usuario usuario-1 form-control" name="txtUsuario" id="txtUsuario" placeholder="Usuario">

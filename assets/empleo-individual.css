@@ -272,10 +272,13 @@
 
 .empleo-individual .nosotros {
   height: 126px;
-  left: 80px;
-  position: absolute;
+  /*left: 80px;*/
+  left: 0px;
+  /*position: absolute;*/
+  position: relative;
   top: 32px;
   width: 171px;
+  margin: 0px auto;
 }
 
 .empleo-individual .sobre-nosotros {
@@ -315,12 +318,17 @@
 }
 
 .empleo-individual .preguntas-frecuentes {
-  left: 4px;
+  /*left: 4px;*/
+  left: 0px;
   letter-spacing: 0;
   line-height: 18.2px;
-  position: absolute;
-  top: 108px;
+  /*position: absolute;*/
+  position: relative;
+  /*top: 108px;*/
+  top: 80px;
   white-space: nowrap;
+  text-align: center;
+  width: 100%;
 }
 
 .empleo-individual .frame-124 {
@@ -681,7 +689,8 @@
   left: 24px;
   letter-spacing: 0;
   line-height: 19.2px;
-  position: absolute;
+  /*position: absolute;*/
+  position: relative;
   top: 796px;
   white-space: nowrap;
 }
@@ -690,7 +699,8 @@
   left: 24px;
   letter-spacing: 0;
   line-height: 19.2px;
-  position: absolute;
+  /*position: absolute;*/
+  position: relative;
   top: 639px;
   width: 272px;
 }
@@ -708,17 +718,21 @@
   left: 24px;
   letter-spacing: 0;
   line-height: 19.2px;
-  position: absolute;
-  top: 1156px;
+  /*position: absolute;*/
+  position: relative;
+  top: 1030px;
   width: 272px;
+  
 }
 
 .empleo-individual .remuneracin-en-plan-1 {
   left: 24px;
   letter-spacing: 0;
   line-height: 19.2px;
-  position: absolute;
-  top: 1310px;
+  /*position: absolute;*/
+  position: relative;
+  /*top: 1310px;*/
+  top: 970px;
   width: 272px;
 }
 
@@ -726,8 +740,10 @@
   left: 24px;
   letter-spacing: 0;
   line-height: 19.2px;
-  position: absolute;
-  top: 1445px;
+  /*position: absolute;*/
+  position: relative;
+  /*top: 1445px;*/
+  top: 1000px;
   width: 272px;
 }
 
@@ -735,17 +751,23 @@
   align-items: flex-start;
   border: 1px none;
   display: flex;
-  left: 61px;
-  position: absolute;
-  top: 1554px;
+  /*left: 61px;*/
+  /*position: absolute;*/
+  position: relative;
+  /*top: 1554px;*/
+  top: 1050px;
   width: fit-content;
+  margin: 0px auto;
+
 }
 
 .empleo-individual .group-177 {
   height: 19px;
   left: 24px;
-  position: absolute;
-  top: 1411px;
+  /*position: absolute;*/
+  position: relative;
+  /*top: 1411px;*/
+  top: 990px;
   width: 228px;
 }
 
@@ -770,9 +792,12 @@
 .empleo-individual .group-176 {
   height: 38px;
   left: 24px;
-  position: absolute;
-  top: 1257px;
+  /*position: absolute;*/
+  position: relative;
+  /*top: 1257px;*/
+  top: 950px;
   width: 228px;
+  /*border: 1px solid red;*/
 }
 
 .empleo-individual .eres-la-persona-que-bscamos-si {
@@ -796,8 +821,9 @@
   left: 24px;
   letter-spacing: 0;
   line-height: 19.2px;
-  position: absolute;
-  top: 1121px;
+  /*position: absolute;*/
+  position: relative;
+  top: 1021px;
   white-space: nowrap;
 }
 

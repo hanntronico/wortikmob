@@ -10,7 +10,7 @@
                  ON jp.id_profile = P.id 
                  INNER JOIN COMPANIES C 
                  ON J.company_id = C.id
-                 WHERE P.id = " . $_SESSION["idPosutlante"];
+                 WHERE JP.job_profile_status = 0 AND P.id = " . $_SESSION["idPosutlante"];
   $db = $dbh->prepare($sql_conteo);
   $db->execute();
   $reg_conteo = $db->fetch(PDO::FETCH_OBJ);
@@ -24,13 +24,18 @@
            ON jp.id_profile = P.id 
            INNER JOIN COMPANIES C 
            ON J.company_id = C.id
-           WHERE P.id = " . $_SESSION["idPosutlante"];
+           WHERE JP.job_profile_status = 0 AND P.id = " . $_SESSION["idPosutlante"];
   
   
   $db = $dbh->prepare($sql2);
   $db->execute();
   // $data= Array();
   // $reg = $db->fetch(PDO::FETCH_OBJ);
+
+  if (isset($_POST["param1"])) {
+    echo $_POST["param1"];
+    exit();
+  }
 
 ?>
 
@@ -73,7 +78,114 @@
     <div class="container-center-horizontal">
 
       <div class="vista-de-empleos screen">
-        <div class="group-140 poppins-normal-storm-dust-12px">
+
+          <div class="header">
+<!--             <img
+              class="search-2"
+              src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/search-2-1@2x.svg"
+              alt="Search 2"
+            /> -->
+
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+              <img
+                class="men-hamburguesa"
+                src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/men--hamburguesa-3@2x.svg"
+                alt="Men Hamburguesa"
+              />
+            </a>
+
+            <img
+              class="logo-versin-positiva-2"
+              src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/logo---versi-n-positiva-2-3@2x.svg"
+              alt="Logo - Versin Positiva 2"
+            />
+
+
+          </div>
+
+
+
+
+          <div class="filtros-1" style="border: none; height: 100px; width: 90%;">
+
+            <div class="frame-109" style="margin-left: 25px; width: 90%;">
+             
+              <input type="text" name="busqueda" id="busqueda" value="" placeholder="Buscar empleo" style="border: none; background-color: transparent; width: 98%; outline: none; font-size: 14px;">
+
+              <a href="#" onclick="buscar()" style="position: fixed; z-index: 500px;">
+                <img
+                  src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/search-2-1@2x.svg"
+                  alt="Search 2"
+                />                
+              </a>
+
+            </div>
+          </div>
+
+
+
+        <div class="filtros-1" style="border: none; height: 100px; width: 98%;">
+
+          <!-- <div> -->
+
+          <!-- </div> -->
+
+          <div class="filtros-2" style="border: none; margin-top: 55px;">
+
+            <div class="frame-109">
+              <select name="fecha_publicacion" class="fecha-de-publicacin poppins-normal-star-dust-14px" style="border: none; background-color: transparent; outline: none;">
+                <option value="0">Ubicación</option>
+                <option value="1">Argentina</option>
+                <option value="2">Bolivia</option>
+                <option value="3">Chile</option>
+                <option value="4">Colombia</option>
+                <option value="5">Ecuador</option>
+                <option value="6">México</option>
+                <option value="7">Perú</option>
+                <option value="8">Venezuela</option>
+              </select>
+            </div>
+
+            <div class="frame-109">
+              <select name="fecha_publicacion" class="fecha-de-publicacin poppins-normal-star-dust-14px" style="border: none; background-color: transparent; outline: none;">
+                <option value="0">Fecha de publicación</option>
+                <option value="1">Hoy</option>
+                <option value="2">Desde ayer</option>
+                <option value="3">Desde hace 3 días</option>
+                <option value="4">Desde hace 4 días</option>
+                <option value="5">Desde hace 5 días</option>
+                <option value="6">Desde hace 6 días</option>
+                <option value="7">Desde hace 1 semana</option>
+                <option value="8">Desde hace 2 semana</option>
+                <option value="9">Desde hace 1 mes</option>
+              </select>
+            </div>
+
+            <div class="frame-113">
+              <select name="modalidad_trabajo" class="modalidad-de-trabajo poppins-normal-star-dust-14px" style="border: none; background-color: transparent; outline: none;">
+                <option value="0">Modalidad de trabajo</option>
+                <option value="1">Presencial</option>
+                <option value="2">Remoto localmente</option>
+                <option value="3">Totalmente remoto</option>
+                <option value="4">Híbrido</option>
+              </select>
+            </div>
+
+            <div class="frame-114">
+              <select name="tipo_contrato" class="tipo-de-contrato poppins-normal-star-dust-14px" style="border: none; background-color: transparent; outline: none;">
+                <option value="0">Tipo de contrato</option>
+                <option value="1">Nómina / Planilla</option>
+                <option value="2">Contractor</option>
+                <option value="3">Freelancer</option>
+                <option value="4">Convenio de prácticas</option>
+              </select>              
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="group-140 poppins-normal-storm-dust-12px" style="border: none; margin-top: 60px;">
           <div class="overlap-group">
             <div class="rectangle-214"></div>
             <div class="ellipse-195"></div>
@@ -83,7 +195,11 @@
         </div>
 
 
-<div style="border: none; margin-top: 200px; width: 275px; margin-left: 26px;">
+
+
+
+<div id="listado_empleos" style="border: none; margin-top: 250px; width: 275px; margin-left: 26px;">
+
 
 <?php 
 
@@ -155,124 +271,6 @@
       
 </div>
 
-
-<!--         <div class="empleo-4">
-          <div class="developer-font-back-end poppins-medium-storm-dust-16px">Developer Font/Back end</div>
-          <div class="place poppins-normal-storm-dust-12px">SAMSUNG</div>
-          <div class="san-isidro-lima poppins-normal-storm-dust-12px">San Isidro, Lima</div>
-          <div class="part-time poppins-normal-storm-dust-16px">Part time</div>
-          <div class="hoy-1 poppins-medium-silver-chalice-12px">Hoy</div>
-          <img
-            class="calendar-1"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/calendar-1-1@2x.svg"
-            alt="Calendar 1"
-          />
-          <img
-            class="ellipse-18"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/ellipse-18@2x.png"
-            alt="Ellipse 18"
-          />
-        </div>
-        <div class="empleo-2">
-          <div class="developer-font-back-end poppins-medium-storm-dust-16px">Developer Font/Back end</div>
-          <div class="place poppins-normal-storm-dust-12px">SAMSUNG</div>
-          <div class="san-isidro-lima poppins-normal-storm-dust-12px">San Isidro, Lima</div>
-          <div class="part-time poppins-normal-storm-dust-16px">Part time</div>
-          <div class="hoy-2 poppins-medium-silver-chalice-12px">Hoy</div>
-          <img
-            class="calendar-1"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/calendar-1-2@2x.svg"
-            alt="Calendar 1"
-          />
-          <img
-            class="ellipse-18"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/ellipse-18@2x.png"
-            alt="Ellipse 18"
-          />
-        </div>
-        <div class="empleo-5">
-          <div class="developer-font-back-end poppins-medium-storm-dust-16px">Developer Font/Back end</div>
-          <div class="place poppins-normal-storm-dust-12px">SAMSUNG</div>
-          <div class="san-isidro-lima poppins-normal-storm-dust-12px">San Isidro, Lima</div>
-          <div class="part-time poppins-normal-storm-dust-16px">Part time</div>
-          <div class="hoy-3 poppins-medium-silver-chalice-12px">Hoy</div>
-          <img
-            class="calendar-1"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/calendar-1-3@2x.svg"
-            alt="Calendar 1"
-          />
-          <img
-            class="ellipse-18"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/ellipse-18@2x.png"
-            alt="Ellipse 18"
-          />
-        </div>
-        <div class="empleo-3">
-          <div class="developer-font-back-end poppins-medium-storm-dust-16px">Developer Font/Back end</div>
-          <div class="place poppins-normal-storm-dust-12px">SAMSUNG</div>
-          <div class="san-isidro-lima poppins-normal-storm-dust-12px">San Isidro, Lima</div>
-          <div class="part-time poppins-normal-storm-dust-16px">Part time</div>
-          <div class="hoy-4 poppins-medium-silver-chalice-12px">Hoy</div>
-          <img
-            class="calendar-1"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/calendar-1-4@2x.svg"
-            alt="Calendar 1"
-          />
-          <img
-            class="ellipse-18"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/ellipse-18@2x.png"
-            alt="Ellipse 18"
-          />
-        </div>
-        <div class="empleo-6">
-          <div class="developer-font-back-end poppins-medium-storm-dust-16px">Developer Font/Back end</div>
-          <div class="place poppins-normal-storm-dust-12px">SAMSUNG</div>
-          <div class="san-isidro-lima poppins-normal-storm-dust-12px">San Isidro, Lima</div>
-          <div class="part-time poppins-normal-storm-dust-16px">Part time</div>
-          <div class="hoy-5 poppins-medium-silver-chalice-12px">Hoy</div>
-          <img
-            class="calendar-1"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/calendar-1-5@2x.svg"
-            alt="Calendar 1"
-          />
-          <img
-            class="ellipse-18"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/ellipse-18@2x.png"
-            alt="Ellipse 18"
-          />
-        </div> -->
-
-
-<!--         <img
-          class="vector-11"
-          src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/vector-11@2x.svg"
-          alt="Vector 11"
-        />
-         <img
-          class="vector-14"
-          src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/vector-11@2x.svg"
-          alt="Vector 14"
-        /> -->
-<!--        <img
-          class="vector-12"
-          src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/vector-12@2x.svg"
-          alt="Vector 12"
-        />
-        <img
-          class="vector-15"
-          src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/vector-12@2x.svg"
-          alt="Vector 15"
-        />
-        <img
-          class="vector-13"
-          src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/vector-12@2x.svg"
-          alt="Vector 13"
-        />
-        <img
-          class="vector-16"
-          src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/vector-12@2x.svg"
-          alt="Vector 16"
-        /> -->
 
         <div class="filtros">
           <div class="empleo-4-1">
@@ -367,90 +365,7 @@
           </div>
         </div>
 
-        <div class="filtros-1">
-          <div class="filtros-2">
 
-            <div class="frame-109">
-              <!-- <div class="fecha-de-publicacin poppins-normal-star-dust-14px">Fecha de publicación</div> -->
-              <select name="fecha_publicacion" class="fecha-de-publicacin poppins-normal-star-dust-14px" style="border: none; background-color: transparent; outline: none;">
-                <option value="0">Fecha de publicación</option>
-                <option value="1">Hoy</option>
-                <option value="2">Desde ayer</option>
-                <option value="3">Desde hace 3 días</option>
-                <option value="4">Desde hace 4 días</option>
-                <option value="5">Desde hace 5 días</option>
-                <option value="6">Desde hace 6 días</option>
-                <option value="7">Desde hace 1 semana</option>
-                <option value="8">Desde hace 2 semana</option>
-                <option value="9">Desde hace 1 mes</option>
-              </select>
-            </div>
-
-<!--             <div class="frame-110" style="margin-right: 3px;">
-              <div class="nivel-de-experiencia poppins-normal-star-dust-14px">Nivel de experiencia</div>
-            </div> -->
-
-<!--             <div class="frame-111">
-              <div class="rea poppins-normal-star-dust-14px">Área</div>
-            </div> -->
-
-            <!-- <div class="frame-112"><div class="subrea poppins-normal-star-dust-14px">Subárea</div></div> -->
-
-            <div class="frame-113">
-              <!-- <div class="modalidad-de-trabajo poppins-normal-star-dust-14px">Modalidad de trabajo</div> -->
-              <select name="modalidad_trabajo" class="modalidad-de-trabajo poppins-normal-star-dust-14px" style="border: none; background-color: transparent; outline: none;">
-                <option value="0">Modalidad de trabajo</option>
-                <option value="1">Presencial</option>
-                <option value="2">Remoto localmente</option>
-                <option value="3">Totalmente remoto</option>
-                <option value="4">Híbrido</option>
-              </select>
-            </div>
-
-            <div class="frame-114">
-              <!-- <div class="tipo-de-contrato poppins-normal-star-dust-14px">Tipo de contrato</div> -->
-              <select name="tipo_contrato" class="tipo-de-contrato poppins-normal-star-dust-14px" style="border: none; background-color: transparent; outline: none;">
-                <option value="0">Tipo de contrato</option>
-                <option value="1">Nómina / Planilla</option>
-                <option value="2">Contractor</option>
-                <option value="3">Freelancer</option>
-                <option value="4">Convenio de prácticas</option>
-              </select>              
-            </div>
-
-<!--            <div class="frame-115">
-              <div class="nivel-mnimo-de-contrato poppins-normal-star-dust-14px">Nivel mínimo de contrato</div>
-            </div>
-            <div class="frame-116">
-              <div class="jornada-laboral poppins-normal-star-dust-14px">Jornada laboral</div>
-            </div>
-          </div> -->
-
-        </div>
-
-
-        <div class="header">
-          <img
-            class="search-2"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/search-2-1@2x.svg"
-            alt="Search 2"
-          />
-
-          <a class="nav-link" data-widget="pushmenu" href="#" role="button">
-            <img
-              class="men-hamburguesa"
-              src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/men--hamburguesa-3@2x.svg"
-              alt="Men Hamburguesa"
-            />
-          </a>
-
-          <img
-            class="logo-versin-positiva-2"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/logo---versi-n-positiva-2-3@2x.svg"
-            alt="Logo - Versin Positiva 2"
-          />
-        </div>
-      </div>
     </div>
 
 
@@ -474,10 +389,40 @@
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
 
     <script type="text/javascript">
+
+      $("#busqueda").focus();
       
       function irDetalleEmpleo(idempleo) {
         location.href = 'detalle_empleo.php?idemp='+idempleo;
       }
+
+      $(document).on('keypress',function(e) {
+        if(e.which == 13) {
+            
+          $.ajax({
+            url: 'busca_empleo.php',
+            type: 'POST',
+            data: {param1: $("#busqueda").val() },
+          })
+          .done(function(data) {
+            // console.log("success - "+ data );
+          if(data != ''){
+            $('#listado_empleos').empty().html(data);  
+          }else{
+            $('#listado_empleos').empty().html('Sin resultados');
+          }
+
+          })
+          .fail(function() {
+            console.log("error");
+          });
+
+
+        }
+      });
+
+
+
 
     </script>
 

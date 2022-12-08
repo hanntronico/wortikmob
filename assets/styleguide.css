@@ -237,3 +237,19 @@
   font-style: normal;
   font-weight: 600;
 }
+
+.poppins-normal-storm-dust-14px {
+  color: var(--storm-dust);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs2);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-semi-bold-malachite-24px {
+  color: var(--malachite2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m2);
+  font-style: normal;
+  font-weight: 600;
+}

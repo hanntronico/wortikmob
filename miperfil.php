@@ -30,19 +30,40 @@
                      DL.nivel_language as nivelLanguaje
           FROM detalle_languages DL 
           INNER JOIN languages L ON DL.id_language = L.id
-          WHERE DL.id_profile = 1";
-  $db = $dbh->prepare( $sql_lan );
-  $db->execute();
+          WHERE DL.id_profile = " . $_SESSION["idPosutlante"];
+  $dbLan = $dbh->prepare( $sql_lan );
+  $dbLan->execute();
 
   $idiomas = $db->rowCount();
 
 
-  //print_r($reg);
+  $date1 = new DateTime($reg->birthdate);
+  $date2 = new DateTime("now");
+  $diff = $date1->diff($date2);
+  $anios = ($diff->y > 1) ? $diff->y : $diff->y;
 
-$date1 = new DateTime($reg->birthdate);
-$date2 = new DateTime("now");
-$diff = $date1->diff($date2);
-$anios = ($diff->y > 1) ? $diff->y : $diff->y;
+
+    $sql_work_exp = "SELECT * FROM detalle_work_experience DWE 
+                     LEFT JOIN work_experience WE ON DWE.id_work_experience = WE.id 
+                     WHERE DWE.id_profile = " . $_SESSION["idPosutlante"] . " ORDER BY WE.id DESC";
+
+    $db = $dbh->prepare($sql_work_exp);
+    $db->execute();
+    // $data= Array();
+    // $reg_work_exp = $db->fetch(PDO::FETCH_OBJ);
+
+
+    $sql_job_spec = "SELECT * 
+                     FROM detalle_job_specializations DJS 
+                     LEFT JOIN profiles P 
+                     ON DJS.id_profile = P.id
+                     LEFT JOIN specializations S
+                     ON DJS.id_specialization = S.id
+                     WHERE id_profile = " . $_SESSION["idPosutlante"];
+    $dbJobSpec = $dbh->prepare($sql_job_spec);
+    $dbJobSpec->execute();
+
+
 
 ?>
 <!DOCTYPE html>
@@ -82,8 +103,6 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
 
     </div>
   </aside>
-
-
 
 
   <div class="container container-principal">
@@ -331,7 +350,6 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
           }else{
             echo (isset($reg->idjobsummary) || $reg->idjobsummary != 0 ) ? $reg->summary : 'Sin resultados'; 
           }
-
         ?>
               </p>
             </div>
@@ -346,107 +364,109 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
               </h5>
             </div>
             <div class="col-3  icono-edit1 mt-2 ps-3 ">
-              <a href="assets/experiencia_laboral.php">
+              <a href="assets/experiencia_laboral.php?sw=1">
                 <img src="img/Editar (1).png" alt="">                
               </a>
 
             </div>
           </div>
         </div>
+
+
+<?php while ($reg_work_exp = $db->fetch(PDO::FETCH_OBJ)) { ?>
+
+<!--     echo $reg_work_exp->id_profile."<br>";
+    echo $reg_work_exp->id_work_experience."<br>";
+    echo $reg_work_exp->id."<br>";
+    echo $reg_work_exp->title_work_experience."<br>";
+    echo $reg_work_exp->companies."<br>";
+    echo $reg_work_exp->lugar."<br>";
+    echo $reg_work_exp->descrip_work_experience."<br>";
+    echo $reg_work_exp->fec_inicio."<br>";
+    echo $reg_work_exp->fec_fin."<br>";
+    echo $reg_work_exp->status_work_experience."<br>"; -->
+
+
         <div class="container">
           <div class="row">
             <div class="col-10 detalles-perfil">
               <h5 class=" mt-3 ">
-                Reclutador TI - Junior - Full time
+                <?php echo $reg_work_exp->title_work_experience;?>
               </h5>
               <p class="direcion-perfil fw-light">
-                BBVA (Banca) - San Isidro, Lima Perú
+                <?php echo $reg_work_exp->companies; ?> - <?php echo $reg_work_exp->lugar; ?>
               </p>
               <ul class="lista-perfil fw-light">
                 <li>
-                  Análisis de los equerimientos y funcionalidades del proyecto.
+                  <?php echo $reg_work_exp->descrip_work_experience; ?>
                 </li>
-                <li>
+<!--                 <li>
                   Implementación y soporte del proyecto.
                 </li>
                 <li>
                   Elaboración de la estructura y elementos necesarios para la base de datos.
                 </li>
-                <li>Elaboración de reportes.</li>
+                <li>Elaboración de reportes.</li> -->
               </ul>
               <p class="fw-normal">Tecnologías usadas:</p>
+
               <ul class="lista-tab p-0">
-                <li>
-                  <button class="bg-white border-0  p-2 mx-1 rounded-3 text-black-50">React</button>
-                  <button class="bg-white border-0 p-2  rounded-3 text-black-50">MogoDB</button>
+                <?php  
+
+                  $sql_work_exp_skill = "SELECT S.descrip_skiill
+                                         FROM skills S LEFT JOIN detalle_work_exp_skill DWES
+                                         ON S.idSkill = DWES.id_skill 
+                                         LEFT JOIN work_experience WE 
+                                         ON DWES.id_work_experience = WE.id
+                                         WHERE DWES.id_work_experience = " . $reg_work_exp->id_work_experience;
+                  $db_skill = $dbh->prepare($sql_work_exp_skill);
+                  $db_skill->execute();
+
+                  while ($reg_skill_work_exp = $db_skill->fetch(PDO::FETCH_OBJ)) {
+
+                ?>
+                <li style="list-style-type: none; display: inline; padding-right: 5px;">
+                  <button class="bg-white border-0  p-2 mx-1 rounded-3 text-black-50 mb-2">
+                    <?php echo $reg_skill_work_exp->descrip_skiill; ?>
+                  </button>
                 </li>
-                <li class="mt-3 d-flex">
-                  <button class="bg-white border-0  p-2 mx-1 rounded-3 text-black-50">MogoDB</button>
-                  <button class="bg-white border-0  p-2 mx-1 rounded-3 text-black-50">Javascript</button>
-                  <button class="bg-white border-0 p-2 mx-1 rounded-3 text-black-50">CSS</button>
-                </li>
-                <li class="mt-3 d-flex">
-                  <button class="bg-white border-0  p-2 mx-1 rounded-3 text-black-50">GitLab</button>
-                  <button class="bg-white border-0  p-2 mx-1 rounded-3 text-black-50">AQL</button>
-                  <button class="bg-white border-0 p-2 mx-1 rounded-3 text-black-50">Angular</button>
-                </li>
+                <?php } ?>
+
+
               </ul>
-              <p class="fw-normal">Ene 2019 - Ago 2019 (7 meses)</p>
+
+
+
+<?php 
+
+$date1 = new DateTime($reg_work_exp->fec_inicio);
+$date2 = new DateTime($reg_work_exp->fec_fin);
+$diff = $date1->diff($date2);
+$meses = ($diff->m > 1) ? $diff->m : $diff->m;
+
+$date_ini = date_create($reg_work_exp->fec_inicio);
+$date_fin = date_create($reg_work_exp->fec_fin);
+
+
+?>
+
+              <p class="fw-normal"><?php echo date_format($date_ini,"m-Y");?> - <?php echo date_format($date_fin,"m-Y");?> (<?php echo $meses+1;?> meses)</p>
             </div>
             <div class="col-2">
               <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -15px;">
-                <img src="img/Edit 1.png" alt="">
+                <a href="assets/experiencia_laboral.php?sw=2&id=<?php echo $reg_work_exp->id_work_experience;?>">
+                  <img src="img/Edit 1.png" alt="">
+                </a>
               </div>
-          </div>
-        </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-10 detalles-perfil">
-              <h5 class=" mt-3 ">
-                Reclutador TI - Junior - Full time
-              </h5>
-              <p class="direcion-perfil fw-light">
-                BBVA (Banca) - San Isidro, Lima Perú
-              </p>
-              <ul class="lista-perfil fw-light">
-                <li>
-                  Análisis de los equerimientos y funcionalidades del proyecto.
-                </li>
-                <li>
-                  Implementación y soporte del proyecto.
-                </li>
-                <li>
-                  Elaboración de la estructura y elementos necesarios para la base de datos.
-                </li>
-                <li>Elaboración de reportes.</li>
-              </ul>
-              <p class="fw-normal">Tecnologías usadas:</p>
-              <ul class="lista-tab p-0">
-                <li>
-                  <button class="bg-white border-0  p-2 mx-1 rounded-3 text-black-50">React</button>
-                  <button class="bg-white border-0 p-2  rounded-3 text-black-50">MogoDB</button>
-                </li>
-                <li class="mt-3 d-flex">
-                  <button class="bg-white border-0  p-2 mx-1 rounded-3 text-black-50">MogoDB</button>
-                  <button class="bg-white border-0  p-2 mx-1 rounded-3 text-black-50">Javascript</button>
-                  <button class="bg-white border-0 p-2 mx-1 rounded-3 text-black-50">CSS</button>
-                </li>
-                <li class="mt-3 d-flex">
-                  <button class="bg-white border-0  p-2 mx-1 rounded-3 text-black-50">GitLab</button>
-                  <button class="bg-white border-0  p-2 mx-1 rounded-3 text-black-50">AQL</button>
-                  <button class="bg-white border-0 p-2 mx-1 rounded-3 text-black-50">Angular</button>
-                </li>
-              </ul>
-              <p class="fw-normal">Ene 2019 - Ago 2019 (7 meses)</p>
             </div>
-            <div class="col-2">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -15px;">
-                <img src="img/Edit 1.png" alt="">
-              </div>
-          </div>
           </div>
         </div>
+
+
+<?php }  ?>
+
+
+
       </div>
     </div>
 
@@ -458,10 +478,41 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
               <h5 class=" mt-3">Form. académica
               </h5>
             </div>
-            <div class="col-3 ps-3  icono-edit1 mt-2 ">
-              <img src="img/Editar (1).png" alt="">
+            <div class="col-3 ps-3 icono-edit1 mt-2 ">
+              <a href="assets/formacion_academica.php">
+                <img src="img/Editar (1).png" alt="">  
+              </a>
             </div>
-            <div class="row mt-2 m-0">
+
+            <?php while ( $reg_job_spec = $dbJobSpec->fetch(PDO::FETCH_OBJ) ) { ?>
+
+<?php 
+
+$start_date = ( is_null($reg_job_spec->start_date) || $reg_job_spec->start_date == "") ? "--" : date_format(date_create($reg_job_spec->start_date),"m-Y");
+$end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "") ? "--" : date_format(date_create($reg_job_spec->end_date),"m-Y");
+?>
+
+                <div class="row mt-2 m-0">
+                  <div class="col-10 info-formacion">
+                    <p class="fw-semibold m-0"><?php echo $reg_job_spec->name; ?></p>
+                    <!-- <p class="fw-light">Pontifica Universidad Nacional Mayor de San Marcos</p> -->
+                    <p class="fw-light"><?php echo $reg_job_spec->place; ?></p>
+                    <p class="fw-semibold"><?php echo $start_date;?> / <?php echo $end_date; ?></p>
+                  </div>
+                  <div class="col-2">
+                    <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -8px;">
+                      <a href="assets/formacion_academica.php?sw=2">
+                      <img src="img/Edit 1.png" alt="">
+                        
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+            <?php } ?>
+
+            
+<!--             <div class="row mt-2 m-0">
               <div class="col-10 info-formacion">
                 <p class="fw-semibold m-0">Ingeniería de Sistemas –Culminado –Décimo superior</p>
                 <p class="fw-light">Pontifica Universidad Nacional Mayor de San Marcos</p>
@@ -473,20 +524,7 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
                   <img src="img/Edit 1.png" alt="">
                 </div>
               </div>
-            </div>
-            <div class="row mt-2 m-0">
-              <div class="col-10 info-formacion">
-                <p class="fw-semibold m-0">Ingeniería de Sistemas –Culminado –Décimo superior</p>
-                <p class="fw-light">Pontifica Universidad Nacional Mayor de San Marcos</p>
-                <p class="fw-semibold">Marz 2014 - Ago 2019</p>
-
-              </div>
-              <div class="col-2">
-                <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -8px;">
-                  <img src="img/Edit 1.png" alt="">
-                </div>
-              </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -501,7 +539,7 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
 
           <?php 
           if ( $idiomas > 0 ) {
-            while (  $regLan = $db->fetch(PDO::FETCH_OBJ) ) { 
+            while (  $regLan = $dbLan->fetch(PDO::FETCH_OBJ) ) { 
           ?>
               <div class="idiomas d-flex fw-light">
                 <p class="idioma-1"><?php echo $regLan->language; ?></p>
@@ -705,6 +743,85 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
         <div class="container">
           <div class="row">
             <div class="col-10">
+              <h5 class="mt-3" style="font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 130%;">Tu preferencia de empleo</h5>
+              <div class="cursos-certifica row mt-3 ">
+                <div class="col-8 info-formacion">
+                  <p class="fw-light m-0">Estado:</p>
+                  <p class="fw-semibold">Busco empleo</p>
+                </div>
+                <div class="col-8 info-formacion">
+                  <p class="fw-light m-0">Puesto de trabajo deseado:</p>
+
+                  <ul>
+                      <li class="fw-semibold" style="font-family: Poppins;
+font-size: 12px;
+font-weight: 500;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left; color:#616161;">Desarrollador Back End</li>
+                      <li class="fw-semibold" style="font-family: Poppins;
+font-size: 12px;
+font-weight: 500;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left; color:#616161;">Desarrollador Front End</li>
+                      <li class="fw-semibold" style="font-family: Poppins;
+font-size: 12px;
+font-weight: 500;
+line-height: 16px;
+letter-spacing: 0em;
+text-align: left; color:#616161;">Diseño e implementación de BD</li>
+                  </ul>
+                </div>
+
+                <div class="col-8 info-formacion">
+                  <p class="fw-light m-0">Categoría:</p>
+                  <p class="fw-semibold">Programación</p>
+                </div>
+
+                <div class="col-8 info-formacion">
+                  <p class="fw-light m-0">Nivel:</p>
+                  <p class="fw-semibold">Junior</p>
+                </div>
+
+                <div class="col-8 info-formacion">
+                  <p class="fw-light m-0">Salario mínimo aceptado:</p>
+                  <p class="fw-semibold">PEN 3000 mensuales</p>
+                </div>
+
+<!--                 <div class="col-4">
+                  <div class="bg-white rounded-3 icono-edit1 mt-2 " style="margin-left:-29px;">
+                    <img src="img/Edit 1.png" alt="">
+                  </div>
+                </div> -->
+              </div>
+<!--               <div class="cursos-certifica row mt-3 ">
+                <div class="col-8 info-formacion">
+                  <p class="fw-semibold m-0">Fundamentos de Design <br> Thinking</p>
+                  <p class="fw-light">Platzi</p>
+                  <p class="fw-semibold">Ago 2014 - Dic 2019</p>
+                </div>
+              </div> -->
+            </div>
+            <div class="col-2">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
+                <img src="img/Edit 1.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+    
+<!--     <div class="container">
+      <div class="tuCV border border-1 border-white rounded-4 mb-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-10">
               <h5 class=" mt-3">Referencia laboral
               </h5>
               <div class="cursos-certifica row mt-3 ">
@@ -746,7 +863,7 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
   </div>
 
@@ -771,6 +888,14 @@ $anios = ($diff->y > 1) ? $diff->y : $diff->y;
     <script src="assets/menu/plugins/jquery/jquery.min.js"></script>
     <script src="assets/menu/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+        console.log('carga inicial');
+      });
+
+    </script>
 
 
 

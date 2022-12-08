@@ -14,14 +14,21 @@
   $db = $dbh->prepare($sql2);
   $db->execute();
   $data= Array();
-  // $reg = $db->fetch(PDO::FETCH_OBJ);
+  $regJob = $db->fetch(PDO::FETCH_OBJ);
+
+  // echo "<pre>";
+  // print_r($regJob);
+  // echo "</pre>";
+  // exit();
+
 
 // echo "<pre>";
 // print_r($reg);
 // echo "</pre>";
 // exit();
 
-
+  $texto_Postular = '';
+  $link = '';
 
 
 ?>
@@ -114,28 +121,32 @@
               <div class="rectangle-63"></div>
             </div>
           </div>
-          <div class="contcto">
-            <div class="telfono poppins-normal-malachite-12px">Teléfono</div>
-            <div class="plataforma poppins-semi-bold-malachite-12px">Plataforma</div>
-            <div class="correo poppins-normal-malachite-12px">Correo</div>
+
+          <div class="contcto" style="margin-top: -50px;">
+            <div class="telfono poppins-normal-malachite-12px" style="left: 0px; margin: 0px auto; text-align: center; width: 100%;">Teléfono</div>
+            <div class="plataforma poppins-semi-bold-malachite-12px" style="left: 0px; margin: 0px auto; text-align: center; width: 100%;">Contacto</div>
+            <div class="correo poppins-normal-malachite-12px" style="left: 0px; margin: 0px auto; text-align: center; width: 100%;">Correo</div>
           </div>
+
           <div class="plataforma-1">
             <div class="precios poppins-normal-malachite-12px">Precios</div>
             <div class="plataforma-2 poppins-semi-bold-malachite-12px">Plataforma</div>
-            <div class="ayuda poppins-normal-malachite-12px">Ayuda</div>
-            <div class="soporte poppins-normal-malachite-12px">Soporte</div>
-            <div class="contrata-publicidad poppins-normal-malachite-12px">Contrata Publicidad</div>
-            <div class="trminos-y-condiciones poppins-normal-malachite-12px">Términos y Condiciones</div>
-            <div class="poltica-y-privacidad poppins-normal-malachite-12px">Política y Privacidad</div>
+            <!-- <div class="ayuda poppins-normal-malachite-12px">Ayuda</div> -->
+            <!-- <div class="soporte poppins-normal-malachite-12px">Soporte</div> -->
+            <!-- <div class="contrata-publicidad poppins-normal-malachite-12px">Contrata Publicidad</div> -->
+            <div class="trminos-y-condiciones poppins-normal-malachite-12px" style="margin-top: -70px;">Términos y Condiciones</div>
+            <div class="poltica-y-privacidad poppins-normal-malachite-12px" style="margin-top: -70px;">Política y Privacidad</div>
           </div>
+
           <div class="nosotros">
-            <div class="sobre-nosotros poppins-normal-malachite-14px">Sobre nosotros</div>
-            <div class="nosotros-1 poppins-semi-bold-malachite-14px">Nosotros</div>
-            <div class="nete-a-nosotros poppins-normal-malachite-14px">¡Únete a nosotros!</div>
-            <div class="programa-de-referidos poppins-normal-malachite-14px">Programa de Referidos</div>
+            <div class="sobre-nosotros poppins-normal-malachite-14px" style="left: 0px; margin: 0px auto; text-align: center; width: 100%;">Sobre nosotros</div>
+            <div class="nosotros-1 poppins-semi-bold-malachite-14px" style="left: 0px; margin: 0px auto; text-align: center; width: 100%;">Nosotros</div>
+            <div class="nete-a-nosotros poppins-normal-malachite-14px" style="left: 0px; margin: 0px auto; text-align: center; width: 100%;">¡Únete a nosotros!</div>
+         <!--    <div class="programa-de-referidos poppins-normal-malachite-14px">Programa de Referidos</div> -->
             <div class="preguntas-frecuentes poppins-normal-malachite-14px">Preguntas Frecuentes</div>
           </div>
         </div>
+
         <div class="frame-124">
           <img
             class="arrow"
@@ -152,7 +163,7 @@
         </div>
         <a href="empleo-individual.html">
           <div class="empleo-1">
-            <div class="developer-font-back-end poppins-semi-bold-malachite-18px">Developer Font/Back end</div>
+            <div class="developer-font-back-end poppins-semi-bold-malachite-18px"><?php echo $regJob->name; ?>d</div>
             <div class="frame-156">
               <div class="group-139">
                 <div class="hoy poppins-medium-silver-chalice-12px">Hoy</div>
@@ -186,7 +197,27 @@
           Recomienda a alguien para este puesto.
         </p>
         <div class="cta">
-          <div class="botn-p"><div class="botn-primario poppins-medium-white-16px">Postular</div></div>
+          <div class="botn-p">
+            <div class="botn-primario poppins-medium-white-16px">
+
+              <?php 
+
+              if ($_GET['sw']==1) { 
+                $texto_Postular = "Enviado";
+                $link = "javascript:;";
+              } else{
+                $texto_Postular = "Postular";
+                $link = "antes_postular.php?idemp=".$_GET["idemp"];
+              } 
+              ?>
+
+              <a href="<?php echo $link;?>" style="text-decoration: none; color: #FFF;">
+              
+                <?php echo $texto_Postular;?>
+              
+              </a>
+            </div>
+          </div>
         </div>
         <img
           class="vector-21"
@@ -207,6 +238,7 @@
         <div class="frame-73"><div class="diseo poppins-normal-storm-dust-14px">Diseño</div></div>
         <div class="sobre-el-puesto poppins-medium-malachite-16px">Sobre el Puesto</div>
         <div class="sobre-nosotros-1 poppins-medium-malachite-16px">Sobre nosotros</div>
+
         <div class="te-encargars-de poppins-medium-malachite-16px">Te encargarás de:</div>
         <p class="si-eres-desarrollado poppins-light-storm-dust-16px">
           Si eres desarrollador Full Stack y estás en búsqueda de un rol desafiante en el que puedas aprender mucho más
@@ -219,23 +251,8 @@
           informáticos que le sean solicitados por los usuarios.
         </p>
         
-        <p class="remuneracin-en-plan-1 poppins-light-storm-dust-16px">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur mollitia sequi tempore unde optio. 
-        <p class="remuneracin-en-plan-2 poppins-light-storm-dust-16px">
-          <!-- Remuneración en planilla, con todas las condiciones de ley. <br />Línea de carrera, descuentos corporativos. -->
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur mollitia sequi tempore unde optio.
-        </p>
-        <div class="cta-1">
-          <div class="botn-p"><div class="botn-primario poppins-medium-white-16px">Postular al empleo</div></div>
-        </div>
-        <div class="group-177">
-          <div class="te-amaremos-si poppins-medium-malachite-16px">Te amaremos si...</div>
-          <img
-            class="heart-1-1"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/heart--1--1@2x.svg"
-            alt="Heart (1) 1"
-          />
-        </div>
+
+
         <div class="group-176">
           <p class="eres-la-persona-que-bscamos-si poppins-medium-malachite-16px">Eres la persona que búscamos si...</p>
           <img
@@ -245,13 +262,53 @@
           />
         </div>
 
+        <p class="remuneracin-en-plan-1 poppins-light-storm-dust-16px">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur mollitia sequi tempore unde optio.</p>
+
         <!-- van abajo de todo -->
         
-        <div class="beneficios poppins-medium-malachite-16px" style="margin-top: 420px;">Beneficios</div>
+        <div class="group-177">
+          <div class="te-amaremos-si poppins-medium-malachite-16px">Te amaremos si...</div>
+          <img
+            class="heart-1-1"
+            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/631015a33cda19c4344dee13/img/heart--1--1@2x.svg"
+            alt="Heart (1) 1"
+          />
+        </div>
+
+        <p class="remuneracin-en-plan-2 poppins-light-storm-dust-16px">
+          <!-- Remuneración en planilla, con todas las condiciones de ley. <br />Línea de carrera, descuentos corporativos. -->
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur mollitia sequi tempore unde optio.
+        </p>     
+
+
+        <div class="beneficios poppins-medium-malachite-16px">Beneficios</div>
 
         <p class="remuneracin-en-plan poppins-light-storm-dust-16px">
           Remuneración en planilla, con todas las condiciones de ley. <br />Línea de carrera, descuentos corporativos.
         </p>
+
+
+        <div class="cta-1">
+          <div class="botn-p">
+            <div class="botn-primario poppins-medium-white-16px">
+            
+            <?php 
+              if ($_GET['sw']==1) { 
+                $texto_Postular = "Enviado";
+                $link = "javascript:;";
+              } else{
+                $texto_Postular = "Postular al empleo";
+                $link = "antes_postular.php?idemp=".$_GET["idemp"];
+              } 
+            ?>
+              <a href="<?php echo $link;?>" style="text-decoration: none; color: #FFF;">
+                <?php echo $texto_Postular;?>
+              </a>
+            </div>
+          </div>
+        </div>
+
 
         <div class="header">
           <img

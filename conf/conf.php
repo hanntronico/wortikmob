@@ -22,6 +22,23 @@ $dbh = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=UTF8',
     PDO::ATTR_PERSISTENT => true, PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
 ));
 
+$dddd = "hanntronico";
+
+function obtenerMoneda($idMoneda)
+{
+		$dbh = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=UTF8', DB_USERNAME, DB_PASSWORD, array(
+		    PDO::ATTR_PERSISTENT => true, PDO::MYSQL_ATTR_USE_BUFFERED_QUERY => true,
+		));
+    $sqlCurr = "SELECT idCurrency, currency, currency_code 
+                FROM currencies 
+                WHERE idCurrency=".$idMoneda;
+    $dbCurr = $dbh->prepare($sqlCurr);
+    $dbCurr->execute();
+    $regCurrency= $dbCurr->fetch(PDO::FETCH_OBJ);    
+    return $regCurrency->currency_code;
+
+
+}
 
 ?>
 

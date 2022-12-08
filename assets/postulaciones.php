@@ -10,7 +10,7 @@
            ON jp.id_profile = P.id 
            INNER JOIN COMPANIES C 
            ON J.company_id = C.id
-           WHERE P.id = " . $_SESSION["idPosutlante"];
+           WHERE JP.job_profile_status = 1 AND P.id = " . $_SESSION["idPosutlante"];
   $db = $dbh->prepare($sql2);
   $db->execute();
   $data= Array();

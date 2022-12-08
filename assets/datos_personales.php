@@ -185,11 +185,11 @@
                       <div class="select_frame">
                         <select class="form-control select_input" name="">
                           <?php $ubi = $reg->ubication; ?>
-                          <option value="lima" <?php echo ($ubi == 'lima') ? 'selected' : '';?>>Lima, Perú</option>
-                          <option value="bogota" <?php echo ($ubi == 'bogota') ? 'selected' : '';?>>Bogotá, Colombia</option>
-                          <option value="quito" <?php echo ($ubi == 'quito') ? 'selected' : '';?>>Quito, Ecuador</option>
-                          <option value="bs_as" <?php echo ($ubi == 'bs_as') ? 'selected' : '';?>>Buenos Aires, Argentina</option>
-                          <option value="la_paz" <?php echo ($ubi == 'la_paz') ? 'selected' : '';?>>La Paz, Bolivia</option>
+                          <option value="peru" <?php echo ($ubi == 'lima') ? 'selected' : '';?>>Perú</option>
+                          <option value="colombia" <?php echo ($ubi == 'bogota') ? 'selected' : '';?>>Colombia</option>
+                          <option value="ecuador" <?php echo ($ubi == 'quito') ? 'selected' : '';?>>Ecuador</option>
+                          <option value="argentina" <?php echo ($ubi == 'bs_as') ? 'selected' : '';?>>Argentina</option>
+                          <option value="bolivia" <?php echo ($ubi == 'la_paz') ? 'selected' : '';?>>Bolivia</option>
 
                         </select>
                         <img

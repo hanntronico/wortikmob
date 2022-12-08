@@ -1,0 +1,824 @@
+/* screen - detalles-de-la-emrpesa */
+
+.detalles-de-la-emrpesa {
+  background-color: var(--hint-of-red);
+  border: 1px none;
+  height: 1921px;
+  overflow: hidden;
+  position: relative;
+  width: 320px;
+}
+
+.detalles-de-la-emrpesa .frame-3693 {
+  align-items: center;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  left: -2px;
+  position: absolute;
+  top: 178px;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .frame-3694 {
+  border: 1px none;
+  height: 101px;
+  min-width: 272px;
+}
+
+.detalles-de-la-emrpesa .overlap-group {
+  height: 101px;
+  left: -1px;
+  position: relative;
+  width: 274px;
+}
+
+.detalles-de-la-emrpesa .rectangle-222 {
+  height: 64px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 274px;
+}
+
+.detalles-de-la-emrpesa .ellipse-9 {
+  height: 83px;
+  left: 96px;
+  position: absolute;
+  top: 22px;
+  width: 83px;
+}
+
+.detalles-de-la-emrpesa .detalles {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--mercury-22);
+  height: 518px;
+  min-width: 322px;
+  position: relative;
+}
+
+.detalles-de-la-emrpesa .frame-3695 {
+  align-items: center;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  left: 78px;
+  position: absolute;
+  top: 81px;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .de-20-a-500-colaboradores {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .frame-3695-item {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .ver-mas {
+  align-items: center;
+  border: 1px none;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  left: 112px;
+  position: absolute;
+  top: 469px;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .ver-ms {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .add-stroke-1 {
+  height: 24px;
+  min-width: 24px;
+}
+
+.detalles-de-la-emrpesa .en-bbva-estamos-lide {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  text-align: center;
+  top: 221px;
+  width: 272px;
+}
+
+.detalles-de-la-emrpesa .cta {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  left: 110px;
+  position: absolute;
+  top: 153px;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .botn-p {
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgb(131, 195, 137) 0%, rgb(51, 150, 152) 100%);
+  border: 1px none;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  padding: 8px 24px;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .botn-primario {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .creando-oportunidades {
+  color: var(--storm-dust);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xs2);
+  font-weight: 500;
+  left: 74px;
+  letter-spacing: 0;
+  line-height: 16.8px;
+  position: absolute;
+  text-align: center;
+  top: 51px;
+  white-space: nowrap;
+}
+
+.detalles-de-la-emrpesa .title {
+  left: 69px;
+  letter-spacing: 0;
+  line-height: 28.8px;
+  position: absolute;
+  text-align: center;
+  top: 14px;
+  white-space: nowrap;
+  width: 182px;
+}
+
+.detalles-de-la-emrpesa .frame-154 {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--mercury-22);
+  height: 218px;
+  min-width: 322px;
+  position: relative;
+}
+
+.detalles-de-la-emrpesa .video-corporativo {
+  left: 86px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 14px;
+}
+
+.detalles-de-la-emrpesa .group-184 {
+  background-color: var(--black);
+  height: 145px;
+  left: 24px;
+  position: absolute;
+  top: 55px;
+  width: 272px;
+}
+
+.detalles-de-la-emrpesa .overlap-group-1 {
+  background-color: var(--malachite2);
+  border-radius: 27.9px;
+  height: 56px;
+  left: 108px;
+  position: relative;
+  top: 44px;
+  width: 56px;
+}
+
+.detalles-de-la-emrpesa .polygon-4 {
+  height: 23px;
+  left: 21px;
+  position: absolute;
+  top: 16px;
+  width: 20px;
+}
+
+.detalles-de-la-emrpesa .ubicacin {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--mercury-22);
+  height: 250px;
+  min-width: 322px;
+  position: relative;
+}
+
+.detalles-de-la-emrpesa .redes-sociales {
+  height: 33px;
+  left: 70px;
+  position: absolute;
+  top: 200px;
+  width: 180px;
+}
+
+.detalles-de-la-emrpesa .fb {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.detalles-de-la-emrpesa .brandicofacebook {
+  height: 20px;
+  left: 11px;
+  position: absolute;
+  top: 7px;
+  width: 10px;
+}
+
+.detalles-de-la-emrpesa .ins {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 50px;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.detalles-de-la-emrpesa .akar-iconsinstagram-fill {
+  height: 19px;
+  left: 6px;
+  position: absolute;
+  top: 7px;
+  width: 19px;
+}
+
+.detalles-de-la-emrpesa .tw {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 98px;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.detalles-de-la-emrpesa .akar-iconstwitter-fill {
+  height: 20px;
+  left: 6px;
+  position: absolute;
+  top: 6px;
+  width: 20px;
+}
+
+.detalles-de-la-emrpesa .in {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 148px;
+  position: absolute;
+  top: 1px;
+  width: 32px;
+}
+
+.detalles-de-la-emrpesa .vector {
+  height: 17px;
+  left: 7px;
+  position: absolute;
+  top: 7px;
+  width: 18px;
+}
+
+.detalles-de-la-emrpesa .redes-sociales-1 {
+  left: 100px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  text-align: center;
+  top: 166px;
+  white-space: nowrap;
+}
+
+.detalles-de-la-emrpesa .ubicacin-1 {
+  left: 109px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 51px;
+  width: 104px;
+}
+
+.detalles-de-la-emrpesa .repblica-de-panam {
+  left: 25px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 80px;
+  width: 272px;
+}
+
+.detalles-de-la-emrpesa .ver-en-google-maps {
+  left: 100px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 124px;
+}
+
+.detalles-de-la-emrpesa .detalles-1 {
+  left: 109px;
+  letter-spacing: 0;
+  position: absolute;
+  text-align: center;
+  top: 14px;
+  width: 104px;
+}
+
+.detalles-de-la-emrpesa .frame-3692 {
+  border: 1px none;
+  height: 343px;
+  min-width: 322px;
+  position: relative;
+}
+
+.detalles-de-la-emrpesa .ubicacin-2 {
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: var(--mercury-22);
+  height: 291px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 322px;
+}
+
+.detalles-de-la-emrpesa .valaciones {
+  left: 108px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 14px;
+  width: 104px;
+}
+
+.detalles-de-la-emrpesa .group-2887 {
+  height: 29px;
+  left: 24px;
+  position: absolute;
+  top: 52px;
+  width: 260px;
+}
+
+.detalles-de-la-emrpesa .frame-138 {
+  align-items: flex-start;
+  background-color: var(--lily-white);
+  border: 1px none;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  left: 97px;
+  padding: 4px 8px;
+  position: absolute;
+  top: 0;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .text-1 {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .place {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 4px;
+  white-space: nowrap;
+}
+
+.detalles-de-la-emrpesa .group-2886-1 {
+  height: 14px;
+  left: 156px;
+  position: absolute;
+  top: 8px;
+  width: 102px;
+}
+
+.detalles-de-la-emrpesa .star-6 {
+  height: 13px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 13px;
+}
+
+.detalles-de-la-emrpesa .star-7 {
+  height: 13px;
+  left: 22px;
+  position: absolute;
+  top: 0;
+  width: 13px;
+}
+
+.detalles-de-la-emrpesa .star-8 {
+  height: 13px;
+  left: 44px;
+  position: absolute;
+  top: 0;
+  width: 13px;
+}
+
+.detalles-de-la-emrpesa .star-9 {
+  height: 13px;
+  left: 66px;
+  position: absolute;
+  top: 0;
+  width: 13px;
+}
+
+.detalles-de-la-emrpesa .star-20 {
+  height: 13px;
+  left: 88px;
+  position: absolute;
+  top: 0;
+  width: 13px;
+}
+
+.detalles-de-la-emrpesa .frame-155 {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 24px;
+  position: absolute;
+  top: 97px;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .group-28 {
+  height: 32px;
+  margin-right: -2.00px;
+  min-width: 259.91px;
+  position: relative;
+}
+
+.detalles-de-la-emrpesa .frame-139 {
+  align-items: flex-start;
+  background-color: var(--saltpan);
+  border: 1px none;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  left: 97px;
+  padding: 4px 8px;
+  position: absolute;
+  top: 1px;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .text-2 {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .ambiente-laboral {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 0;
+  width: 61px;
+}
+
+.detalles-de-la-emrpesa .group-2886 {
+  height: 14px;
+  left: 156px;
+  position: absolute;
+  top: 9px;
+  width: 102px;
+}
+
+.detalles-de-la-emrpesa .frame-14 {
+  align-items: flex-start;
+  background-color: var(--saltpan);
+  border: 1px none;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  left: 97px;
+  padding: 4px 8px;
+  position: absolute;
+  top: 0;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .text-3 {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .salarios-y-beneficios {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 0;
+  width: 77px;
+}
+
+.detalles-de-la-emrpesa .text-4 {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .desarrollo-profesional {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 0;
+  width: 77px;
+}
+
+.detalles-de-la-emrpesa .group-2891 {
+  height: 33px;
+  margin-right: -2.00px;
+  min-width: 259.91px;
+  position: relative;
+}
+
+.detalles-de-la-emrpesa .text-5 {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .desarrollo-profesional-1 {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 1px;
+  width: 77px;
+}
+
+.detalles-de-la-emrpesa .group-2886-2 {
+  height: 14px;
+  left: 156px;
+  position: absolute;
+  top: 10px;
+  width: 102px;
+}
+
+.detalles-de-la-emrpesa .frame-3691 {
+  border: 1px none;
+  height: 36px;
+  left: 75px;
+  position: absolute;
+  top: 307px;
+  width: 173px;
+}
+
+.detalles-de-la-emrpesa .deseas-dejar-tu-valoracin {
+  left: 0;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: -1px;
+  white-space: nowrap;
+}
+
+.detalles-de-la-emrpesa .valorar-a-esta-empresa {
+  cursor: pointer;
+  left: 14px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: right;
+  top: 19px;
+  white-space: nowrap;
+}
+
+.detalles-de-la-emrpesa .footer {
+  background-color: var(--cultured-pearl);
+  border: 1px none;
+  height: 193px;
+  min-width: 320px;
+  position: relative;
+}
+
+.detalles-de-la-emrpesa .x2022-wortika-todos {
+  left: 86px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  text-align: center;
+  top: 128px;
+  width: 148px;
+}
+
+.detalles-de-la-emrpesa .logo-versin-positiva-2 {
+  height: 24px;
+  left: 101px;
+  position: absolute;
+  top: 89px;
+  width: 119px;
+}
+
+.detalles-de-la-emrpesa .redes-sociales-2 {
+  height: 33px;
+  left: 70px;
+  position: absolute;
+  top: 16px;
+  width: 180px;
+}
+
+.detalles-de-la-emrpesa .fb-1 {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.detalles-de-la-emrpesa .ins-1 {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 50px;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.detalles-de-la-emrpesa .tw-1 {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 98px;
+  position: absolute;
+  top: 0;
+  width: 32px;
+}
+
+.detalles-de-la-emrpesa .in-1 {
+  background-color: var(--white);
+  border-radius: 16px;
+  height: 32px;
+  left: 148px;
+  position: absolute;
+  top: 1px;
+  width: 32px;
+}
+
+.detalles-de-la-emrpesa .frame-136 {
+  background-color: var(--white);
+  border: 1px none;
+  box-shadow: 0px 4px 4px #eefafa;
+  height: 90px;
+  left: 0;
+  position: fixed;
+  top: 64px;
+  width: 320px;
+}
+
+.detalles-de-la-emrpesa .frame-129 {
+  height: 24px;
+  left: 24px;
+  position: absolute;
+  top: 12px;
+  width: 24px;
+}
+
+.detalles-de-la-emrpesa .bbva-per-1000-seguidores {
+  left: 56px;
+  letter-spacing: 0;
+  line-height: 15.6px;
+  position: absolute;
+  top: 15px;
+  white-space: nowrap;
+}
+
+.detalles-de-la-emrpesa .frame-105 {
+  align-items: flex-start;
+  background-color: var(--zircon);
+  border: 1px none;
+  border-radius: 16px;
+  display: flex;
+  gap: 10px;
+  left: 24px;
+  padding: 8px 16px;
+  position: absolute;
+  top: 48px;
+  width: 177px;
+}
+
+.detalles-de-la-emrpesa .detalles-de-empresa {
+  letter-spacing: 0;
+  line-height: 18.2px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .frame-106 {
+  align-items: flex-start;
+  background-color: var(--white);
+  border: 1px none;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  left: 201px;
+  padding: 8px 16px;
+  position: absolute;
+  top: 48px;
+  width: 92px;
+}
+
+.detalles-de-la-emrpesa .empleos {
+  letter-spacing: 0;
+  line-height: 18.2px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.detalles-de-la-emrpesa .rectangle-234 {
+  background-color: var(--malachite2);
+  border: 1px none;
+  border-radius: 8px;
+  height: 3px;
+  left: 24px;
+  position: absolute;
+  top: 87px;
+  width: 177px;
+}
+
+.detalles-de-la-emrpesa .header {
+  background-color: var(--white);
+  height: 64px;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 320px;
+}
+
+.detalles-de-la-emrpesa .vector-24 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 64px;
+  width: 320px;
+}
+
+.detalles-de-la-emrpesa .logo-versin-positiva-2-1 {
+  height: 24px;
+  left: 101px;
+  position: absolute;
+  top: 19px;
+  width: 119px;
+}
+
+.detalles-de-la-emrpesa .men-hamburguesa {
+  height: 24px;
+  left: 272px;
+  position: absolute;
+  top: 20px;
+  width: 24px;
+}

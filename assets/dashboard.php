@@ -570,7 +570,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
+   <!--  <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 
     <script src="menu/plugins/jquery/jquery.min.js"></script>
     <script src="menu/plugins/jquery-ui/jquery-ui.min.js"></script>

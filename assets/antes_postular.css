@@ -1,0 +1,350 @@
+/* screen - empleo-individual */
+
+.empleo-individual {
+  background-color: var(--white);
+  border: 1px none;
+  height: 976px;
+  position: relative;
+  width: 320px;
+}
+
+.empleo-individual .antes-de-postular {
+  left: 44px;
+  letter-spacing: 0;
+  line-height: 31.2px;
+  position: absolute;
+  text-align: center;
+  top: 71px;
+  white-space: nowrap;
+}
+
+.empleo-individual .selecciona-y-respond {
+  left: 24px;
+  letter-spacing: 0;
+  line-height: 18.2px;
+  position: absolute;
+  text-align: center;
+  top: 110px;
+  width: 272px;
+}
+
+.empleo-individual .habilidad-tecnica {
+  left: 89px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 196px;
+  white-space: nowrap;
+}
+
+.habilidad-tecnica2 {
+  left: 89px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  /*position: absolute;*/
+  position: relative;
+  top: 196px;
+  white-space: nowrap;
+}
+
+.empleo-individual .conocimiento {
+  left: 103px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 412px;
+  white-space: nowrap;
+}
+
+.empleo-individual .preguntas-adicionales {
+  left: 70px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 628px;
+  white-space: nowrap;
+}
+
+.empleo-individual .frame-3697 {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 24px;
+  position: absolute;
+  top: 234px;
+  width: fit-content;
+}
+
+.habilidad {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 24px;
+  /*position: absolute;*/
+  position: relative;
+  top: 234px;
+  width: fit-content;
+  margin-bottom: 30px; 
+}
+
+.fra_btn_siguiente {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 0px;
+  /*position: absolute;*/
+  position: relative;
+  top: 234px;
+  width: fit-content;
+  margin-bottom: 30px; 
+  margin: 0px auto;
+}
+
+.empleo-individual .nombres {
+  height: 37px;
+  margin-right: -2.00px;
+  min-width: 274px;
+  position: relative;
+}
+
+.empleo-individual .vector-9 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 36px;
+  width: 273px;
+}
+
+.empleo-individual .javasript {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.empleo-individual .nombres-1 {
+  height: 39px;
+  margin-right: -2.00px;
+  min-width: 274px;
+  position: relative;
+}
+
+.empleo-individual .vector-9-1 {
+  height: 1px;
+  left: 0;
+  position: absolute;
+  top: 38px;
+  width: 273px;
+}
+
+.empleo-individual .seleccionar-nivel {
+  /*left: 16px;*/
+  left: 10px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 2px;
+  white-space: nowrap;
+}
+
+.empleo-individual .chevron-down-1 {
+  height: 24px;
+  left: 248px;
+  position: absolute;
+  top: 0;
+  width: 24px;
+}
+
+.chevron-up-1 {
+  height: 24px;
+  left: 248px;
+  position: absolute;
+  top: 0;
+  width: 24px;
+  transform:rotate(180deg);
+  -ms-transform:rotate(180deg); /* IE 9 */
+  -webkit-transform:rotate(180deg)  
+}
+
+.empleo-individual .experiencia {
+  /*left: 16px;*/
+  left: 10px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 2px;
+  white-space: nowrap;
+  width: 121px;
+}
+
+.empleo-individual .frame-3698 {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  left: 24px;
+  position: absolute;
+  top: 450px;
+  width: fit-content;
+}
+
+.empleo-individual .javasript-1 {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.empleo-individual .frame-3699 {
+  align-items: center;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  left: 24px;
+  position: absolute;
+  top: 666px;
+  width: fit-content;
+}
+
+.empleo-individual .trabajas-o-trajaste-en-esta-empresa {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  text-align: center;
+  width: 272px;
+}
+
+.empleo-individual .escribir {
+  left: 16px;
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.empleo-individual .frame-3700 {
+  align-items: center;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  left: 24px;
+  position: absolute;
+  top: 777px;
+  width: fit-content;
+}
+
+.pregunta {
+  align-items: center;
+  border: 1px none;
+  /*display: flex;*/
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  /*left: 24px;*/
+  left: 0px;
+  /*position: absolute;*/
+  position: relative;
+  /*top: 777px;*/
+  width: fit-content;
+}
+
+.empleo-individual .cul-es-tu-pretensi {
+  letter-spacing: 0;
+  line-height: 20.8px;
+  margin-top: -1.00px;
+  text-align: center;
+  width: 272px;
+}
+
+.empleo-individual .escribir-1 {
+  /*left: 16px;*/
+  letter-spacing: 0;
+  line-height: 20.8px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.empleo-individual .nuevo-mensaje {
+  background-color: var(--white);
+  border: 1px none;
+  border-radius: 16px 16px 0px 0px;
+  box-shadow: 0px 5px 20px #ededed;
+  height: 64px;
+  left: 0;
+  /*position: absolute;*/
+  position: absolute;
+  top: 912px;
+  width: 320px;
+}
+
+.empleo-individual .frame-3353 {
+  align-items: flex-start;
+  background-color: var(--gallery);
+  border: 1px none;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  left: 85px;
+  padding: 8px 24px;
+  position: relative;
+  top: 16px;
+  width: fit-content;
+}
+
+.btn_siguiente {
+  align-items: flex-start;
+  background-color: var(--gallery);
+  border: 1px none;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  left: 0px;
+  padding: 8px 24px;
+  position: relative;
+  top: 16px;
+  width: fit-content;
+}
+
+.empleo-individual .descripcin {
+  letter-spacing: 0;
+  line-height: 15.6px;
+  margin-top: -1.00px;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.empleo-individual .close-1-1 {
+  cursor: pointer;
+  height: 24px;
+  left: 272px;
+  position: absolute;
+  top: 16px;
+  width: 24px;
+}
+
+.empleo-individual .logo-versin-positiva-2 {
+  height: 24px;
+  left: 101px;
+  position: absolute;
+  top: 16px;
+  width: 119px;
+}
