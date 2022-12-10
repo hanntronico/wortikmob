@@ -36,8 +36,6 @@ function obtenerMoneda($idMoneda)
     $dbCurr->execute();
     $regCurrency= $dbCurr->fetch(PDO::FETCH_OBJ);    
     return $regCurrency->currency_code;
-
-
 }
 
 ?>

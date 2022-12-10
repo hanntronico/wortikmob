@@ -108,7 +108,9 @@
           <div class="subtitulo">
             <div class="nombre poppins-medium-malachite-16px">Resumen Laboral</div>
             <div class="poppins-normal-storm-dust-12px">
-              Mi Perfil / <span class="poppins-normal-malachite-12px">Editar</span>
+              <a href="../miperfil.php" style="text-decoration: none; color:#616161">
+                      Mi perfil
+                      </a> / <span class="poppins-normal-malachite-12px">Editar</span>
             </div>
           </div>
 

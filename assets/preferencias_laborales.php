@@ -36,11 +36,24 @@
     <!-- <link rel="stylesheet" type="text/css" href="miperfil.css" /> -->
     <link rel="stylesheet" type="text/css" href="styleguide.css" />
     <link rel="stylesheet" type="text/css" href="globals.css" />
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <link rel="stylesheet" href="menu/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+
+    <style type="text/css">
+      .span-green {
+          color: #339698;
+      }
+      
+      .lista-aptitudes {
+        font-size: 14px;
+        width: 120%;
+      }      
+    </style>
+
 
   </head>
   <body class="hold-transition sidebar-mini layout-fixed">
@@ -91,7 +104,7 @@
 
                 <div class="row" style="border: none; margin: 0px auto; padding: 0px; width: 100%; ">
                   <div class="col-md-12">
-                    <h1 class="titulo">Datos personales</h1>
+                    <h1 class="titulo">Preferencias laborales</h1>
                     <p class="poppins-light-storm-dust-12px" style="text-align: center;"><a href="../miperfil.php" style="text-decoration: none; color:#616161">
                       Mi perfil
                       </a> / 
@@ -101,9 +114,98 @@
 
                 <form style="border: none;" action="editarPerfil.php" method="POST">
                   <div class="form-row mt-3">
+
                     <div class="col-12 col-md-12 mb-4">
-                      <input type="text" class="form-control input_text" name="nombre" id="nombre" placeholder="Nombre" value="<?php echo $reg->name;?>" required>
+                      <div class="select_frame">
+                        <select class="form-control select_input" name="situacion" id="situacion">
+                          <option value="0">Seleccionar situacion actual</option>
+                          <?php $situacion = $reg->situacion; ?>
+                          
+                          <?php //if($sexo=='m'){echo 'selected';}?>
+                          <option value="1" <?php echo ($situacion == 1) ? 'selected' : '';?>>Busco empleo activamente</option>
+                          <option value="2" <?php echo ($situacion == 2) ? 'selected' : '';?>>Estoy escuchando ofertas</option>
+                          <option value="3" <?php echo ($situacion == 3) ? 'selected' : '';?>>No busco empleo</option>
+                        </select>
+                        <img
+                        class="chevron-down-1"
+                        src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/629768465aeed9a731c2eb83/img/chevron-down-1@2x.svg"
+                      />
+                      </div>
                     </div>
+
+
+                    <div class="col-12 col-md-12 mb-4">
+                      <input type="text" class="form-control input_text" name="puesto_deseado" id="puesto_deseado" placeholder="Puesto deseado" required>
+                    </div>
+                    <div class="col-12 col-md-12 mt-2 mb-4">
+                      <button type="button" class="btn btn-primary btn-lg|btn-sm" onclick="agregarPuesto()" style="border: none; border-radius: 16px;  background: #E6E6E6; color: #339698; font-size: 16px; padding: 8px 24px;">Agregar</button>
+                    </div>
+
+                    <div class="col-12 col-md-12 mb-2">
+                      <ul id="lista_puestos_deseados" class="lista-tab p-0"></ul>
+                    </div>
+
+                    <div class="col-12 col-md-12 mb-2">
+                      <div class="select_frame">
+                        <select class="form-control select_input" name="seniority" id="seniority">
+                          <option value="0">Seleccionar seniority</option>
+                          <?php 
+                            $seniority = $reg->seniority; 
+                          ?>
+                          
+                          <?php //if($sexo=='m'){echo 'selected';}?>
+
+                          <option value="1" <?php echo ($seniority == 1) ? 'selected' : '';?>>Junior</option>
+                          <option value="2" <?php echo ($seniority == 2) ? 'selected' : '';?>>Semi-senior</option>
+                          <option value="3" <?php echo ($seniority == 3) ? 'selected' : '';?>>Senior</option>
+                          <option value="4" <?php echo ($seniority == 4) ? 'selected' : '';?>>Master</option>
+                        </select>
+                        <img
+                        class="chevron-down-1"
+                        src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/629768465aeed9a731c2eb83/img/chevron-down-1@2x.svg"
+                      />
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 mb-5">
+                      <div class="select_frame">
+                        <select class="form-control select_input" name="seniority" id="seniority">
+                          <option value="0">Seleccionar área</option>
+                          <?php 
+                            $area = $reg->area; 
+                          ?>
+                          
+                          <?php //if($sexo=='m'){echo 'selected';}?>
+
+                          <option value="1" <?php echo ($seniority == 1) ? 'selected' : '';?>>Programming</option>
+                          <option value="2" <?php echo ($seniority == 2) ? 'selected' : '';?>>Design</option>
+                          <option value="3" <?php echo ($seniority == 3) ? 'selected' : '';?>>Human Resources</option>
+                          <option value="4" <?php echo ($seniority == 4) ? 'selected' : '';?>>Sales & business</option>
+                          <option value="5" <?php echo ($seniority == 5) ? 'selected' : '';?>>Quality Assurance</option>
+                          <option value="6" <?php echo ($seniority == 6) ? 'selected' : '';?>>Marketing</option>
+                          <option value="7" <?php echo ($seniority == 7) ? 'selected' : '';?>>Data</option>
+                          <option value="8" <?php echo ($seniority == 8) ? 'selected' : '';?>>Project & Product Management</option>
+                          <option value="9" <?php echo ($seniority == 9) ? 'selected' : '';?>>Informatic security</option>
+                          <option value="10" <?php echo ($seniority == 10) ? 'selected' : '';?>>IT Infraestructure</option>
+                          <option value="11" <?php echo ($seniority == 11) ? 'selected' : '';?>>Customer service / IT support</option>
+                          <option value="12" <?php echo ($seniority == 12) ? 'selected' : '';?>>Business Solutions</option>
+                        </select>
+                        <img
+                        class="chevron-down-1"
+                        src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/629768465aeed9a731c2eb83/img/chevron-down-1@2x.svg"
+                      />
+                      </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
 
                     <div class="col-12 col-md-12 mb-3">
                       <input type="text" class="form-control input_text" id="apellidos" name="apellidos" placeholder="Apellidos" value="<?php echo $reg->surnames;?>" required>
@@ -241,11 +343,56 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- <script src="../../../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 
     <script src="menu/plugins/jquery/jquery.min.js"></script>
     <script src="menu/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+
+    <script type="text/javascript">
+
+      var ddDataPuestosDeseados = [];
+
+      function agregarPuesto() {
+
+        if($("#puesto_deseado").val() != ""){
+          $("#puesto_deseado").attr("style", "background: none !important;");
+          ddDataPuestosDeseados.push( $("#puesto_deseado").val() );
+          // console.log(ddDataPuestosDeseados);
+          $("#puesto_deseado").val('');
+          mostrarListaPuestos();
+        }else{
+          // alert("Por favor agregar puesto deseado");
+          $("#puesto_deseado").attr("style", "background: #FCDCDC !important;");
+        
+        }
+
+      
+
+      }
+
+      function mostrarListaPuestos() {
+        var item = "";
+        ddDataPuestosDeseados.forEach(function(varItem) {
+          item = item + "<li class='lista-aptitudes mt-2 d-flex'><div class='bg-white border-0  p-2 mx-1 rounded-3 '><span class='span-oscuro'> "+varItem+"</span><a href='javascript:;' onclick='quitarPuesto(\""+varItem+"\")'><img src='assets/close--2--1@2x.svg' /></a></div></li>";
+            $("#lista_puestos_deseados").html(item);
+        });
+      }
+
+
+      function quitarPuesto(puesto) {
+          var item = "";
+          // console.log(puesto);
+          ddDataPuestosDeseados = ddDataPuestosDeseados.filter((item) => item !== puesto)
+          // console.log(ddDataPuestosDeseados);
+
+          ddDataPuestosDeseados.forEach(function(varItem) {
+          item = item + "<li class='lista-aptitudes mt-2 d-flex'><div class='bg-white border-0  p-2 mx-1 rounded-3 '><span class='span-oscuro'> "+varItem+"</span><a href='javascript:;' onclick='quitarPuesto(\""+varItem+"\")'><img src='assets/close--2--1@2x.svg' /></a></div></li>";
+            $("#lista_puestos_deseados").html(item);
+        });
+      }
+
+    </script>
 
   </body>
 </html>

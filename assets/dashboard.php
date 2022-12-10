@@ -1,6 +1,6 @@
 <?php  
   session_start();
-  $_SESSION["idPosutlante"] = 1; 
+  // $_SESSION["idPosutlante"] = 1; 
   include_once "../conf/conf.php";
 
   $sql = "SELECT id,
@@ -17,7 +17,7 @@
                  position,
                  image
           FROM profiles
-          WHERE id = 1";
+          WHERE id = " . $_SESSION["idPosutlante"];
 
   $db = $dbh->prepare($sql);
   $db->execute();
@@ -450,7 +450,9 @@
                     Tu próximo empleo lo encontrarás aquí. ¿Empezamos?
                   </p>
                   <div class="frame-3353">
-                    <div class="descripcin-1 poppins-semi-bold-white-12px">Encontrar empleo</div>
+                    <a href="javascript:;" onclick="irEmpleos()">
+                      <div class="descripcin-1 poppins-semi-bold-white-12px">Encontrar empleo</div>
+                    </a>
                   </div>
                 </div>
                 <div class="frame-3359">
@@ -575,5 +577,15 @@
     <script src="menu/plugins/jquery/jquery.min.js"></script>
     <script src="menu/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        
+        $("#btnClose").click(function () {    
+            $("#btnMenu").click();
+        });
+        
+      });      
+    </script>
   </body>
 </html>

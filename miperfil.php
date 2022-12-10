@@ -2,6 +2,8 @@
   session_start();
   include_once "conf/conf.php";
 
+$_SESSION["idPosutlante"] = 1;
+
   $sql = "SELECT P.id,
                  P.name,
                  P.surnames,
@@ -64,6 +66,16 @@
     $dbJobSpec->execute();
 
 
+    $sql_job_pref = "SELECT * FROM `job_preferences` WHERE idProfile = " . $_SESSION["idPosutlante"];
+    $dbJobPref = $dbh->prepare($sql_job_pref);
+    $dbJobPref->execute();
+    $regJobPref = $dbJobPref->fetch(PDO::FETCH_OBJ);
+  
+  // echo "<pre>";
+  // print_r($regJobPref);
+  // echo "</pre>";
+  // exit();
+  
 
 ?>
 <!DOCTYPE html>
@@ -112,7 +124,7 @@
         <div class="overlap-group4"> 
           
           <div class="align-justify-2">
-            <a class="nav-link" data-widget="pushmenu" href="#" role="button">
+            <a class="nav-link" data-widget="pushmenu" id="btnMenu" href="#" role="button">
               <img src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/align-justify-2@2x.svg">
             </a>
           </div>
@@ -127,7 +139,9 @@
               class="bell"
               src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/bell@2x.svg"
             />
-            <div class="nuevo"><div class="number poppins-semi-bold-white-12px">20</div></div>
+            <div class="nuevo" style="border: 1px solid red;">
+              <div class="number poppins-semi-bold-white-12px">0</div>
+            </div>
           </div>
         
         </div>
@@ -690,6 +704,7 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
               <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
               <a href="assets/aptitudes.php">
                 <img src="img/Edit 1.png" alt="">
+              </a>
               </div>
             </div>
           </div>
@@ -731,7 +746,9 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
             </div>
             <div class="col-2">
               <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
+                <a href="assets/editar_preferencias_laborales.php">
                 <img src="img/Edit 1.png" alt="">
+                </a>
               </div>
             </div>
           </div>
@@ -750,20 +767,43 @@ font-size: 16px;
 line-height: 130%;">Tu preferencia de empleo</h5>
               <div class="cursos-certifica row mt-3 ">
                 <div class="col-8 info-formacion">
-                  <p class="fw-light m-0">Estado:</p>
-                  <p class="fw-semibold">Busco empleo</p>
+                  <p class="fw-light m-0">Sitaución actual:</p>
+                  <p class="fw-semibold">
+
+                    <?php 
+                        if($regJobPref->situation==1){
+                          echo $situa = 'Busco empleo activamente';
+                        }else if($regJobPref->situation==2){
+                          echo $situa = 'Estoy escuchando ofertas';
+                        }else if($regJobPref->situation==3){
+                          echo $situa = 'No busco empleo';
+                        }
+                    ?>
+
+                  </p>
                 </div>
                 <div class="col-8 info-formacion">
                   <p class="fw-light m-0">Puesto de trabajo deseado:</p>
 
                   <ul>
-                      <li class="fw-semibold" style="font-family: Poppins;
+
+                      <?php 
+                      foreach (json_decode($regJobPref->desired_job) as $key => $value) { ?>
+                          <li class="fw-semibold" style="font-family: Poppins;
+                          font-size: 12px;
+                          font-weight: 500;
+                          line-height: 20px;
+                          letter-spacing: 0em;
+                          text-align: left; color:#616161;"><?php echo $value; ?></li>
+                      <?php } ?>
+
+<!--                       <li class="fw-semibold" style="font-family: Poppins;
 font-size: 12px;
 font-weight: 500;
 line-height: 16px;
 letter-spacing: 0em;
-text-align: left; color:#616161;">Desarrollador Back End</li>
-                      <li class="fw-semibold" style="font-family: Poppins;
+text-align: left; color:#616161;">Desarrollador Back End</li> -->
+<!--                       <li class="fw-semibold" style="font-family: Poppins;
 font-size: 12px;
 font-weight: 500;
 line-height: 16px;
@@ -774,23 +814,44 @@ font-size: 12px;
 font-weight: 500;
 line-height: 16px;
 letter-spacing: 0em;
-text-align: left; color:#616161;">Diseño e implementación de BD</li>
+text-align: left; color:#616161;">Diseño e implementación de BD</li> -->
                   </ul>
                 </div>
 
                 <div class="col-8 info-formacion">
-                  <p class="fw-light m-0">Categoría:</p>
-                  <p class="fw-semibold">Programación</p>
+                  <p class="fw-light m-0">Área de interés:</p>
+                  <p class="fw-semibold"> <?php echo $regJobPref->area; ?></p>
                 </div>
 
                 <div class="col-8 info-formacion">
-                  <p class="fw-light m-0">Nivel:</p>
-                  <p class="fw-semibold">Junior</p>
+                  <p class="fw-light m-0">Seniority:</p>
+                  <p class="fw-semibold">
+                    <?php 
+                        switch ($regJobPref->seniority) {
+                          case 1:
+                            echo "Junior";
+                            break;
+                          case 2:
+                            echo "Semi-senior";
+                            break;                          
+                          case 3:
+                            echo "Senior";
+                            break;
+                          case 4:
+                            echo "Master";
+                            break;
+                          default:
+                            # code...
+                            break;
+                        }
+                    ?>
+                      
+                    </p>
                 </div>
 
                 <div class="col-8 info-formacion">
                   <p class="fw-light m-0">Salario mínimo aceptado:</p>
-                  <p class="fw-semibold">PEN 3000 mensuales</p>
+                  <p class="fw-semibold"><?php echo obtenerMoneda($regJobPref->currency) ?> <?php echo $regJobPref->min_salary; ?> / mes</p>
                 </div>
 
 <!--                 <div class="col-4">
@@ -809,7 +870,9 @@ text-align: left; color:#616161;">Diseño e implementación de BD</li>
             </div>
             <div class="col-2">
               <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
-                <img src="img/Edit 1.png" alt="">
+                <a href="assets/editar_preferencias_laborales.php">
+                  <img src="img/Edit 1.png" alt="">
+                </a>
               </div>
             </div>
           </div>
@@ -892,8 +955,15 @@ text-align: left; color:#616161;">Diseño e implementación de BD</li>
     <script type="text/javascript">
 
       $(document).ready(function() {
-        console.log('carga inicial');
+
+        $("#btnClose").click(function () {    
+            $("#btnMenu").click();
+        }); 
+
       });
+
+
+
 
     </script>
 
