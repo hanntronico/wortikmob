@@ -3,36 +3,55 @@
 .inicio-de-sesion {
   background-color: var(--white);
   height: 568px;
-  width: 320px;
+  /*width: 320px;*/
+  width: 100%;
 }
 
 .inicio-de-sesion .overlap-group {
   /*background-color: var(--malachite2);*/
   background-color: #339698;
   background-image: url(assets/image-27@1x_green.png);
-  background-size: 100% 100%;
-  height: 568px;
-  position: relative;
+  /*background-size: 100% 100%;*/
+  background-size: cover;
+  background-image: fixed;
+  background-image: center;
+  
+  margin: 0px auto;
+  /*height: 568px;*/
+  height: 100vh;
+  /*position: relative;*/
 }
 
 .inicio-de-sesion .frame-125 {
   background-color: var(--white);
   border-radius: 20px;
-  height: 420px;
-  left: 24px;
-  position: absolute;
-  top: 108px;
-  width: 272px;
+
+  /*height: 200px;*/
+  /*left: 24px;*/
+  /*position: absolute;*/
+  /*position: relative;*/
+  /*position: relative;*/
+  /*top: 108px;*/
+  /*width: 272px;*/
+  
+  display: flex; 
+  justify-content: center;
+  align-content: center;
+  margin: 40px 50px;
+
 }
 
-.inicio-de-sesion .te-damos-la-bienvenida {
-  left: 38px;
+.inicio-de-sesion .titulo-bienvenida {
+  /*border: 1px solid green;*/
   letter-spacing: 0;
   line-height: 19.2px;
-  position: absolute;
+  padding: 24px 10px;
+  margin-bottom: 20px;
+/*  display: center;
+  justify-content: center;
+  align-content: center;*/
   text-align: center;
-  top: 23px;
-  width: 196px;
+  width: 100%;
 }
 
 ::placeholder {
@@ -40,17 +59,19 @@
 }
 
 .inicio-de-sesion .usuario {
-  align-items: flex-start;
+  /*align-items: flex-start;*/
   background-color: #f6f6f6;
   border-radius: 15px;
-  border: none;
+  border: 1px solid green;
   display: flex;
-  gap: 10px;
-  left: 38px;
+  justify-content: center;
+  align-content: center;
+/*  gap: 10px;
+  left: 38px;*/
   padding: 12px 24px;
-  position: absolute;
-  top: 86px;
-  width: 196px;
+  /*position: absolute;*/
+  /*top: 86px;*/
+  width: 100%;
 }
 
 .inicio-de-sesion .usuario-1 {
@@ -180,8 +201,8 @@
 .inicio-de-sesion .logo-versin-positiva-6 {
   height: 26px;
   left: 96px;
-  position: absolute;
-  top: 42px;
+  /*position: absolute;*/
+  /*top: 42px;*/
   width: 128px;
 }
 
