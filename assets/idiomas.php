@@ -14,8 +14,6 @@
 
     <link rel="stylesheet" href="menu/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
-    
-
 
   </head>
   <body class="hold-transition sidebar-mini layout-fixed">
@@ -65,7 +63,11 @@
                 <div class="row" style="border: none; margin: 0px auto; padding: 0px; width: 100%; ">
                   <div class="col-md-12">
                     <h1 class="titulo">Idiomas</h1>
-                    <p class="poppins-light-storm-dust-12px" style="text-align: center;">Mi perfil / 
+                    <p class="poppins-light-storm-dust-12px" style="text-align: center;">
+                      <a href="../miperfil.php" style="text-decoration: none; color:#616161">
+                        Mi perfil
+                      </a>
+                      / 
                       <span style="color: #339698; font-weight: 400; line-height: 130%;">Edición</span></p>
                   </div>
                 </div>
