@@ -54,14 +54,17 @@
                   class="icon-bookmark"
                   src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/bookmark-2@2x.svg"
                 />
-                <div class="guardados poppins-normal-storm-dust-16px">Guardados</div>
+                <div class="guardados poppins-normal-storm-dust-16px">
+                  <a href="./assets/404.php">Guardados</a></div>
               </div>
               <div class="seccin-5">
                 <img
                   class="money-1"
                   src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/money-1@2x.svg"
                 />
-                <div class="salarios poppins-normal-storm-dust-16px">Salarios</div>
+                <div class="salarios poppins-normal-storm-dust-16px">
+                  <a href="./assets/404.php">Salarios</a></div>
+                </div>
               </div>
             </div>
 
@@ -83,18 +86,27 @@
           </button>
 
 
-          <div class="frame-3539">
-            <div class="correo">
+          <!-- <div class="frame-3539"> -->
+
+            <ul class="frame-3539">
+              <li class="name poppins-medium-storm-dust-16px" style="text-align: left; border: 1px solid green;"><?php echo $_SESSION["nombre_postulante"] . " <br> " . $_SESSION["apellidos_postulante"]; ?></li>
+              <li class="text_correo poppins-normal-storm-dust-12px"><?php echo $_SESSION["email_postulante"]; ?></li>
+              <li class="mi-cuenta poppins-medium-storm-dust-16px" style="text-align: left; border: 1px solid green; margin-left: -10px;"><a href="micuenta.php">Mi cuenta</a></li>
+              <li class="cerrar-sesin poppins-medium-storm-dust-16px" style="text-align: left; border: 1px solid green; margin-left: -10px;"><a href="logout.php">Cerrar sesión</a></li>
+            </ul>
+
+<!--             <div class="correo">
               <div class="name poppins-medium-storm-dust-16px">
-                <?php echo $reg->name . " " . $reg->surnames; ?>
+
+                <?php //echo $reg->name . " " . $reg->surnames; ?>
               </div>
-              <div class="rodrigo44gmailcom poppins-normal-storm-dust-12px"><?php echo $reg->email; ?></div>
-            </div>
-            <div class="frame-3542 poppins-normal-storm-dust-16px">
+              <div class="rodrigo44gmailcom poppins-normal-storm-dust-12px"><?php //echo $reg->email; ?></div>
+            </div> -->
+<!--             <div class="frame-3542 poppins-normal-storm-dust-16px">
               <div class="mi-cuenta">Mi cuenta</div>
-              <div class="cerrar-sesin">Cerrar sesión</div>
-            </div>
-          </div>
+              <div class="cerrar-sesin"><a href="assets/logout.php">Cerrar sesión</a></div>
+            </div> -->
+          <!-- </div> -->
         </div>
 
   </div>

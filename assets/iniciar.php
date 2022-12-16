@@ -11,7 +11,7 @@
 	if ($regUsers->total == 1) {
 
 			$sql2 = "SELECT 
-								U.id, U.email, P.name, P.surnames
+								P.id, U.email, P.name, P.surnames
 							 FROM users U INNER JOIN profiles P
 							 ON U.profile_id = P.id
 							 WHERE U.email = '".$_POST["txtUsuario"]."' 

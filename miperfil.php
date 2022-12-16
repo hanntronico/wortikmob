@@ -1,8 +1,10 @@
 <?php 
   session_start();
   include_once "conf/conf.php";
-
-$_SESSION["idPosutlante"] = 1;
+  if(!isset($_SESSION["idPosutlante"]) || $_SESSION["idPosutlante"]==null){
+    print "<script>alert('Acceso invalido! - Inicia Sesion para Acceder');window.location='index.php';</script>";
+    exit();
+  }
 
   $sql = "SELECT P.id,
                  P.name,
@@ -47,7 +49,7 @@ $_SESSION["idPosutlante"] = 1;
 
     $sql_work_exp = "SELECT * FROM detalle_work_experience DWE 
                      LEFT JOIN work_experience WE ON DWE.id_work_experience = WE.id 
-                     WHERE DWE.id_profile = " . $_SESSION["idPosutlante"] . " ORDER BY WE.id DESC";
+                     WHERE WE.status_work_experience = 1 AND DWE.id_profile = " . $_SESSION["idPosutlante"] . " ORDER BY WE.id DESC";
 
     $db = $dbh->prepare($sql_work_exp);
     $db->execute();
@@ -71,12 +73,11 @@ $_SESSION["idPosutlante"] = 1;
     $dbJobPref->execute();
     $regJobPref = $dbJobPref->fetch(PDO::FETCH_OBJ);
   
-  // echo "<pre>";
-  // print_r($regJobPref);
-  // echo "</pre>";
-  // exit();
-  
-
+ 
+    $sql_trainings = "SELECT * FROM trainings WHERE training_status = 1";
+    $stmt = $dbh->prepare($sql_trainings);
+    $stmt->execute();
+    // $results_trainings = $stmt->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -139,7 +140,7 @@ $_SESSION["idPosutlante"] = 1;
               class="bell"
               src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/bell@2x.svg"
             />
-            <div class="nuevo" style="border: 1px solid red;">
+            <div class="nuevo" style="border: none;">
               <div class="number poppins-semi-bold-white-12px">0</div>
             </div>
           </div>
@@ -711,6 +712,7 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
         </div>
       </div>
     </div>
+
     <div class="container">
       <div class="tuCV border border-1 border-white rounded-4 mb-5">
         <div class="container">
@@ -718,39 +720,50 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
             <div class="col-10">
               <h5 class=" mt-3">Cursos y certifica.
               </h5>
+
+            <?php while (  $results_trainings = $stmt->fetch(PDO::FETCH_OBJ) ) {  
+
+              $start_date = ( is_null($results_trainings->training_start_date) || $results_trainings->training_start_date == "") ? "--" : date_format(date_create($results_trainings->training_start_date),"m-Y");
+              $end_date = ( is_null($results_trainings->training_end_date) || $results_trainings->training_end_date == "") ? "--" : date_format(date_create($results_trainings->training_end_date),"m-Y");
+            ?>
+
               <div class="cursos-certifica row mt-3 ">
                 <div class="col-8 info-formacion">
-                  <p class="fw-semibold m-0">Fundamentos de Design <br> Thinking</p>
-                  <p class="fw-light">Platzi</p>
-                  <p class="fw-semibold">Ago 2014 - Dic 2019</p>
+                  <p class="fw-semibold m-0"><?php echo $results_trainings->training_name; ?></p>
+                  <p class="fw-light"><?php echo $results_trainings->training_institution; ?></p>
+                  <p class="fw-semibold"><?php echo $start_date . " / " . $end_date; ?></p>
 
                 </div>
                 <div class="col-4">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-29px;">
-                <img src="img/Edit 1.png" alt="">
+                  <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-29px;">
+                    <a href="assets/cursos_certif.php?idTrai=<?php echo $results_trainings->idTraining; ?>"><img src="img/Edit 1.png" alt=""></a>
+                  </div>
+                </div>
               </div>
-            </div>
-              </div>
-              <div class="cursos-certifica row mt-3 ">
+
+            <?php } ?>
+
+
+<!--               <div class="cursos-certifica row mt-3 ">
                 <div class="col-8 info-formacion">
                   <p class="fw-semibold m-0">Fundamentos de Design <br> Thinking</p>
                   <p class="fw-light">Platzi</p>
                   <p class="fw-semibold">Ago 2014 - Dic 2019</p>
                 </div>
-            <div class="col-4">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-29px;">
-                <img src="img/Edit 1.png" alt="">
-              </div>
+                <div class="col-4">
+                  <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-29px;">
+                    <a href="assets/cursos_certif.php"><img src="img/Edit 1.png" alt=""></a>
+                  </div>
+                </div>
+              </div> -->
             </div>
-              </div>
-            </div>
-            <div class="col-2">
+<!--             <div class="col-2">
               <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
                 <a href="assets/editar_preferencias_laborales.php">
                 <img src="img/Edit 1.png" alt="">
                 </a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

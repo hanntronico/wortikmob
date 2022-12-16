@@ -2,25 +2,30 @@
   session_start();
   include_once "../conf/conf.php";
 
-  // echo $_SESSION["idPosutlante"];
-  // echo $_GET["id"];
-  // echo $_GET["sw"];
+  $sqlJobPref = "SELECT idTraining, 
+                        training_name, 
+                        training_institution, 
+                        training_start_date, 
+                        training_end_date, 
+                        training_status 
+                 FROM trainings 
+                 WHERE idTraining = " . $_GET["idTrai"];
 
-  if ($_GET["sw"] == 2) {
-    $sql_work_exp = "SELECT * FROM detalle_work_experience DWE 
-                     LEFT JOIN work_experience WE ON DWE.id_work_experience = WE.id 
-                     WHERE DWE.id_profile = " . $_SESSION["idPosutlante"] . " AND WE.id = " . $_GET["id"];
+  $db = $dbh->prepare($sqlJobPref);
+  $db->execute();
+  $data= Array();
+  $regTraining = $db->fetch(PDO::FETCH_OBJ);
 
-    $db = $dbh->prepare($sql_work_exp);
-    $db->execute();
-    $data= Array();
-    $reg_work_exp = $db->fetch(PDO::FETCH_OBJ);
-  }
+  // $regJobPref = $db->fetch(PDO::FETCH_OBJ);
+  // $regJobPref = $db->fetchAll(PDO::FETCH_ASSOC);
+  //$regJobPref = $db->fetchAll();
+  // echo $regJobPref[0]["training_name"];
+  // foreach ($regJobPref as $key => $value) {
+  //   echo $value["training_institution"]."<br>";
+  // }
 
-  // echo "<pre>";
-  // print_r($reg_work_exp);
-  // echo "</pre>";
-  // exit();
+  
+
 ?>
 
 <!DOCTYPE html>
@@ -34,11 +39,24 @@
     <!-- <link rel="stylesheet" type="text/css" href="miperfil.css" /> -->
     <link rel="stylesheet" type="text/css" href="styleguide.css" />
     <link rel="stylesheet" type="text/css" href="globals.css" />
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <link rel="stylesheet" href="menu/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+
+    <style type="text/css">
+      .span-green {
+          color: #339698;
+      }
+      
+      .lista-aptitudes {
+        font-size: 14px;
+        width: 120%;
+      }      
+    </style>
+
 
   </head>
   <body class="hold-transition sidebar-mini layout-fixed">
@@ -89,114 +107,55 @@
 
                 <div class="row" style="border: none; margin: 0px auto; padding: 0px; width: 100%; ">
                   <div class="col-md-12">
-                    <h1 class="titulo">Experiencia Laboral</h1>
-                    <p class="poppins-light-storm-dust-12px" style="text-align: center;">
-                      <a href="../miperfil.php" style="text-decoration: none; color: #868686">
+                    <h1 class="titulo">Cursos y certificaciones</h1>
+                    <p class="poppins-light-storm-dust-12px" style="text-align: center;"><a href="../miperfil.php" style="text-decoration: none; color:#616161">
                       Mi perfil
-                      </a>
-                      / 
-                      <span style="color: #339698; font-weight: 400; line-height: 130%;"><?php echo $blExpLab = ($_GET["sw"] == 2) ? 'Edición' : 'Nueva' ; ?></span></p>
+                      </a> / 
+                      <span style="color: #339698; font-weight: 400; line-height: 130%;">Edición</span></p>
                   </div>
                 </div>
 
-
-
-<!-- id
-title_work_experience
-companies
-lugar
-descrip_work_experience
-fec_inicio
-fec_fin
-status_work_experience 
-
-
-    [id_profile] => 1
-    [id_work_experience] => 1
-    [id] => 1
-    [title_work_experience] => Reclutador TI - Junior - Full time
-    [companies] => BBVA (Banca)
-    [lugar] => San Isidro, Lima Perú
-    [descrip_work_experience] => Análisis de los requerimientos y funcionalidades del proyecto.\n
-Implementación y soporte del proyecto.\n
-Elaboración de la estructura y elementos necesarios para la base de datos.\n
-Elaboración de reportes.\n
-    [fec_inicio] => 2019-01-01
-    [fec_fin] => 2019-08-31
-    [status_work_experience] => 1
-
-
--->
-
-
-                <form style="border: none;" action="<?php echo $blExpLab = ($_GET['sw'] == 2) ? 'editarExperienciaLaboral.php' : 'guardar_experiencia_laboral.php';?>" method="POST">
-
-                  <input type="hidden" name="idPostulante" id="idPostulante" value="<?php echo $reg_work_exp->id_profile;?>">
-
-                  <input type="hidden" name="idWorkExperience" id="idWorkExperience" value="<?php echo $reg_work_exp->id_work_experience;?>">
-
+                <form style="border: none;" id="frmCursoCertif" method="POST">
                   <div class="form-row mt-3">
-                    <div class="col-12 col-md-12 mb-4">
-                      <input type="text" class="form-control input_text" name="titulo" id="titulo" placeholder="Título" value="<?php echo $reg_work_exp->title_work_experience;?>" required>
-                    </div>
-
-                    <div class="col-12 col-md-12 mb-4">
-                      <input type="text" class="form-control input_text" id="companie" name="companie" placeholder="Empresa" value="<?php echo $reg_work_exp->companies;?>" required>
-                    </div>
-
-                    <div class="col-12 col-md-12 mb-4">
-                      <input type="text" class="form-control input_text" id="lugar" name="lugar" placeholder="Lugar" value="<?php echo $reg_work_exp->lugar;?>" required>
-                    </div>                    
-
-                    <div class="col-12 col-md-12 mb-4">
-                      <textarea class="form-control input_text" id="descripcion" name="descripcion" rows="8"><?php echo $reg_work_exp->descrip_work_experience;?></textarea>
-                    </div>  
 
                     <div class="col-12 col-md-12 mt-2 mb-4">
                       <div class="select_frame">
-                        <input type="date" class="form-control input_text" name="fec_ini" id="fec_ini" value="<?php echo $reg_work_exp->fec_inicio; ?>">
+                        <input type="text" class="form-control input_text" name="training_name" id="training_name" value="<?php echo $regTraining->training_name;?>">
                       </div>
                     </div>
 
                     <div class="col-12 col-md-12 mt-2 mb-4">
                       <div class="select_frame">
-                        <input type="date" class="form-control input_text" name="fec_fin" id="fec_fin" value="<?php echo $reg_work_exp->fec_fin;?>">
+                        <input type="text" class="form-control input_text" name="training_instit" id="training_instit" value="<?php echo $regTraining->training_institution;?>">
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 mt-2 mb-4">
+                      <div class="select_frame">
+                        <input type="date" class="form-control input_text" name="trai_start_date" id="trai_start_date" value="<?php echo $regTraining->training_start_date;?>">
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 mt-2 mb-4">
+                      <div class="select_frame">
+                        <input type="date" class="form-control input_text" name="trai_end_date" id="trai_end_date" value="<?php echo $regTraining->training_end_date;?>">
                       </div>
                     </div>
 
 
-<!--                     <div class="col-12 col-md-12 mb-4">
-                      <div class="select_frame">
-                        <select class="form-control select_input" name="">
-                          <?php 
-                            $sexo = $reg->sexo; 
-                          ?>
-                          
-                          <?php //if($sexo=='m'){echo 'selected';}?>
-                          <option value="m" <?php echo ($sexo == 'm') ? 'selected' : '';?>>Masculino</option>
-                          <option value="f" <?php echo ($sexo == 'f') ? 'selected' : '';?>>Femenino</option>
-                        </select>
-                        <img
-                        class="chevron-down-1"
-                        src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/629768465aeed9a731c2eb83/img/chevron-down-1@2x.svg"
-                      />
-                      </div>
-                    </div> -->
+
+
+
+
 
                   </div>
 
                   <div class="form-row mt-2">
-
                     <div class="col-12 col-md-12 mt-2 mb-4">
                       <button type="submit" class="btn btn-primary btn-lg|btn-sm" style="border: none; border-radius: 16px; background: linear-gradient(270deg, #339698 0%, #83C389 100%); font-size: 12px; padding: 8px 24px;">Guardar</button>
                     </div>
-
-
-                    <div class="col-12 col-md-12 mt-2 mb-4">
-                      <button type="button" class="btn btn-primary btn-lg|btn-sm" style="border: none; border-radius: 16px; background: linear-gradient(270deg, #EDEDED 0%, #EDEDED 100%); font-size: 12px; padding: 8px 24px; color:#339698; font-weight: bolder;" onclick="eliminarRegistro( <?php echo $_GET["id"]; ?> )">Eliminar</button>
-                    </div>                    
-
                   </div>
+
                 </form>
 
               </div>
@@ -224,12 +183,27 @@ Elaboración de reportes.\n
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
 
     <script type="text/javascript">
-      function eliminarRegistro(idReg) {
+
+      $(document).ready(function() {
+        
+          
+
+      });
+
+
+
+
+      $( "#frmCursoCertif" ).submit(function( event ) {
+        event.preventDefault();
+
         $.ajax({
-          url: 'upd_del_experiencia_laboral.php',
+          url: 'upd_training.php',
           type: 'POST',
-          data: {codEmp: $("#codJob").val(), 
-                 codExperLab: idReg
+          data: {codTrai: '<?php echo $_GET["idTrai"]; ?>', 
+                 training_name: $("#training_name").val(),
+                 training_instit: $("#training_instit").val(),
+                 trai_start_date: $("#trai_start_date").val(),
+                 trai_end_date: $("#trai_end_date").val(),
                },
         })
         .done(function(data) {
@@ -240,7 +214,10 @@ Elaboración de reportes.\n
         .fail(function() {
           console.log("error");
         })
-      }
+
+
+      });      
+
     </script>
 
   </body>

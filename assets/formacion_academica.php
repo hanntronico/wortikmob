@@ -191,6 +191,10 @@ Elaboración de reportes.\n
                       <button type="submit" class="btn btn-primary btn-lg|btn-sm" style="border: none; border-radius: 16px; background: linear-gradient(270deg, #339698 0%, #83C389 100%); font-size: 12px; padding: 8px 24px;">Guardar</button>
                     </div>
 
+                    <div class="col-12 col-md-12 mt-2 mb-4">
+                      <button type="button" class="btn btn-primary btn-lg|btn-sm" style="border: none; border-radius: 16px; background: linear-gradient(270deg, #EDEDED 0%, #EDEDED 100%); font-size: 12px; padding: 8px 24px; color:#339698; font-weight: bolder;" onclick="eliminarRegistro( <?php echo $_GET["id"]; ?> )">Eliminar</button>
+                    </div>                     
+
                   </div>
                 </form>
 

@@ -514,12 +514,16 @@
                   </div>
                 </div>
                 <div class="info-2">
-                  <div class="aviso poppins-medium-malachite-16px">Salarios</div>
+                  <div class="aviso poppins-medium-malachite-16px">
+                    Salarios
+                  </div>
                   <p class="aviso-1 poppins-light-storm-dust-12px">
                     ¡Conoce la remuneración de tu puesto, en el mercado actual!
                   </p>
                   <div class="ver-mas-1">
-                    <div class="conocer poppins-semi-bold-malachite-12px">Conocer</div>
+                    <div class="conocer poppins-semi-bold-malachite-12px">
+                      <a href="./404.php" style="color: ;">Conocer</a>
+                    </div>
                     <img
                       class="add-stroke-1-1"
                       src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a738c3c50d8e0f8758cea4/img/undraw-online-banking-re-kwqh-1@2x.png"
@@ -550,7 +554,8 @@
                     <div class="analista-programador-backend-java">Analista programador backend java</div>
                   </div>
                   <div class="ver-mas-2">
-                    <div class="ver-1 poppins-semi-bold-malachite-12px">Ver</div>
+                    <div class="ver-1 poppins-semi-bold-malachite-12px">
+                    <a href="404.php">Ver</a></div>
                     <img
                       class="add-stroke-1-2"
                       src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a738c3c50d8e0f8758cea4/img/undraw-online-banking-re-kwqh-1@2x.png"

@@ -1,0 +1,81 @@
+/* screen - buscador */
+
+.buscador {
+  align-items: center;
+  background-color: var(--white);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 568px;
+  padding: 19px 16px;
+  width: 320px;
+}
+
+.buscador .flex-row {
+  align-items: flex-start;
+  align-self: flex-end;
+  display: flex;
+  gap: 60px;
+  height: 29px;
+  min-width: 203px;
+}
+
+.buscador .logo-versin-positiva-2 {
+  height: 24px;
+  width: 119px;
+}
+
+.buscador .close-2-1 {
+  align-self: flex-end;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+}
+
+.buscador .frame-109 {
+  align-items: center;
+  background-color: var(--cultured-pearl);
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 29px;
+  padding: 8px 16px;
+  width: 272px;
+}
+
+.buscador .buscar-empleo {
+  letter-spacing: 0;
+  line-height: 18.2px;
+  margin-left: -4.00px;
+  white-space: nowrap;
+  width: 214px;
+}
+
+.buscador .search-1 {
+  height: 24px;
+  margin-right: -4.00px;
+  min-width: 24px;
+}
+
+.buscador .vector-18 {
+  height: 1px;
+  margin-top: 24px;
+  object-fit: cover;
+  width: 273px;
+}
+
+.buscador .undraw_searching_re_3ra9-1 {
+  height: 146px;
+  margin-top: 76px;
+  width: 156px;
+}
+
+.buscador .escribe-el-empleo-que-deseas-encontrar {
+  letter-spacing: 0;
+  line-height: 19.2px;
+  margin-top: 15px;
+  text-align: center;
+  width: 196px;
+}
