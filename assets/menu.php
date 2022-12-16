@@ -147,7 +147,8 @@
           </div>
         </div> -->
 
-        <div style="border: 1px solid #A3B3C3; display: flex; justify-content: center;">
+        <!-- <div style="border: 1px solid #A3B3C3; display: flex; justify-content: center;"> -->
+        <div style="border: 0px solid #A3B3C3; display: flex; padding-left: 30px; padding-top: 10px;">
           <button type="button" class="botn-p" onclick="irEmpleos()" style="position: relative; top: 0px;">
             <img
                 class="icon-search"
@@ -157,12 +158,35 @@
           </button>
         </div>
 
-        <div style="border: 1px solid cyan; display: flex; justify-content: center; padding-top: 20px;">
+        <div style="border: 0px solid cyan; display: flex; padding-top: 20px; padding-left: 18px;">
           <ul class="frame-3539" style="position: relative; top: 0px;">
-            <li class="name poppins-medium-storm-dust-16px" style="border: 1px solid red;"><?php echo $_SESSION["nombre_postulante"] . " <br> " . $_SESSION["apellidos_postulante"]; ?></li>
-            <li class="text_correo poppins-normal-storm-dust-12px"><?php echo $_SESSION["email_postulante"]; ?></li>
-            <li class="mi-cuenta poppins-medium-storm-dust-16px" style="text-align: left; margin-left: -8px;"><a href="micuenta.php">Mi cuenta</a></li>
-            <li class="cerrar-sesin poppins-medium-storm-dust-16px" style="text-align: left; margin-left: -8px;"><a href="logout.php">Cerrar sesión</a></li>
+            <li class="name poppins-medium-storm-dust-16px" style="border: 0px solid red; text-align: left;">
+              <?php echo $_SESSION["nombre_postulante"] . " <br> " . $_SESSION["apellidos_postulante"]; ?>
+            </li>
+            
+            <li class="text_correo poppins-normal-storm-dust-12px" style="padding-bottom: 12px;"><?php echo $_SESSION["email_postulante"]; ?></li>
+            
+            <li class="mi-cuenta poppins-medium-storm-dust-16px" style="text-align: left; margin-left: -8px; padding-bottom: 10px;">
+              <a href="micuenta.php">
+                <div style="display: inline-block; vertical-align: top;">
+                  <img style="width: 2.5vh;" src="assets/menu/micuenta.svg"/>
+                </div>
+                <div style="display: inline-block; vertical-align: top; padding-left: 6px; padding-top: 2px;">
+                  Mi cuenta
+                </div>
+              </a>         
+            </li>
+
+            <li class="cerrar-sesin poppins-medium-storm-dust-16px" style="text-align: left; margin-left: -8px; padding-bottom: 10px;">
+              <a href="logout.php">
+                <div style="display: inline-block; vertical-align: top;">
+                  <img style="width: 2.5vh;" src="assets/menu/logout.svg"/>
+                </div>
+                <div style="display: inline-block; vertical-align: top; padding-left: 6px; padding-top: 2px;">
+                  Cerrar sesión
+                </div>
+              </a>
+            </li>            
           </ul>
         </div>
 

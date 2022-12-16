@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
   </head>
-  <body style="margin: 0; background: #ffffff">
+  <body style="margin: 0; background: #ffffff;">
     <input type="hidden" id="anPageName" name="page" value="inicio-de-sesion" />
 
     <div class="container-center-horizontal">
