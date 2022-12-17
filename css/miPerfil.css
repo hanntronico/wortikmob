@@ -13,8 +13,11 @@
     );
   background-blend-mode: screen, overlay;
   /*width: 367px !important;*/
-  width: 320px !important;
-  height: 661px;
+  /*width: 320px !important;*/
+  width: 100% !important;
+  /*height: 661px;*/
+  /*height: 761px;*/
+  height: 100%;
   overflow-x: hidden;
 }
 body {

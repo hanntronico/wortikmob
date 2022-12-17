@@ -34,10 +34,7 @@
                 </div>
               </div>
               <div class="seccin-2">
-                <img
-                  class="icon-user-1"
-                  src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/628e2d7a4d7b8199858c9c5f/img/user--1--1@2x.svg"
-                />
+                <img class="icon-user-1" src="assets/assets/menu/Folder 2.svg"/>
                 <div class="postulaciones poppins-normal-storm-dust-16px">
                   <a href="./assets/postulaciones.php">Postulaciones</a>
                 </div>
@@ -89,10 +86,11 @@
           <!-- <div class="frame-3539"> -->
 
             <ul class="frame-3539">
-              <li class="name poppins-medium-storm-dust-16px" style="text-align: left; border: 1px solid green;"><?php echo $_SESSION["nombre_postulante"] . " <br> " . $_SESSION["apellidos_postulante"]; ?></li>
-              <li class="text_correo poppins-normal-storm-dust-12px"><?php echo $_SESSION["email_postulante"]; ?></li>
-              <li class="mi-cuenta poppins-medium-storm-dust-16px" style="text-align: left; border: 1px solid green; margin-left: -10px;"><a href="micuenta.php">Mi cuenta</a></li>
-              <li class="cerrar-sesin poppins-medium-storm-dust-16px" style="text-align: left; border: 1px solid green; margin-left: -10px;"><a href="logout.php">Cerrar sesión</a></li>
+              <li class="name poppins-medium-storm-dust-16px" style="text-align: left;"><?php echo $_SESSION["nombre_postulante"] . " <br> " . $_SESSION["apellidos_postulante"]; ?></li>
+              <li class="text_correo poppins-normal-storm-dust-12px" style="margin-bottom: 20px;"><?php echo $_SESSION["email_postulante"]; ?></li>
+              <li class="mi-cuenta poppins-medium-storm-dust-16px" style="text-align: left; margin-left: -8px;"><a href="micuenta.php">Mi cuenta</a></li>
+              <li class="cerrar-sesin poppins-medium-storm-dust-16px" style="text-align: left; margin-left: -8px;">
+                <a href="assets/logout.php">Cerrar sesión</a></li>
             </ul>
 
 <!--             <div class="correo">
