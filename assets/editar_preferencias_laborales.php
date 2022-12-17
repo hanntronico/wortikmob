@@ -200,18 +200,47 @@
                           
                           <?php //if($sexo=='m'){echo 'selected';}?>
 
-                          <option value="1" <?php echo ($seniority == 1) ? 'selected' : '';?>>Programming</option>
-                          <option value="2" <?php echo ($seniority == 2) ? 'selected' : '';?>>Design</option>
-                          <option value="3" <?php echo ($seniority == 3) ? 'selected' : '';?>>Human Resources</option>
-                          <option value="4" <?php echo ($seniority == 4) ? 'selected' : '';?>>Sales & business</option>
-                          <option value="5" <?php echo ($seniority == 5) ? 'selected' : '';?>>Quality Assurance</option>
-                          <option value="6" <?php echo ($seniority == 6) ? 'selected' : '';?>>Marketing</option>
-                          <option value="7" <?php echo ($seniority == 7) ? 'selected' : '';?>>Data</option>
-                          <option value="8" <?php echo ($seniority == 8) ? 'selected' : '';?>>Project & Product Management</option>
-                          <option value="9" <?php echo ($seniority == 9) ? 'selected' : '';?>>Informatic security</option>
-                          <option value="10" <?php echo ($seniority == 10) ? 'selected' : '';?>>IT Infraestructure</option>
-                          <option value="11" <?php echo ($seniority == 11) ? 'selected' : '';?>>Customer service / IT support</option>
-                          <option value="12" <?php echo ($seniority == 12) ? 'selected' : '';?>>Business Solutions</option>
+                          <option value="1" <?php echo ($seniority == 1) ? 'selected' : '';?>>Web development -> Programming</option>
+                          <option value="2" <?php echo ($seniority == 2) ? 'selected' : '';?>>Mobile development -> Programming</option>
+                          <option value="3" <?php echo ($seniority == 3) ? 'selected' : '';?>>Desktop applications -> Programming</option>
+                          <option value="4" <?php echo ($seniority == 4) ? 'selected' : '';?>>Gaming -> Programming</option>
+                          
+                          <option value="5" <?php echo ($seniority == 5) ? 'selected' : '';?>>UX -> Design</option>
+                          <option value="6" <?php echo ($seniority == 6) ? 'selected' : '';?>>UI -> Design</option>
+                          <option value="7" <?php echo ($seniority == 7) ? 'selected' : '';?>>UX/UI -> Design</option>
+                          <option value="8" <?php echo ($seniority == 8) ? 'selected' : '';?>>Research -> Design</option>
+
+                          <option value="9" <?php echo ($seniority == 9) ? 'selected' : '';?>>Recruitment -> HR</option>
+                          
+                          <option value="10" <?php echo ($seniority == 10) ? 'selected' : '';?>>Sales & business -> Sales & business</option>
+                          <option value="11" <?php echo ($seniority == 11) ? 'selected' : '';?>>QA / Testing -> Quality Assurance</option>
+                          
+                          <option value="12" <?php echo ($seniority == 12) ? 'selected' : '';?>>SEO/SEM -> Marketing</option>
+                          <option value="13" <?php echo ($seniority == 13) ? 'selected' : '';?>>Content marketing -> Marketing</option>
+                          <option value="14" <?php echo ($seniority == 14) ? 'selected' : '';?>>Social Media -> Marketing</option>
+                          <option value="15" <?php echo ($seniority == 15) ? 'selected' : '';?>>CRO -> Marketing</option>
+                          <option value="16" <?php echo ($seniority == 16) ? 'selected' : '';?>>Digital Analytics -> Marketing</option>
+                          <option value="17" <?php echo ($seniority == 17) ? 'selected' : '';?>>Growth Hacking -> Marketing</option>
+
+                          <option value="18" <?php echo ($seniority == 18) ? 'selected' : '';?>>Data science -> Data</option>
+                          <option value="19" <?php echo ($seniority == 19) ? 'selected' : '';?>>BI -> Data</option>
+                          <option value="20" <?php echo ($seniority == 20) ? 'selected' : '';?>>Maching Learning -> Data</option>
+
+                          <option value="21" <?php echo ($seniority == 21) ? 'selected' : '';?>>Project Management -> Management</option>
+                          <option value="22" <?php echo ($seniority == 22) ? 'selected' : '';?>>Product Management -> Management</option>
+
+                          <option value="23" <?php echo ($seniority == 23) ? 'selected' : '';?>>Cybersecurity -> Informatic security</option>
+
+                          <option value="24" <?php echo ($seniority == 24) ? 'selected' : '';?>>Microsoft OS -> IT Infraestructure</option>
+                          <option value="25" <?php echo ($seniority == 25) ? 'selected' : '';?>>Linux OS -> IT Infraestructure</option>
+                          <option value="26" <?php echo ($seniority == 26) ? 'selected' : '';?>>Networking -> IT Infraestructure</option>
+                          
+                          <option value="27" <?php echo ($seniority == 27) ? 'selected' : '';?>>Customer service / IT support</option>
+                          <option value="28" <?php echo ($seniority == 28) ? 'selected' : '';?>>Business Solutions -> Business Solutions</option>
+                          <option value="29" <?php echo ($seniority == 29) ? 'selected' : '';?>>Cloud Computing -> Cloud Computing</option>
+                          <option value="30" <?php echo ($seniority == 30) ? 'selected' : '';?>>Otros -> Otros</option>
+
+
                         </select>
                         <img
                         class="chevron-down-1"
@@ -220,7 +249,7 @@
                       </div>
                     </div>
 
-                    <div class="col-12 col-md-12 mb-5">
+<!--                     <div class="col-12 col-md-12 mb-5">
                       <div class="select_frame">
                         <select class="form-control select_input" name="area" id="area">
                           <option value="0">Seleccionar área</option>
@@ -228,24 +257,24 @@
                             $area = $regJobPref->area; 
                           ?>
                           
-                          <?php //if($sexo=='m'){echo 'selected';}?>
+                          <option value="1" <?php //echo ($seniority == 1) ? 'selected' : '';?>>Desarrollo Web</option>
+                          <option value="2" <?php //echo ($seniority == 2) ? 'selected' : '';?>>Desarrollo Movil</option>
+                          <option value="3" <?php //echo ($seniority == 3) ? 'selected' : '';?>>Videojuegos</option>
+                          <option value="4" <?php //echo ($seniority == 4) ? 'selected' : '';?>>Realidad Virtual y aumentada</option>
+                          <option value="5" <?php //echo ($seniority == 5) ? 'selected' : '';?>>Aplicaciones de escritorio</option>
+                          <option value="6" <?php //echo ($seniority == 6) ? 'selected' : '';?>>Sistemas operativos y sistemas embebidos</option>
+                          <option value="7" <?php //echo ($seniority == 7) ? 'selected' : '';?>>Seguridad Informática</option>
+                          <option value="8" <?php //echo ($seniority == 8) ? 'selected' : '';?>>Maching Learning</option>
+                          <option value="9" <?php //echo ($seniority == 9) ? 'selected' : '';?>>Cloud Computing</option>
 
-                          <option value="1" <?php echo ($seniority == 1) ? 'selected' : '';?>>Desarrollo Web</option>
-                          <option value="2" <?php echo ($seniority == 2) ? 'selected' : '';?>>Desarrollo Movil</option>
-                          <option value="3" <?php echo ($seniority == 3) ? 'selected' : '';?>>Videojuegos</option>
-                          <option value="4" <?php echo ($seniority == 4) ? 'selected' : '';?>>Realidad Virtual y aumentada</option>
-                          <option value="5" <?php echo ($seniority == 5) ? 'selected' : '';?>>Aplicaciones de escritorio</option>
-                          <option value="6" <?php echo ($seniority == 6) ? 'selected' : '';?>>Sistemas operativos y sistemas embebidos</option>
-                          <option value="7" <?php echo ($seniority == 7) ? 'selected' : '';?>>Seguridad Informática</option>
-                          <option value="8" <?php echo ($seniority == 8) ? 'selected' : '';?>>Maching Learning</option>
-                          <option value="9" <?php echo ($seniority == 9) ? 'selected' : '';?>>Cloud Computing</option>
+
                         </select>
                         <img
                         class="chevron-down-1"
                         src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/629768465aeed9a731c2eb83/img/chevron-down-1@2x.svg"
                       />
                       </div>
-                    </div>
+                    </div> -->
 
                     <div class="row">
                       

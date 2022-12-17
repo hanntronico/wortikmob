@@ -15,10 +15,15 @@
   <body style="margin: 0; background: #ffffff;">
     <input type="hidden" id="anPageName" name="page" value="inicio-de-sesion" />
 
+  
+
     <div class="container-center-horizontal">
       <div class="inicio-de-sesion screen">
 
+
         <div class="overlap-group">
+          
+
           
           <div style="width: 100%; text-align: right; padding: 12px 15px 5px 0px; border: 0px solid yellow;">
              <a href="menu2.php">
@@ -36,47 +41,73 @@
             />            
           </div>
 
+          <form action="iniciar.php" method="POST" accept-charset="utf-8">
 
+            <div class="frame-125">
 
-          <div class="frame-125">
-
-            <form action="iniciar.php" method="POST" accept-charset="utf-8">
 
               <div class="titulo-bienvenida poppins-semi-bold-malachite-16px">¡Te damos la <br> Bienvenida!</div>
 
+                <input type="text" class="usuario usuario-1 form-control poppins-semi-bold-malachite-16px" name="txtUsuario" id="txtUsuario" placeholder="Usuario">
+
+                <div class="contrasea">
+                  <input type="password" class="contrasea-1 form-control" name="txtPassword" id="txtPassword" placeholder="Contraseña">
+                  <div class="eye-1">
+                    <a href="javascript:;" onclick="togglePasswordInput()"><img src="img/eye.svg" alt=""></a>
+                  </div>
+                </div>
 
 
-                <input type="text" class="usuario usuario-1 form-control" name="txtUsuario" id="txtUsuario" placeholder="Usuario">
-            
-                <!-- <input type="password" class="contrasea contrasea-1 form-control" name="txtPassword" id="txtPassword" placeholder="Contraseña"> -->
 
-            
-<!--               <div class="estado-default-tipo">
+                <div class="olvid-mi-contrasea poppins-light-chicago-12px">
+                  Olvidé mi contraseña
+                </div>
+
+                <div class="no-tienes-una-cuenta-regstrate">
+                  <span class="poppins-light-chicago-12px">
+                    ¿No tienes una cuenta?
+                  </span>
+                  <span class="span poppins-normal-malachite-12px">Regístrate</span>
+                </div>
+
+              <div class="estado-default-tipo">
                 <button type="submit" class="botn-p botn-primario poppins-medium-white-16px" style="border: none;">
                   Iniciar Sesión
                 </button>
-              </div> -->
-            
-            </form>
+              </div>
 
 
-<!--             <div class="frame-52">
-              <div class="acceder-con">Acceder con</div>
-              <img
-                class="image-28"
-                src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/630d39884df0c20ccf0bd4be/img/image-28@2x.png"
-              />
+              <div class="accesso-google">
+                <div class="frame-52">
+                  <div class="acceder-con">Acceder con</div>
+                  <img
+                    class="image-28"
+                    src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/630d39884df0c20ccf0bd4be/img/image-28@2x.png"
+                  />
+                </div>
+              </div>
+
+
+
+          
             </div>
-            <div class="olvid-mi-contrasea poppins-light-chicago-12px">Olvidé mi contraseña</div>
+          </form>
+
+
+
+
+
+<!--             <div class="olvid-mi-contrasea poppins-light-chicago-12px">Olvidé mi contraseña</div>
             <p class="no-tienes-una-cuenta-regstrate">
               <span class="poppins-light-chicago-12px">¿No tienes una cuenta?</span
               ><span class="span poppins-light-chicago-12px">&nbsp;</span
               ><span class="span poppins-normal-malachite-12px">Regístrate</span>
-            </p>
- -->
+            </p> -->
 
-            
-          </div>
+
+
+
+          
 
 
 <!--           <div class="frame-125">
@@ -118,5 +149,17 @@
         </div>
       </div>
     </div>
+
+   <script type="text/javascript">
+    function togglePasswordInput() {
+      var input = document.getElementById('txtPassword');
+      if (input.type === 'text') {
+        input.type = 'password';
+      } else {
+        input.type = 'text';
+      }
+    }
+  </script>
+
   </body>
 </html>

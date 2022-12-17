@@ -34,10 +34,11 @@
   /*top: 108px;*/
   /*width: 272px;*/
   
-  display: flex; 
+/*  display: flex; 
   justify-content: center;
-  align-content: center;
-  margin: 40px 50px;
+  align-content: center;*/
+  margin: 40px 30px;
+  padding: 0px 30px 50px;
 
 }
 
@@ -46,7 +47,7 @@
   letter-spacing: 0;
   line-height: 19.2px;
   padding: 24px 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 /*  display: center;
   justify-content: center;
   align-content: center;*/
@@ -54,24 +55,43 @@
   width: 100%;
 }
 
-::placeholder {
+/*::placeholder {
+  color: #ADADAD;
+}*/
+
+.inicio-de-sesion .usuario::placeholder,
+.inicio-de-sesion .contrasena::placeholder,
+.inicio-de-sesion .contrasea-1::placeholder {
+  color: #ADADAD;
+  opacity: 1; 
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: #ADADAD;
 }
 
-.inicio-de-sesion .usuario {
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #ADADAD;
+}
+
+
+.inicio-de-sesion .usuario, 
+.inicio-de-sesion .contrasena {
   /*align-items: flex-start;*/
   background-color: #f6f6f6;
   border-radius: 15px;
-  border: 1px solid green;
+  border: none;
   display: flex;
   justify-content: center;
   align-content: center;
-/*  gap: 10px;
-  left: 38px;*/
-  padding: 12px 24px;
+  /*gap: 10px;*/
+/*  left: 38px;*/
+  padding: 23px 24px;
   /*position: absolute;*/
   /*top: 86px;*/
   width: 100%;
+  margin-bottom: 20px;
+  outline: none;
 }
 
 .inicio-de-sesion .usuario-1 {
@@ -91,12 +111,15 @@
   border-radius: 15px;
   border: none;
   display: flex;
-  gap: 32px;
-  left: 38px;
-  padding: 12px 24px;
-  position: absolute;
-  top: 147px;
-  width: 196px;
+  justify-content: center;
+  align-content: center;
+  /*gap: 32px;*/
+  /*left: 38px;*/
+  padding: 6px 10px 5px;
+  /*position: absolute;*/
+  /*top: 147px;*/
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .inicio-de-sesion .contrasea-1 {
@@ -109,19 +132,39 @@
   margin-top: -2.00px;
   min-width: 95px;
   white-space: nowrap;
+  background-color: transparent;
+  border: none;
+  width: 90%;
+}
+
+.inicio-de-sesion .usuario:focus,
+.inicio-de-sesion .contrasea-1:focus {
+  outline: none;  
+  background-color: transparent;
 }
 
 .inicio-de-sesion .eye-1 {
   height: 21px;
   min-width: 21px;
+  padding: 4px 0px;
+
 }
 
 .inicio-de-sesion .estado-default-tipo {
-  align-items: flex-start;
   display: flex;
-  left: 58px;
-  position: absolute;
-  top: 284px;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 20px;
+  /*left: 58px;*/
+  /*position: absolute;*/
+  /*top: 284px;*/
+}
+
+.inicio-de-sesion .accesso-google {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 20px;
 }
 
 .inicio-de-sesion .botn-p {
@@ -141,15 +184,15 @@
 }
 
 .inicio-de-sesion .frame-52 {
-  align-items: flex-start;
+  /*align-items: flex-start;*/
+  /*position: relative;*/
   background-color: #f8f8f8;
   border-radius: 20px;
   display: flex;
-  gap: 12px;
-  left: 45px;
-  padding: 12px 24px;
-  position: absolute;
-  top: 343px;
+  justify-content: center;
+  align-content: center;
+  padding: 12px 0px;
+  width: 75%;
 }
 
 .inicio-de-sesion .acceder-con {
@@ -167,16 +210,22 @@
 .inicio-de-sesion .image-28 {
   height: 20.4px;
   min-width: 20px;
+  margin-left: 10px;
 }
 
 .inicio-de-sesion .olvid-mi-contrasea {
-  left: 70px;
+  /*left: 70px;*/
   letter-spacing: 0;
   line-height: 15.6px;
-  position: absolute;
-  top: 207px;
+  /*position: absolute;*/
+  /*top: 207px;*/
   white-space: nowrap;
   width: 132px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .inicio-de-sesion .no-tienes-una-cuenta-regstrate {
@@ -184,14 +233,15 @@
   font-family: var(--font-family-poppins);
   font-size: var(--font-size-xs);
   font-weight: 300;
-  left: 33px;
+  /*left: 33px;*/
   letter-spacing: 0;
   line-height: 15.6px;
-  position: absolute;
+  margin-bottom: 25px;
+  /*position: absolute;*/
   text-align: center;
-  top: 237px;
+  /*top: 237px;*/
   white-space: nowrap;
-  width: 206px;
+  width: 100%;
 }
 
 .inicio-de-sesion .span {
