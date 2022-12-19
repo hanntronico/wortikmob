@@ -263,3 +263,43 @@
   left: 620px;
   top: 24px;
 }
+
+#menu-container {
+  position: fixed;
+/*  left: 0; 
+  top: 0; */
+  height: 100%; 
+  width: 320px; 
+  /*background-color: #333; */
+  background-color: #fff; 
+  overflow-x: hidden; 
+  transition: 0.5s; 
+  display: none; 
+  box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+
+/*  display: flex;
+  justify-content: center;
+  align-content: center;*/
+}
+
+#menu-container a {
+  color: white; 
+  text-decoration: none; 
+  font-size: 16px; 
+  display: block; 
+  padding: 12px 10px; 
+  transition: 0.3s; 
+}
+
+#menu-container a:hover {
+  background-color: #444; 
+}
+
+.menu-hidden #menu-container {
+  display: none;
+}
+
+.menu-visible #menu-container {
+  display: block;
+}
+

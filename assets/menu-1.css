@@ -3,8 +3,21 @@
 .menu-1 {
   background-color: var(--white);
   height: 568px;
-  position: relative;
+  /*position: relative;*/
+  /*width: 320px;*/
   width: 320px;
+}
+
+.menu-container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  /*pointer-events: none;*/
+  width: 100%;
+
+/*  border: 1px solid red;*/
+
 }
 
 .menu-1 .group {
@@ -18,10 +31,18 @@
 .menu-1 .close-2-1 {
   cursor: pointer;
   height: 24px;
-  left: 280px;
-  position: absolute;
-  top: 24px;
+  /*left: 280px;*/
+  /*position: absolute;*/
+  /*top: 24px;*/
   width: 24px;
+}
+
+.menu-1 .barra-superior {
+  width: 100%;
+  margin: 0px;
+  text-align: right;
+  /*border: 1px solid #339698;*/
+  padding-right: 5px;
 }
 
 .menu-1 .vector-17 {
