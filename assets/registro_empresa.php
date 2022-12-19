@@ -45,13 +45,13 @@
   </head>
   <body class="hold-transition sidebar-mini layout-fixed">
 
-  <aside class="main-sidebar sidebar-light-primary elevation-4" >
+<!--   <aside class="main-sidebar sidebar-light-primary elevation-4" >
     <div class="sidebar">
 
-    <?php include 'menu.php' ?>
+    <?php //include 'menu.php' ?>
 
     </div>
-  </aside>
+  </aside> -->
 
 
 

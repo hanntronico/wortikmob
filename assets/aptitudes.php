@@ -1,3 +1,7 @@
+<?php 
+  session_start();
+  include_once "../conf/conf.php";
+?>
 <!DOCTYPE html>
 <html>
   <head>

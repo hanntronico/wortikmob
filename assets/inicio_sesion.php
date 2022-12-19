@@ -139,7 +139,9 @@
                   <span class="poppins-light-chicago-12px">
                     ¿No tienes una cuenta?
                   </span>
-                  <span class="span poppins-normal-malachite-12px">Regístrate</span>
+                  <span class="span poppins-normal-malachite-12px">
+                    <a href="registro_candidato.php" style="text-decoration: none; color: #339698;">Regístrate</a>
+                  </span>
                 </div>
 
               <div class="estado-default-tipo">

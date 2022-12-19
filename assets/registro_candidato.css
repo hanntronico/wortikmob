@@ -3,19 +3,37 @@
 .dashboard {
   background-color: var(--hint-of-red);
   /*height: 568px;*/
-  height: 600px;
+  /*height: 600px;*/
+  height: 100vh;
   overflow: hidden;
-  width: 320px;
-  /*width: 100%;*/
+  /*width: 320px;*/
+  width: 100%;
+  /*border: 1px solid red;*/
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.dashboard .barra_superior {
+  display: flex; 
+  justify-content: center; 
+  align-content: center; 
+  padding: 18px 0px 30px;
   /*border: 1px solid red;*/
 }
 
 .dashboard .overlap-group4 {
-  height: 727px;
-  left: -100px;
+  /*height: 727px;*/
+  height: 100vh;
+  /*border: 1px solid purple;*/
+  width: 100%;
+/*   left: -100px;
   position: relative;
   top: 12px;
-  width: 577px;
+  width: 577px;*/
+/*  display: flex;
+  justify-content: center;
+  align-content: center;*/
 }
 
 .dashboard .overlap-group2 {
@@ -95,11 +113,12 @@
 }
 
 .dashboard .group {
-  height: 24px;
-  left: 206px;
-  position: absolute;
-  top: 8px;
-  width: 118px;
+  /*height: 24px;*/
+  /*left: 206px;*/
+  /*position: absolute;*/
+  /*top: 8px;*/
+  /*width: 118px;*/
+
 }
 
 .dashboard .overlap-group3 {
@@ -143,13 +162,16 @@
 }
 
 .dashboard .frame-3553 {
-  height: 492px;
+  /*height: 492px;*/
+  height: 100vh;
   left: 100px;
   overflow: hidden;
   overflow-y: scroll;
-  position: absolute;
+  /*position: absolute;*/
   top: 64px;
-  width: 320px;
+  /*width: 320px;*/
+  width: 100%;
+  /*border: 1px solid blue;*/
 }
 
 .dashboard .frame-3543::-webkit-scrollbar {
@@ -946,11 +968,11 @@
 }
 
 /*.mi-perfil .overlap-group4 {*/
-.overlap-group4 {
+/*.overlap-group4 {*/
   /*height: 727px;*/
   /*left: -100px;*/
   /*position: relative;*/
-  top: 30px;
+  /*top: 30px;*/
   /*width: 577px;*/
   /*width: 320px;*/
   /*border: 1px solid blue;*/
@@ -1099,12 +1121,13 @@
 
 .main-frame {
   /*border: 1px solid red;*/
-  height: 750px;
-  width: 320px;
+  /*height: 750px;*/
+  /*width: 320px;*/
+  width: 100%;
   margin: 0px auto;
   text-align: center;
   /*margin-left: 10px;*/
-  padding: 0px 20px;
+  padding: 0px 30px;
 }
 
 .mi-perfil .texto {
@@ -2812,6 +2835,16 @@
   font-size: 18px !important;
   padding-left: 18px !important;
   padding-bottom: 20px !important;
+}
+
+.input_text2 {
+  border-radius: 0px !important;
+  border: none !important;
+  background-color: transparent !important;
+  /*border-bottom: 1px solid #b8b8b8 !important;*/
+  font-size: 18px !important;
+  padding-left: 18px !important;
+  /*padding-bottom: 20px !important;*/
 }
 
 .select_input {

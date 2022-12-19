@@ -3,6 +3,7 @@
 	include_once "../conf/conf.php";
 	
   $sql2 = "SELECT count(*) as total, users.id FROM users WHERE email = '".$_POST["txtUsuario"]."' AND password = MD5('".$_POST["txtPassword"]."')";
+
   $db = $dbh->prepare($sql2);
   $db->execute();
 
@@ -21,7 +22,6 @@
 			$db->execute();
 
 			$regUsers_data = $db->fetch(PDO::FETCH_OBJ);
-
 
 			session_start();
   		// $_SESSION["idPosutlante"] = $regUsers->id;
