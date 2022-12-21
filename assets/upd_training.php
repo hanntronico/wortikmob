@@ -8,11 +8,12 @@
 // $_POST["trai_start_date"]
 // $_POST["trai_end_date"]
 
-  echo $sql = "UPDATE trainings 
+  $sql = "UPDATE trainings 
           SET training_name='".$_POST["training_name"]."', 
               training_institution='".$_POST["training_instit"]."',
               training_start_date='".$_POST["trai_start_date"]."',
-              training_end_date='".$_POST["trai_end_date"]."' 
+              training_end_date='".$_POST["trai_end_date"]."', 
+              id_profile=".$_SESSION["idPosutlante"]."
           WHERE idTraining = " . $_POST["codTrai"];
 
   $db = $dbh->prepare($sql);

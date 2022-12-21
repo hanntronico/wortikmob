@@ -1,45 +1,40 @@
 <?php
 
-// Dirección de correo electrónico y contraseña de tu cuenta de Gmail
-$username = 'wortika4@gmail.com';
-$password = '44wortika12$';
+require 'assets/phpmailer/vendor/autoload.php';
 
-// Dirección de correo electrónico del destinatario
-$to = 'hanntronico@gmail.com';
+// Crea una instancia de PHPMailer
+$mail = new PHPMailer\PHPMailer\PHPMailer;
 
-// Asunto y cuerpo del mensaje
-$subject = 'Asunto del correo';
-$message = 'Cuerpo del correo';
+// Configura el servidor SMTP
+$mail->isSMTP();
+$mail->Host = 'smtp.gmail.com';
+$mail->SMTPAuth = true;
+$mail->Username = 'wortika4@gmail.com';
+$mail->Password = 'gtettztbwzxzokyd';
+$mail->SMTPSecure = 'tls';
+// $mail->SMTPDebug = 2;
+$mail->Port = 587;
 
-// Cabeceras del correo
-$headers = array(
-  'From' => $username,
-  'Reply-To' => $username,
-  'X-Mailer' => 'PHP/' . phpversion()
-);
+// Configura el remitente y el destinatario
+$mail->setFrom('wortika4@gmail.com', 'Wortika');
+$mail->addAddress('hanntronico@gmail.com', 'Pedro Luis Bernal');
 
-// Opciones del servidor
-$options = array(
-  'ssl' => array(
-    'verify_peer' => false,
-    'verify_peer_name' => false,
-    'allow_self_signed' => true
-  )
-);
+// Configura el contenido del correo electrónico
+$mail->isHTML(true);
+$mail->Subject = 'Asunto del correo';
+$mail->Body    = 'Contenido del correo en formato HTML';
+$mail->AltBody = 'Contenido del correo en texto plano';
 
-// Conecta al servidor de Gmail a través de IMAP
-$inbox = imap_open('{imap.gmail.com:993/imap/ssl}INBOX', $username, $password, 0, 1, $options);
+// Adjunta un archivo al correo
+// $mail->addAttachment('ruta/del/archivo.pdf');
 
-// Envía el correo
-$result = imap_mail($to, $subject, $message, implode("\r\n", $headers));
 
-// Cierra la conexión
-imap_close($inbox);
-
-if ($result) {
-  echo 'Correo enviado';
+if (!$mail->send()) {
+    echo 'El correo no pudo ser enviado.'.'<br>';
+    echo 'Error: ' . $mail->ErrorInfo;
 } else {
-  echo 'Error al enviar el correo';
+    echo 'El correo ha sido enviado correctamente.';
 }
+
 
 ?>

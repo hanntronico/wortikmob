@@ -20,9 +20,12 @@
                  P.position,
                  P.image,
                  JS.id as idjobsummary, 
-                 JS.job_summary as summary
+                 JS.job_summary as summary,
+                 U.*
                 FROM profiles P INNER JOIN job_summary JS
                 ON P.id_job_summary = JS.id
+                INNER JOIN users U
+                ON P.id = U.profile_id
           WHERE P.id = " . $_SESSION["idPosutlante"];
 
   $db = $dbh->prepare($sql);
@@ -73,8 +76,7 @@
     $dbJobPref->execute();
     $regJobPref = $dbJobPref->fetch(PDO::FETCH_OBJ);
   
- 
-    $sql_trainings = "SELECT * FROM trainings WHERE training_status = 1";
+    $sql_trainings = "SELECT * FROM trainings WHERE training_status = 1 AND id_profile = ".$_SESSION["idPosutlante"];
     $stmt = $dbh->prepare($sql_trainings);
     $stmt->execute();
     // $results_trainings = $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -91,7 +93,8 @@
   
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  
+
   <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
 
   <link rel="stylesheet" type="text/css" href="assets/styleguide.css" />
@@ -102,8 +105,16 @@
 
   <link rel="stylesheet" href="assets/menu/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
 
   <title>Document</title>
+
+  <style type="text/css">
+
+
+
+  </style>
+
 </head>
 
 <body>
@@ -119,23 +130,47 @@
 
 
   <div class="container container-principal">
+      <div class="dashboard screen bg-transparent" style="height: 70px; border: 0px solid red; width: 100%;">
+        <div class="overlap-group44"> 
 
-
-      <div class="dashboard screen bg-transparent" style=" height: 70px; margin-left: -10px;">
-        <div class="overlap-group4"> 
+          <div class="overlap-group33">
+            <img
+              class="bell"
+              src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/bell@2x.svg"
+            />
+            <div class="nuevo">
+              <div class="number poppins-semi-bold-white-12px">0</div>
+            </div>
+          </div>
           
+          <div class="titulo">
+            <img src="assets/img/logo_wortika_verde_titulo@2x.svg" />  
+          </div>
+
+
           <div class="align-justify-2">
             <a class="nav-link" data-widget="pushmenu" id="btnMenu" href="#" role="button">
               <img src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/align-justify-2@2x.svg">
             </a>
           </div>
+     
+
+<!--           <img
+            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a738c3c50d8e0f8758cea4/img/group@2x.svg"
+          /> -->
+
+<!--           <div class="align-justify-2">
+            <a class="nav-link" data-widget="pushmenu" id="btnMenu" href="#" role="button">
+              <img src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/align-justify-2@2x.svg">
+            </a>
+          </div> -->
           
-          <img
+<!--           <img
             class="group"
             src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a738c3c50d8e0f8758cea4/img/group@2x.svg"
-          />
+          /> -->
 
-          <div class="overlap-group3">
+<!--           <div class="overlap-group3">
             <img
               class="bell"
               src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/bell@2x.svg"
@@ -143,7 +178,7 @@
             <div class="nuevo" style="border: none;">
               <div class="number poppins-semi-bold-white-12px">0</div>
             </div>
-          </div>
+          </div> -->
         
         </div>
       </div>
@@ -183,15 +218,78 @@
 
 
 
-    <div class="container text-center  mb-5 text-black-50">
+    <div class="container text-center mt-3 mb-5 text-black-50">
       <h1 class="fs-3 fw-bold ">Mi perfil</h1>
       <p class="fw-light fs-6">
         ¡Un perfil completo, es un perfil más empleable!
       </p>
     </div>
-    <div class="container">
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-interval="false" style="padding-bottom: 60px;">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" style="background-color: #339698; width: 12px; height: 12px; border-radius:50%; margin-right: 10px;" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" style="background-color: #339698; width: 12px; height: 12px; border-radius:50%; margin-right: 10px;" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="text-align: center !important;">
+          <div class="row">
+            <div class="col-2 col-md-2"></div>
+            <div class="col-8 col-md-8 card-custom border border-1 border-white rounded-4 w-75" style="background-color: rgba(255,255,255, 0.6); padding:20px 0px;">
+              <div class="container text-center">
+                <h5 class="tituloMedidor">Medidor Workita</h5>
+                <p class="text-black-50">
+                  ¡Un perfil completo, es <br />
+                  más empleable!
+                </p>
+              </div>
+              <div class="container">
+                <div class="ui-widgets">
+                  <div class="ui-values">98%</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-2 col-md-2"></div>
+          </div>  
+
+
+      <!-- </div> -->
+    </div>    
+    <div class="carousel-item" style="text-align: center !important;">
+          <div class="col-2 col-md-2"></div>
+          <div class="col-8 col-md-8 card-custom caja-2 border border-1 border-white rounded-4 w-75" style="margin-left: 17%; background-color: rgba(255,255,255, 0.6); padding:20px 0px;">
+            <div class="container text-center">
+              <h5 class="text-white ">Medidor Workita</h5>
+              <p class="text-white fw-light">
+                ¡Te regalamos diferentes <br />
+                plantillas para usar en tu CV <br />
+                gratis!
+              </p>
+            </div>
+            <a href="assets/assets/docs/cv.pdf" target="_blank">
+              
+              <div class="btn-descarga text-center mb-3">
+                <button class="btn rounded-4 bg-white ">
+                  <img src="img/Download-3 2.png" alt="">
+                  Descarga CV
+                </button>
+              </div>
+
+            </a>
+          </div>
+          <div class="col-2 col-md-2"></div>
+
+    </div>
+  </div>
+
+</div>
+
+
+
+<!--     <div class="container">
       <div class="row">
         <div class="scrollcards js-flickity" data-flickity-options='{ "wrapAround": false }'>
+
           <div class="col-6 card-custom border border-1 border-white rounded-4 w-75">
             <div class="container text-center">
               <h5 class="tituloMedidor">Medidor Workita</h5>
@@ -227,10 +325,13 @@
 
             </a>
           </div>
+
         </div>
       </div>
     </div>
-    <div class="container mt-5">
+ -->
+
+    <div class="container mt-4">
       <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <h5 class="text-center mt-3">Tu CV</h5>
         <a href="javascript: alert('subir archivo');" style="text-decoration: none;">
@@ -254,16 +355,17 @@
         </a>
       </div>
     </div>
+
     <div class="container">
       <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <div class="container">
-          <div class="row" style="border: 0px solid red;">
-            <div class="col-9" style="border: 0px solid green;">
+          <div class="row">
+            <div class="col-10 col-md-10 col-xs-10">
               <h5 class=" mt-3">Datos Personales
               </h5>
             </div>
-            <div class="col-3">
-              <div class="bg-white rounded-3 icono-edit1 mt-3 ms-2" style="border: 0px solid green; margin-right: 80px;">
+            <div class="col-2 col-md-2 col-xs-2" style="border: 0px solid red;">
+              <div class="bg-white rounded-3 icono-edit1 mt-3 ms-2" style="border: 0px solid green;">
                 <a href="assets/datos_personales.php">
                   <img src="img/Edit 1.png" alt="">  
                 </a>
@@ -274,7 +376,8 @@
             <div class="imagenPerfil">
               <!-- <img class="text-center" src="img/Foto.png" alt=""> -->
               <img class="text-center" src="img/Foto.png" alt="">
-              <img src="img/Editar.png" class="mx-5 w-50 editar-perfil" alt="">
+              <!-- <img src="img/Editar.png" class="mx-5 w-70 editar-perfil" alt=""> -->
+              <img src="img/Editar.png" class="mx-5 w-70 editar-perfil" style="width: 40px;" alt="">
             </div>
           </div>
           <div class="container name-perfil text-black-50 ">
@@ -312,11 +415,11 @@
       <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <div class="container">
           <div class="row">
-            <div class="col-9">
+            <div class="col-10 col-md-10 col-xs-10">
               <h5 class=" mt-3">Redes sociales
               </h5>
             </div>
-            <div class="col-3">
+            <div class="col-2 col-md-2 col-xs-2">
               <div class="bg-white rounded-3 icono-edit1 mt-3 ms-2" style="border: 0px solid green; margin-right: 80px;">
                <a href="./assets/redes_proyectos.php">
                <img src="img/Edit 1.png" alt="">
@@ -324,27 +427,35 @@
               </div>
             </div>
             <div class="container iconos-redes">
-              <img src="img/Group 12822.png" alt="">
+              <?php 
+                  $red_social = explode("@", $reg->email); 
+                  if($red_social[1] == "gmail.com"){
+              ?>        
+                  <img class="imagen-237" src="img/logo_gmail.png" style="margin-left: 6px; padding-bottom: 10px;">
+              <?php
+                  }
+              ?>
+<!--               <img src="img/Group 12822.png" alt="">
               <img src="img/Group 12823.png" alt="">
               <img class="imagen-237" src="img/Ellipse 237.png" alt="">
-              <!-- <img src="img/Ellipse 237.png" alt=""> -->
               <img class="" src="img/Ellipse 237 (1).png" alt="">
-              <img src="img/Frame 3493.png" alt="">
+              <img src="img/Frame 3493.png" alt=""> -->
             </div>
           </div>
 
         </div>
       </div>
     </div>
+
     <div class="container">
       <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <div class="container">
           <div class="row">
-            <div class="col-9">
+            <div class="col-10 col-md-10 col-xs-10">
               <h5 class=" mt-3">Resumen laboral
               </h5>
             </div>
-            <div class="col-3">
+            <div class="col-2 col-md-2 col-xs-2">
               <div class="bg-white rounded-3 icono-edit1 mt-2 ms-2" style="border: 0px solid green; margin-right: 80px;">
                 <a href="./assets/editar_resumen_laboral.php">
                   <img src="img/Edit 1.png" alt="">
@@ -374,15 +485,13 @@
       <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <div class="container">
           <div class="row">
-            <div class="col-9">
-              <h5 class=" mt-3">Experiencia Laboral
-              </h5>
+            <div class="col-10 col-md-10 col-xs-10">
+              <h5 class=" mt-3">Experiencia Laboral</h5>
             </div>
-            <div class="col-3  icono-edit1 mt-2 ps-3 ">
+            <div class="col-2 col-md-2 col-xs-2 icono-edit1 mt-2 ps-3">
               <a href="assets/experiencia_laboral.php?sw=1">
                 <img src="img/Editar (1).png" alt="">                
               </a>
-
             </div>
           </div>
         </div>
@@ -468,7 +577,7 @@ $date_fin = date_create($reg_work_exp->fec_fin);
               <p class="fw-normal"><?php echo date_format($date_ini,"m-Y");?> - <?php echo date_format($date_fin,"m-Y");?> (<?php echo $meses+1;?> meses)</p>
             </div>
             <div class="col-2">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -15px;">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: 8px;">
                 <a href="assets/experiencia_laboral.php?sw=2&id=<?php echo $reg_work_exp->id_work_experience;?>">
                   <img src="img/Edit 1.png" alt="">
                 </a>
@@ -489,11 +598,11 @@ $date_fin = date_create($reg_work_exp->fec_fin);
       <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <div class="container">
           <div class="row">
-            <div class="col-9">
+            <div class="col-10 col-md-10 col-xs-10">
               <h5 class=" mt-3">Form. académica
               </h5>
             </div>
-            <div class="col-3 ps-3 icono-edit1 mt-2 ">
+            <div class="col-2 col-md-2 col-xs-2 ps-3 icono-edit1 mt-2 ">
               <a href="assets/formacion_academica.php">
                 <img src="img/Editar (1).png" alt="">  
               </a>
@@ -508,14 +617,14 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
 ?>
 
                 <div class="row mt-2 m-0">
-                  <div class="col-10 info-formacion">
+                  <div class="col-10 col-md-10 col-xs-10 info-formacion">
                     <p class="fw-semibold m-0"><?php echo $reg_job_spec->name; ?></p>
                     <!-- <p class="fw-light">Pontifica Universidad Nacional Mayor de San Marcos</p> -->
                     <p class="fw-light"><?php echo $reg_job_spec->place; ?></p>
                     <p class="fw-semibold"><?php echo $start_date;?> / <?php echo $end_date; ?></p>
                   </div>
-                  <div class="col-2">
-                    <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: -8px;">
+                  <div class="col-2 col-md-2 col-xs-2">
+                    <div class="bg-white rounded-3 icono-edit1 mt-2" style="border: 0px solid blue; margin-left: 16px;">
                       <a href="assets/formacion_academica.php?sw=2">
                       <img src="img/Edit 1.png" alt="">
                         
@@ -549,8 +658,8 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
       <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <div class="container">
           <div class="row">
-            <div class="col-10">
-              <h5 class=" mt-3">Idiomas</h5>
+            <div class="col-10 col-md-10 col-xs-10">
+              <h5 class="mt-3">Idiomas</h5>
 
           <?php 
           if ( $idiomas > 0 ) {
@@ -572,8 +681,8 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
 
 
             </div>
-            <div class="col-2">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
+            <div class="col-2 col-md-2 col-xs-2">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: 8px;">
                 <a href="./assets/idiomas.php">
                 <img src="img/Edit 1.png" alt="">
                 </a>
@@ -587,9 +696,10 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
       <div class="tuCV border border-1 border-white rounded-4 mb-5">
         <div class="container">
           <div class="row">
-            <div class="col-10">
-              <h5 class=" mt-3">Aptitudes
-              </h5>
+
+             <div class="col-10 col-md-10 col-xs-10">
+              <h5 class=" mt-3">Aptitudes</h5>
+<!--              
               <p class="fw-normal titulo-aptitudes">Lenguajes de programación</p>
               <ul class="lista-tab p-0">
                 <li class="lista-aptitudes d-flex">
@@ -699,10 +809,10 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
               <p class="fw-normal titulo-aptitudes m-0">Metodologías de trabajo:</p>
               <p class="aptitudes-respuesta">Scrum, Kanban</p>
               <p class="fw-normal titulo-aptitudes m-0">Metodologías de trabajo:</p>
-              <p class="aptitudes-respuesta">Scrum, Kanban</p>
-            </div>
-            <div class="col-2">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
+              <p class="aptitudes-respuesta">Scrum, Kanban</p>-->
+            </div> 
+            <div class="col-2 col-md-2 col-xs-2">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: 8px;">
               <a href="assets/aptitudes.php">
                 <img src="img/Edit 1.png" alt="">
               </a>
@@ -718,8 +828,19 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
         <div class="container">
           <div class="row">
             <div class="col-10">
-              <h5 class=" mt-3">Cursos y certifica.
-              </h5>
+              <h5 class=" mt-3">Cursos y certifica.</h5>
+            </div>
+
+            <div class="col-2">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: 8px;">
+                <a href="assets/editar_preferencias_laborales.php">
+                <img src="img/Edit 1.png" alt="">
+                </a>
+              </div>
+            </div>
+          
+          </div>
+
 
             <?php while (  $results_trainings = $stmt->fetch(PDO::FETCH_OBJ) ) {  
 
@@ -727,15 +848,15 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
               $end_date = ( is_null($results_trainings->training_end_date) || $results_trainings->training_end_date == "") ? "--" : date_format(date_create($results_trainings->training_end_date),"m-Y");
             ?>
 
-              <div class="cursos-certifica row mt-3 ">
-                <div class="col-8 info-formacion">
+              <div class="row mt-3">
+                <div class="col-10 col-md-10 col-xs-10 info-formacion" style="border: 0px solid red;">
                   <p class="fw-semibold m-0"><?php echo $results_trainings->training_name; ?></p>
                   <p class="fw-light"><?php echo $results_trainings->training_institution; ?></p>
                   <p class="fw-semibold"><?php echo $start_date . " / " . $end_date; ?></p>
 
                 </div>
-                <div class="col-4">
-                  <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-29px;">
+                <div class="col-2 col-md-2 col-xs-2" style="border: 0px solid blue;">
+                  <div class="bg-white rounded-3 icono-edit1 mt-2" style="border: 0px solid green; margin-left: 8px;">
                     <a href="assets/cursos_certif.php?idTrai=<?php echo $results_trainings->idTraining; ?>"><img src="img/Edit 1.png" alt=""></a>
                   </div>
                 </div>
@@ -744,27 +865,6 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
             <?php } ?>
 
 
-<!--               <div class="cursos-certifica row mt-3 ">
-                <div class="col-8 info-formacion">
-                  <p class="fw-semibold m-0">Fundamentos de Design <br> Thinking</p>
-                  <p class="fw-light">Platzi</p>
-                  <p class="fw-semibold">Ago 2014 - Dic 2019</p>
-                </div>
-                <div class="col-4">
-                  <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-29px;">
-                    <a href="assets/cursos_certif.php"><img src="img/Edit 1.png" alt=""></a>
-                  </div>
-                </div>
-              </div> -->
-            </div>
-<!--             <div class="col-2">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
-                <a href="assets/editar_preferencias_laborales.php">
-                <img src="img/Edit 1.png" alt="">
-                </a>
-              </div>
-            </div> -->
-          </div>
         </div>
       </div>
     </div>
@@ -773,11 +873,9 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
         <div class="container">
           <div class="row">
             <div class="col-10">
-              <h5 class="mt-3" style="font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 130%;">Tu preferencia de empleo</h5>
+              <h5 class="mt-3" style="font-family: 'Poppins'; font-style: normal; font-weight: 500; font-size: 16px; line-height: 130%;">
+                Tu preferencia de empleo
+              </h5>
               <div class="cursos-certifica row mt-3 ">
                 <div class="col-8 info-formacion">
                   <p class="fw-light m-0">Sitaución actual:</p>
@@ -801,33 +899,18 @@ line-height: 130%;">Tu preferencia de empleo</h5>
                   <ul>
 
                       <?php 
-                      foreach (json_decode($regJobPref->desired_job) as $key => $value) { ?>
-                          <li class="fw-semibold" style="font-family: Poppins;
-                          font-size: 12px;
-                          font-weight: 500;
-                          line-height: 20px;
-                          letter-spacing: 0em;
-                          text-align: left; color:#616161;"><?php echo $value; ?></li>
+                     
+                      if ($dbJobPref->rowCount() != 0) {
+                        foreach (json_decode($regJobPref->desired_job) as $key => $value) { ?>
+                            <li class="fw-semibold" style="font-family: Poppins;
+                            font-size: 12px;
+                            font-weight: 500;
+                            line-height: 20px;
+                            letter-spacing: 0em;
+                            text-align: left; color:#616161;"><?php echo $value; ?></li>
                       <?php } ?>
+                      <?php }else{ echo "Sin resultados"; } ?>
 
-<!--                       <li class="fw-semibold" style="font-family: Poppins;
-font-size: 12px;
-font-weight: 500;
-line-height: 16px;
-letter-spacing: 0em;
-text-align: left; color:#616161;">Desarrollador Back End</li> -->
-<!--                       <li class="fw-semibold" style="font-family: Poppins;
-font-size: 12px;
-font-weight: 500;
-line-height: 16px;
-letter-spacing: 0em;
-text-align: left; color:#616161;">Desarrollador Front End</li>
-                      <li class="fw-semibold" style="font-family: Poppins;
-font-size: 12px;
-font-weight: 500;
-line-height: 16px;
-letter-spacing: 0em;
-text-align: left; color:#616161;">Diseño e implementación de BD</li> -->
                   </ul>
                 </div>
 
@@ -867,11 +950,7 @@ text-align: left; color:#616161;">Diseño e implementación de BD</li> -->
                   <p class="fw-semibold"><?php echo obtenerMoneda($regJobPref->currency) ?> <?php echo $regJobPref->min_salary; ?> / mes</p>
                 </div>
 
-<!--                 <div class="col-4">
-                  <div class="bg-white rounded-3 icono-edit1 mt-2 " style="margin-left:-29px;">
-                    <img src="img/Edit 1.png" alt="">
-                  </div>
-                </div> -->
+
               </div>
 <!--               <div class="cursos-certifica row mt-3 ">
                 <div class="col-8 info-formacion">
@@ -882,7 +961,7 @@ text-align: left; color:#616161;">Diseño e implementación de BD</li> -->
               </div> -->
             </div>
             <div class="col-2">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-11px;">
+              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: 8px;">
                 <a href="assets/editar_preferencias_laborales.php">
                   <img src="img/Edit 1.png" alt="">
                 </a>
@@ -893,53 +972,7 @@ text-align: left; color:#616161;">Diseño e implementación de BD</li> -->
       </div>
     </div>    
     
-<!--     <div class="container">
-      <div class="tuCV border border-1 border-white rounded-4 mb-5">
-        <div class="container">
-          <div class="row">
-            <div class="col-10">
-              <h5 class=" mt-3">Referencia laboral
-              </h5>
-              <div class="cursos-certifica row mt-3 ">
-                <div class="col-8 info-formacion">
-                  <p class="fw-semibold m-0">Mateo Porras Delgado</p>
-                  <p class="fw-light m-0">Gerente de Sistemas en TALENT </p>
-                  <p class="fw-light m-0">QR SAC </p>
-                  <p class="fw-light m-0">Mateogonzales@talent.pe</p>
-                  <p class="fw-light">985656521</p>
-                  <p class="fw-semibold text-decoration-underline">985656521</p>
-                </div>
-            <div class="col-4">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-29px;">
-                <img src="img/Edit 1.png" alt="">
-              </div>
-            </div>
-              </div>
-              <div class="cursos-certifica row mt-3 ">
-                <div class="col-8 info-formacion">
-                  <p class="fw-semibold m-0">Mateo Porras Delgado</p>
-                  <p class="fw-light m-0">Gerente de Sistemas en TALENT </p>
-                  <p class="fw-light m-0">QR SAC </p>
-                  <p class="fw-light m-0">Mateogonzales@talent.pe</p>
-                  <p class="fw-light">985656521</p>
-                  <p class="fw-semibold text-decoration-underline">985656521</p>
-                </div>
-              <div class="col-4">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left:-29px;">
-                <img src="img/Edit 1.png" alt="">
-              </div>
-            </div>
-              </div>
-            </div>
-            <div class="col-2  icono-edit1 mt-2 ps-0">
-              <img src="img/Editar (1).png" alt="">
-            </div>
 
-
-          </div>
-        </div>
-      </div>
-    </div> -->
 
   </div>
 
@@ -952,7 +985,8 @@ text-align: left; color:#616161;">Diseño e implementación de BD</li> -->
     integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous">
   </script>
   <script src="js/miPerfil.js"></script>
-  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
+  
 
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
@@ -964,6 +998,7 @@ text-align: left; color:#616161;">Diseño e implementación de BD</li> -->
     <script src="assets/menu/plugins/jquery/jquery.min.js"></script>
     <script src="assets/menu/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+    <!-- <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.js"></script> -->
 
     <script type="text/javascript">
 
@@ -972,17 +1007,10 @@ text-align: left; color:#616161;">Diseño e implementación de BD</li> -->
         $("#btnClose").click(function () {    
             $("#btnMenu").click();
         }); 
-
+        
       });
 
-
-
-
     </script>
-
-
-
-
 
 </body>
 

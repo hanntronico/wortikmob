@@ -18,6 +18,25 @@
   width: 577px;
 }
 
+.dashboard .overlap-group44 {
+  border: 0px solid blue;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 15px 20px;
+  /*height: 727px;*/
+  /*left: 0px;*/
+  /*position: relative;*/
+  /*top: 12px;*/
+  /*width: 577px;*/
+}
+
+.dashboard .titulo {
+  width: 85%;
+  border: 0px solid green;
+  padding-top: 5px;
+}
+
 .dashboard .overlap-group2 {
   height: 727px;
   left: 0;
@@ -88,9 +107,10 @@
 
 .dashboard .align-justify-2 {
   height: 32px;
-  left: 364px;
-  position: absolute;
-  top: 7px;
+  /*left: 364px;*/
+  /*position: absolute;*/
+  position: relative;
+  /*top: 7px;*/
   width: 32px;
 }
 
@@ -110,10 +130,20 @@
   width: 36px;
 }
 
+.dashboard .overlap-group33 {
+  border: none;
+  /*height: 35px;*/
+  /*left: 127px;*/
+  /*position: absolute;*/
+  /*top: 1px;*/
+  /*width: 36px;*/
+}
+
 .dashboard .bell {
   height: 32px;
   left: 0;
-  position: absolute;
+  /*position: absolute;*/
+  position: relative;
   top: 0;
   width: 32px;
 }
@@ -123,8 +153,9 @@
   border-radius: 16px;
   height: 20px;
   left: 16px;
-  position: absolute;
-  top: 15px;
+  /*position: absolute;*/
+  position: relative;
+  top: -10px;
   width: 20px;
 }
 
@@ -132,7 +163,8 @@
   left: 4px;
   letter-spacing: 0;
   line-height: 15.6px;
-  position: absolute;
+  /*position: absolute;*/
+  position: relative;
   top: 1px;
   white-space: nowrap;
 }
