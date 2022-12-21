@@ -129,7 +129,7 @@
   </aside>
 
 
-  <div class="container container-principal">
+  <div class="container container-principal" style="padding: 0px 20px;">
       <div class="dashboard screen bg-transparent" style="height: 70px; border: 0px solid red; width: 100%;">
         <div class="overlap-group44"> 
 
