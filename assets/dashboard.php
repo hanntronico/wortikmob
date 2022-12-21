@@ -86,28 +86,40 @@
 </nav> -->
 
 
-
     <input type="hidden" id="anPageName" name="page" value="dashboard" />
-    <div class="container-center-horizontal">
-      <div class="dashboard screen">
-        
-        <div class="overlap-group4">
-          <div class="overlap-group2">
-            <div class="overlap-group1">
-              <div class="azul"></div>
-              <div class="overlap-group">
-                <div class="verde"></div>
-                <div class="azul-1"></div>
-              </div>
+
+    <div class="container-center-horizontal" style="border: 0px solid green; padding: 0px 8px;">
+      <div class="dashboard screen" style="height: 70px; border: 0px solid red; width: 100%;">
+        <div class="overlap-group44">
+
+          <div class="overlap-group33">
+            <img
+              class="bell"
+              src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/bell@2x.svg"
+            />
+            <div class="nuevo">
+              <div class="number poppins-semi-bold-white-12px">0</div>
             </div>
-            <div class="azul-2"></div>
           </div>
+          
+          <div class="titulo">
+            <img src="img/logo_wortika_verde_titulo@2x.svg" />  
+          </div>
+
 
           <div class="align-justify-2">
             <a class="nav-link" data-widget="pushmenu" id="btnMenu" href="#" role="button">
               <img src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/align-justify-2@2x.svg">
             </a>
           </div>
+
+
+
+<!--           <div class="align-justify-2">
+            <a class="nav-link" data-widget="pushmenu" id="btnMenu" href="#" role="button">
+              <img src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/align-justify-2@2x.svg">
+            </a>
+          </div> -->
           
 <!--           <img
             class="align-justify-2"
@@ -115,7 +127,7 @@
           /> -->
 
 
-          <img
+<!--           <img
             class="group"
             src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a738c3c50d8e0f8758cea4/img/group@2x.svg"
           />
@@ -125,8 +137,17 @@
               src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/bell@2x.svg"
             />
             <div class="nuevo"><div class="number poppins-semi-bold-white-12px">12</div></div>
-          </div>
-          <div class="frame-3553">
+          </div> -->
+
+
+
+
+
+
+
+        </div>
+
+          <div class="frame_principal">
             <div class="frame-3543">
               <div class="texto">
                 <h1 class="aviso-2 poppins-semi-bold-storm-dust-24px">Hola <?php echo $reg->name; ?></h1>
@@ -254,7 +275,7 @@
               </div>
             </div>
           </div>
-        </div>
+
       </div>
     </div>
 

@@ -19,7 +19,7 @@
 }
 
 .dashboard .overlap-group44 {
-  border: 0px solid blue;
+  border: none;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -182,6 +182,23 @@
   position: absolute;
   top: 64px;
   width: 320px;
+}
+
+.dashboard .frame_principal {
+  /*height: 492px;*/
+  border: none;
+  height: 100%;
+  left: 0px;
+  overflow: hidden;
+  /*overflow-y: scroll;*/
+  position: absolute;
+  /*top: 64px;*/
+  /*width: 320px;*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
 }
 
 .dashboard .frame-3543::-webkit-scrollbar {
