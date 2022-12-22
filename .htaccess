@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^empresa/$										assets/inicio_sesion_empresa.php

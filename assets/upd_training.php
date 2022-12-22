@@ -3,11 +3,6 @@
   session_start();
   include_once "../conf/conf.php";
 
-// $_POST["training_name"]
-// $_POST["training_instit"]
-// $_POST["trai_start_date"]
-// $_POST["trai_end_date"]
-
   $sql = "UPDATE trainings 
           SET training_name='".$_POST["training_name"]."', 
               training_institution='".$_POST["training_instit"]."',

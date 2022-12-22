@@ -36,12 +36,8 @@
 
     <link rel="stylesheet" type="text/css" href="dashboard-empresa-1.css" />
     <link rel="stylesheet" type="text/css" href="dashboard-empresa.css" />
-
     <link rel="stylesheet" type="text/css" href="estilos_empre/styleguide2.css" />
     <link rel="stylesheet" type="text/css" href="estilos_empre/globals2.css" />
-
-<!--     <link rel="stylesheet" type="text/css" href="styleguide.css" />
-    <link rel="stylesheet" type="text/css" href="globals.css" /> -->
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
@@ -49,7 +45,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/css/adminlte.min.css">
 
   </head>
-  <body style="margin: 0; background: #f9f9f9" class="hold-transition sidebar-mini layout-fixed">
+
+  <body class="hold-transition sidebar-mini layout-fixed">
 
   <aside class="main-sidebar sidebar-light-primary elevation-4" >
     <div class="sidebar">
@@ -63,10 +60,8 @@
     <input type="hidden" id="anPageName" name="page" value="dashboard" />
 
 
-
-
     <div class="container-center-horizontal">
-      <div class="dashboard-empresa screen">
+      <div class="dashboard-empresa screen" style="border: none; width: 100%; display: flex; align-content: center; justify-content: center;">
         <div class="overlap-group4">
 
           <div class="frame-3536">
@@ -97,7 +92,6 @@
               <img src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/align-justify-2@2x.svg">
             </a>
           </div>  
-
 
           <div class="frame-2963">
             <div class="overlap-group3">
@@ -357,9 +351,10 @@
 
     <script src="menu/plugins/jquery/jquery.min.js"></script>
     <script src="menu/plugins/jquery-ui/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.1/dist/js/adminlte.min.js"></script> -->
 
     <script type="text/javascript">
+
 
       function verDetalle(idJob) {
         console.log(idJob);

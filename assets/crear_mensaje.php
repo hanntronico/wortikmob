@@ -1,6 +1,5 @@
 <?php  
   session_start();
-  $_SESSION["idPosutlante"] = 1; 
   include_once "../conf/conf.php";
 
   // $sql = "SELECT id,

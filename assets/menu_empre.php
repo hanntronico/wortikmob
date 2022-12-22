@@ -20,7 +20,7 @@
                 <img class="dashboard-1" src="assets/menu/dashboard-1@2x.svg"/>
 
                 <div class="dashboard poppins-medium-malachite-16px">
-                  <a href="./dashboard.php">Avisos</a>
+                  <a href="./dashboard_empre.php">Avisos</a>
                 </div>
 
               </div>

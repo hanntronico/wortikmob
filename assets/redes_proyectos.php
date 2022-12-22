@@ -38,32 +38,35 @@
 
      <div class="container-center-horizontal">
       <div class="dashboard screen">
-        <div class="overlap-group4"> 
+        <div class="overlap-group44">
 
 
-
-          <div class="align-justify-2">
-            <a class="nav-link" data-widget="pushmenu" href="#" role="button">
-              <img src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/align-justify-2@2x.svg">
-            </a>
-          </div>
-          
-          <img
-            class="group"
-            src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a738c3c50d8e0f8758cea4/img/group@2x.svg"
-          />
-
-          <div class="overlap-group3">
+          <div class="overlap-group33">
             <img
               class="bell"
               src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/bell@2x.svg"
             />
-            <div class="nuevo"><div class="number poppins-semi-bold-white-12px">20</div></div>
+            <div class="nuevo">
+              <div class="number poppins-semi-bold-white-12px">0</div>
+            </div>
+          </div>
+          
+          <div class="titulo">
+            <img src="img/logo_wortika_verde_titulo@2x.svg" />  
           </div>
 
 
+          <div class="align-justify-2">
+            <a class="nav-link" data-widget="pushmenu" id="btnMenu" href="#" role="button">
+              <img src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/align-justify-2@2x.svg">
+            </a>
+          </div>
 
-          <div class="frame-3553">
+        </div>
+
+
+          <!-- <div class="frame-3553"> -->
+          <div class="frame_principal">
 
               <div class="main-frame">
 
@@ -79,13 +82,19 @@
                 </div>
 
                 <form style="border: none;">
-                  <div class="form-row mt-3">
+                  <div class="form-row mt-3" style="border: 1px solid blue;">
 
                     <div class="col-12 col-md-12 mb-3">
                       <input type="text" class="form-control input_text" id="txtIdiomas" placeholder="Ingrese link" value="" required>
                     </div>
 
-              <div class="frame_redes" style="border: none;">
+                    <div class="col-12 col-md-12 mt-2 ">
+                      <button type="submit" class="btn btn-primary btn-lg|btn-sm" style="color: #339698; border: none; border-radius: 16px; background: #F5F5F5; font-size: 13px; font-weight: 500; padding: 12px 16px;">Agregar</button>
+                    </div>
+
+
+
+              <div class="frame_redes" style="border: 1px solid red;">
 
                 <div class="banner_redes" style="padding: 0px 24px;">
                   <div class="row py-3">
@@ -107,16 +116,11 @@
                         <button type="button" class="btn_quitar btn btn-light  btn-lg|btn-sm mt-2">Quitar</button>
                     </div>
                   </div>
-                  <!-- <div class="ttulo poppins-semi-bold-malachite-18px">¡Te damos la bienvenida a Wortika!</div> -->
-<!--                   <p class="descripcin poppins-medium-malachite-12px">
-                    Tu próximo empleo lo encontrarás aquí. ¿Empezamos?
-                  </p> -->
-<!--                   <div class="frame-3353">
-                    <div class="descripcin-1 poppins-semi-bold-white-12px">Encontrar empleo</div>
-                  </div> -->
                 </div>
 
-                <div class="frame-3359" style="left: 195px;">
+
+
+<!--                 <div class="frame-3359" style="left: 195px;">
                   <div class="banner_redes" style="padding: 14px 22px;">
                     <div class="col-md-12 pb-3" style="border-bottom: 1px solid #B8B8B8;" >
                       Red social <br> Instagram  
@@ -136,34 +140,11 @@
                         <button type="button" class="btn_quitar btn btn-light  btn-lg|btn-sm mt-2">Quitar</button>
                     </div>
                   </div>
+                </div> -->
 
-                  
-                  <!-- <div class="overlap-group-1" style="border: 1px solid blue;"> -->
-<!--                     <img
-                      class="fondo"
-                      src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a738c3c50d8e0f8758cea4/img/fondo@2x.svg"
-                    /> -->
-<!--                     <div class="info">
-                      <div class="aviso-4 poppins-medium-malachite-16px">Tu CV Wortika</div>
-                      <p class="aviso-5 poppins-light-storm-dust-12px">
-                        Por completar tu perfil. Ahora puedes descargar tu CV gratis.
-                      </p>
-                      <div class="frame-3353-1">
-                        <img
-                          class="icon-download_arrow"
-                          src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a738c3c50d8e0f8758cea4/img/download-3-2@2x.svg"
-                        />
-                        <div class="descripcin-2 poppins-medium-storm-dust-12px">Descargar CV</div>
-                      </div>
-                    </div> -->
-
-                  <!-- </div> -->
-                </div>
               </div>
 
-                    <div class="col-12 col-md-12 mt-2 mb-4">
-                      <button type="submit" class="btn btn-primary btn-lg|btn-sm" style="color: #339698; border: none; border-radius: 16px; background: #F5F5F5; font-size: 13px; font-weight: 500; padding: 12px 16px;">Agregar</button>
-                    </div>
+
 
                     <div class="col-12 col-md-12 mt-2 mb-4" style="top: 400px;">
                       <button type="submit" class="btn btn-primary btn-lg|btn-sm" style="background-color: #339698; color: #fff; border: none; border-radius: 16px; font-size: 13px; font-weight: 500; padding: 8px 20px;">Guardar</button>
@@ -172,13 +153,14 @@
                   </div>
 
 
-<!--                   <div class="form-row mt-2">
-                    
-                    <div class="col-12 col-md-12 mb-4">
-                     <span style="color: #9F9F9F; font-size: 12px; font-weight: 400;">Aún no se ha agregado nada.</span> 
-                    </div>
+                  <div class="row" style="display: flex, justify-content: center; align-content: center;">
+                    <div style="border: 1px solid purple;">primero</div>
+                    <div style="border: 1px solid purple;">segundo</div>
+                    <div style="border: 1px solid purple;">tercero</div>
+                  </div>
 
-                  </div> -->
+
+
 
                 </form>
 
@@ -188,7 +170,6 @@
 
 
 
-        </div>
       </div>
     </div>
 

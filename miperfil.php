@@ -456,11 +456,15 @@
               </h5>
             </div>
             <div class="col-2 col-md-2 col-xs-2">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 ms-2" style="border: 0px solid green; margin-right: 80px;">
-                <a href="./assets/editar_resumen_laboral.php">
-                  <img src="img/Edit 1.png" alt="">
-                </a>
-              </div>
+
+              <?php if ($reg->summary != ''): ?>
+                <div class="bg-white rounded-3 icono-edit1 mt-2 ms-2" style="border: 0px solid green; margin-right: 80px;">
+                  <a href="./assets/editar_resumen_laboral.php">
+                    <img src="img/Edit 1.png" alt="">
+                  </a>
+                </div>
+              <?php endif ?>
+
             </div>
           </div>
         </div>
@@ -472,7 +476,13 @@
 
         <?php 
           if ($reg->summary == '') {
-            echo "Sin resultados";
+        ?>  
+
+            <a href="assets/editar_resumen_laboral.php?sw=1">
+              <img src="img/Editar (1).png" alt="">                
+            </a>
+
+        <?php  
           }else{
             echo (isset($reg->idjobsummary) || $reg->idjobsummary != 0 ) ? $reg->summary : 'Sin resultados'; 
           }
@@ -658,7 +668,7 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
       <div class="tuCV border border-1 border-white rounded-4 mb-4 fondo_transparente">
         <div class="container">
           <div class="row">
-            <div class="col-10 col-md-10 col-xs-10">
+            <div class="col-9 col-md-9 col-xs-9">
               <h5 class="mt-3">Idiomas</h5>
 
           <?php 
@@ -681,11 +691,22 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
 
 
             </div>
-            <div class="col-2 col-md-2 col-xs-2">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: 8px;">
-                <a href="./assets/idiomas.php">
-                <img src="img/Edit 1.png" alt="">
-                </a>
+            <div class="col-3 col-md-3 col-xs-3">
+              <div class="row">
+                <div class="col-6 col-md-6">
+                  <div class="bg-white rounded-3 icono-edit1 mt-2" style="border: 0px solid green;">
+                    <a href="./assets/idiomas.php">
+                      <img src="img/Editar (1).png" alt="" style="border: none; border-radius: 50%; margin-left: -5px; margin-top: -5px;">
+                    </a>
+                  </div>
+                </div>
+                <div class="col-6 col-md-6">
+                  <div class="bg-white rounded-3 icono-edit1 mt-2" style="border: 0px solid green;">
+                    <a href="./assets/lista_idiomas.php">
+                      <img src="img/Edit 1.png" alt="">
+                    </a>
+                  </div>              
+                </div>
               </div>
             </div>
           </div>
@@ -876,6 +897,9 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
               <h5 class="mt-3" style="font-family: 'Poppins'; font-style: normal; font-weight: 500; font-size: 16px; line-height: 130%;">
                 Tu preferencia de empleo
               </h5>
+
+              <?php if ($dbJobPref->rowcount() != 0): ?>
+                
               <div class="cursos-certifica row mt-3 ">
                 <div class="col-8 info-formacion">
                   <p class="fw-light m-0">Sitaución actual:</p>
@@ -952,21 +976,41 @@ $end_date = ( is_null($reg_job_spec->end_date) || $reg_job_spec->end_date == "")
 
 
               </div>
-<!--               <div class="cursos-certifica row mt-3 ">
-                <div class="col-8 info-formacion">
-                  <p class="fw-semibold m-0">Fundamentos de Design <br> Thinking</p>
-                  <p class="fw-light">Platzi</p>
-                  <p class="fw-semibold">Ago 2014 - Dic 2019</p>
+
+
+                
+              <?php else: ?>
+                
+                <div class="cursos-certifica mt-3" style="text-align: center;">
+                  <a href="assets/editar_preferencias_laborales.php?sw=1">
+                    <img src="img/Editar (1).png" alt="">                
+                  </a>
                 </div>
-              </div> -->
+
+              <?php endif ?>
+
+
+
+
+
+
             </div>
+            
             <div class="col-2">
-              <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: 8px;">
-                <a href="assets/editar_preferencias_laborales.php">
-                  <img src="img/Edit 1.png" alt="">
-                </a>
-              </div>
+            
+              <?php if ($dbJobPref->rowcount() != 0): ?>
+
+                <div class="bg-white rounded-3 icono-edit1 mt-2 " style="border: 0px solid green; margin-left: 8px;">
+                  <a href="assets/editar_preferencias_laborales.php">
+                    <img src="img/Edit 1.png" alt="">
+                  </a>
+                </div>
+
+              <?php endif ?>
+
+            
             </div>
+
           </div>
         </div>
       </div>
