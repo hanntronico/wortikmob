@@ -1,3 +1,16 @@
+<?php  
+  session_start();
+  include_once "../conf/conf.php";
+
+  $sql_conteo = "SELECT J.ID as job, J.*, C.*, 
+                      J.created_at as fec_job, J.name as puesto,  C.business_name as empresa 
+                      from jobs J INNER JOIN COMPANIES C 
+               ON J.company_id = C.id
+              WHERE J.status = 'PUBLISHED' AND C.id = " . $_SESSION["idEmpresa"];
+  $db = $dbh->prepare($sql_conteo);
+  $db->execute();
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,7 +18,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
 
-    <!-- <link rel="stylesheet" type="text/css" href="miperfil.css" /> -->
     <link rel="stylesheet" type="text/css" href="styleguide.css" />
     <link rel="stylesheet" type="text/css" href="globals.css" />
     <link rel="stylesheet" type="text/css" href="mi-cuenta.css" />
@@ -24,7 +36,7 @@
   <aside class="main-sidebar sidebar-light-primary elevation-4" >
     <div class="sidebar">
 
-    <?php include 'menu.php' ?>
+    <?php include 'menu_empre.php' ?>
 
     </div>
   </aside>

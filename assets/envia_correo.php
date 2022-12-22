@@ -17,12 +17,13 @@ $mail->Port = 587;
 
 // Configura el remitente y el destinatario
 $mail->setFrom('wortika4@gmail.com', 'Wortika');
-$mail->addAddress('hanntronico@gmail.com', 'Pedro Luis Bernal');
+// $mail->addAddress('hanntronico@gmail.com', 'Pedro Luis Bernal');
+$mail->addAddress('ronil.mondragon.m@gmail.com', 'Ronil Mondragón');
 
 // Configura el contenido del correo electrónico
 $mail->isHTML(true);
-$mail->Subject = 'Asunto del correo';
-$mail->Body    = 'Contenido del correo en formato HTML';
+$mail->Subject = 'Bienvenido a Wortika';
+$mail->Body    = 'Bienvenido a Wortika, haz click en: <br> Ahora puedes acceder a la plataforma';
 $mail->AltBody = 'Contenido del correo en texto plano';
 
 // Adjunta un archivo al correo

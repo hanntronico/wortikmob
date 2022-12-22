@@ -1,6 +1,5 @@
 <?php  
   session_start();
-  $_SESSION["idPosutlante"] = 1; 
   include_once "../conf/conf.php";
 
   $sql = "SELECT P.id,
@@ -21,7 +20,7 @@
                 FROM profiles P 
                 INNER JOIN job_summary JS
                 ON P.id_job_summary = JS.id
-          WHERE P.id = 1";
+          WHERE P.id = ".$_SESSION["idPosutlante"];
 
   $db = $dbh->prepare($sql);
   $db->execute();

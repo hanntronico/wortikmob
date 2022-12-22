@@ -7,6 +7,19 @@
   }
 
 
+  $sql_lan = "SELECT DL.id_language as idLanguaje, 
+                     L.language, 
+                     DL.nivel_language as nivelLanguaje
+          FROM detalle_languages DL 
+          INNER JOIN languages L ON DL.id_language = L.id
+          WHERE DL.id_profile = " . $_SESSION["idPosutlante"];
+  $dbLan = $dbh->prepare( $sql_lan );
+  $dbLan->execute();
+
+  $idiomas = $dbLan->rowCount();
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -64,16 +77,66 @@
               <img src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a34a12a875e505096fc10c/img/align-justify-2@2x.svg">
             </a>
           </div>
-
-
         </div>
 
-
-
-          <div class="frame_principal">
-
+<div class="frame_principal" style="color: #339698;">
+  
               <div class="main-frame">
 
+                <div class="row" style="border: none; margin: 0px auto; padding: 0px; width: 100%; ">
+                  <div class="col-md-12">
+                    <h1 class="titulo">Listado de idiomas</h1>
+<!--                     <p class="poppins-light-storm-dust-12px" style="text-align: center;">
+                      <a href="../miperfil.php" style="text-decoration: none; color:#616161">
+                        Mi perfil
+                      </a>
+                      / 
+                      <span style="color: #339698; font-weight: 400; line-height: 130%;">Edición</span></p> -->
+                  </div>
+                </div>
+
+<div class="row mt-4" style="border: none; margin: 0px auto; padding: 0px; width: 100%; text-align: center;">
+  <div class="col-12 col-md-12">
+
+          <?php 
+          if ( $idiomas > 0 ) {
+            while (  $regLan = $dbLan->fetch(PDO::FETCH_OBJ) ) { 
+          ?>
+              <div class="idiomas d-flex fw-light">
+                <p class="idioma-1"><?php echo $regLan->language; ?></p>
+                <p class="mx-1 nivel-idioma">- <b><?php echo $regLan->nivelLanguaje; ?></b></p>
+              </div>
+
+
+
+          <?php } 
+            }else{
+          ?>
+              <div class="idiomas d-flex fw-light">
+                Sin idiomas  
+                <br><br>
+              </div>
+          <?php  }  ?>
+  </div>  
+</div>
+
+
+
+
+
+
+              
+              </div>    
+
+
+
+
+
+</div>
+
+
+<!--           <div class="frame_principal">
+              <div class="main-frame">
                 <div class="row" style="border: none; margin: 0px auto; padding: 0px; width: 100%; ">
                   <div class="col-md-12">
                     <h1 class="titulo">Idiomas</h1>
@@ -90,7 +153,6 @@
                   <div class="form-row mt-3">
 
                     <div class="col-12 col-md-12 mb-3">
-
                       <div class="select_frame">
                         <select class="form-control select_input" name="optIdiomas" id="optIdiomas">
                           <option value="">Selecciona el idioma</option>
@@ -109,9 +171,7 @@
                       />                                              
 
                       </div>
-
                     </div>
-
 
 
                     <div class="col-12 col-md-12 mb-4">
@@ -148,8 +208,7 @@
                 </form>
 
               </div>
-
-          </div>
+          </div> -->
 
 
 

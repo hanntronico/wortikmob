@@ -5,8 +5,8 @@
   /*height: 568px;*/
   height: 600px;
   overflow: hidden;
-  width: 320px;
-  /*width: 100%;*/
+  /*width: 320px;*/
+  width: 100%;
   /*border: 1px solid red;*/
 }
 
@@ -32,7 +32,7 @@
 }
 
 .dashboard .titulo {
-  width: 85%;
+  width: 100%;
   border: 0px solid green;
   padding-top: 5px;
 }
@@ -2940,8 +2940,9 @@
   left: 0;
   overflow-x: scroll;
   position: absolute;
-  top: 220px;
-  width: 320px;
+  top: 620px;
+  /*width: 320px;*/
+  width: 100%;
 }
 
 .banner_redes {

@@ -1,6 +1,5 @@
 <?php  
   session_start();
-  // $_SESSION["idPosutlante"] = 1; 
   include_once "../conf/conf.php";
 
   $sql = "SELECT id,
@@ -232,7 +231,7 @@
                   </p>
                   <div class="ver-mas-1">
                     <div class="conocer poppins-semi-bold-malachite-12px">
-                      <a href="./404.php" style="color: ;">Conocer</a>
+                      <a href="./404.php" style="color: #339698;">Conocer</a>
                     </div>
                     <img
                       class="add-stroke-1-1"
@@ -265,7 +264,7 @@
                   </div>
                   <div class="ver-mas-2">
                     <div class="ver-1 poppins-semi-bold-malachite-12px">
-                    <a href="404.php">Ver</a></div>
+                    <a href="404.php" style="text-decoration: none; color: #339698;">Ver</a></div>
                     <img
                       class="add-stroke-1-2"
                       src="https://anima-uploads.s3.amazonaws.com/projects/628805940f1d94aefa20936d/releases/62a738c3c50d8e0f8758cea4/img/undraw-online-banking-re-kwqh-1@2x.png"

@@ -1,7 +1,5 @@
 <?php  
-
   session_start();
-  $_SESSION["idPosutlante"]; 
   include_once "../conf/conf.php";
 
   $sql = "UPDATE job_preferences 
@@ -17,9 +15,5 @@
   $db->execute();
   $data= Array();
   $reg = $db->fetch(PDO::FETCH_OBJ);
-
-   // header('Location: ../miperfil.php');
-
-
 
 ?>

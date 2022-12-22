@@ -1,3 +1,8 @@
+<?php 
+  session_start();
+  include_once "../conf/conf.php";
+
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -6,9 +11,9 @@
     <link rel="shortcut icon" type=image/png href=https://animaproject.s3.amazonaws.com/home/favicon.png/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="styleguide.css" />
-    <link rel="stylesheet" type="text/css" href="globals.css" />
-    <link rel="stylesheet" type="text/css" href="inicio-de-sesion_emp.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo ENLACE_WEB ?>assets/styleguide.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo ENLACE_WEB ?>assets/globals.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo ENLACE_WEB ?>assets/inicio-de-sesion_emp.css" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
@@ -24,7 +29,7 @@
              <a href="menu2.php">
             <img
               class="align-justify-2"
-              src="assets/align-justify 1.png"
+              src="<?php echo ENLACE_WEB ?>assets/assets/align-justify 1.png"
             />
             </a>
           </div>
@@ -48,7 +53,7 @@
               </div>
             </div> -->
 
-            <form action="iniciar_emp.php" method="POST" accept-charset="utf-8">
+            <form action="<?php echo ENLACE_WEB ?>assets/iniciar_emp.php" method="POST" accept-charset="utf-8">
 
 
                 <input type="text" class="usuario usuario-1 form-control" name="txtUsuario" id="txtUsuario" placeholder="Usuario">
